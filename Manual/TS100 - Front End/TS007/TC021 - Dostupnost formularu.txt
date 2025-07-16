@@ -1,0 +1,27 @@
+ID: TC021
+Název: Dostupnost formulářů
+
+Stručný popis:
+Test ověřuje, zda jsou formuláře na stránce města Bzenec přístupné, rozdělené do tematických sekcí a přehledně zobrazené.
+
+Preconditions:
+	- Web je dostupný
+	- Stránka „Formuláře ke stažení“ existuje
+
+Testovací kroky:
+	1. Otevři hlavní menu > Město a úřad > Formuláře ke stažení
+	2. Sleduj rozdělení formulářů podle kategorií
+	3. Zkontroluj zobrazení odkazů a názvů souborů
+
+Očekávaný výsledek:
+	- Formuláře jsou přehledně rozděleny
+	- Každý obsahuje odkaz ke stažení a popis
+
+Vstupní data:
+	- Žádná
+
+Postconditions:
+	- Web zůstává nezměněn
+
+Logy a úklid:
+	- Screenshot zobrazené stránky

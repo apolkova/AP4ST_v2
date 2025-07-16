@@ -1,0 +1,27 @@
+ID: TC012
+Název: Zobrazení oznámení
+
+Stručný popis:
+Testuje načtení a správné zobrazení seznamu oznámení na úřední desce. Ověřuje přehlednost, strukturu a základní informace o každém oznámení.
+
+Preconditions:
+	- Načtená stránka úřední desky
+	- Internetové připojení funkční
+
+Testovací kroky:
+	1. Otevři hlavní menu > Město a úřad > Úřední deska
+	2. Sleduj zobrazení oznámení
+	3. Ověř přítomnost názvů, dat a příloh
+
+Očekávaný výsledek:
+	- Zobrazí se přehled oznámení
+	- Každé oznámení je čitelné a má základní informace
+
+Vstupní data:
+	- Žádná specifická
+
+Postconditions:
+	- Web zůstává nezměněn
+
+Logy a úklid:
+	- Screenshot celé tabulky

@@ -1,0 +1,20 @@
+ID: TS014  
+Název: Mapa stránek
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuální
+
+Očekávaný výsledek:  
+    Mapa stránek odráží strukturu webu a všechny odkazy jsou funkční.
+
+Stručný popis:  
+    Testuje se přehlednost a funkčnost sitemap pro návštěvníky i vyhledávače.
+
+Pre-conditions:  
+    - Přístup na stránku s mapou  
+
+Obsahuje:  
+    TC038 - Struktura webu  
+    TC039 - Funkčnost všech odkazů  

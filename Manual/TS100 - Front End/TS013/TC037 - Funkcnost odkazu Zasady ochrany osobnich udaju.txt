@@ -1,0 +1,26 @@
+ID: TC037
+Název: Funkčnost odkazu „Zásady ochrany osobních údajů“
+
+Stručný popis:
+Testuje, zda odkaz na stránku se zásadami ochrany osobních údajů funguje a vede na správnou podstránku s informacemi dle GDPR.
+
+Preconditions:
+	- Cookie lišta je zobrazena nebo je odkaz dostupný v patičce
+
+Testovací kroky:
+	1. Najdi odkaz „Zásady ochrany osobních údajů“
+	2. Klikni na něj
+	3. Sleduj, zda se zobrazí stránka s potřebnými informacemi
+
+Očekávaný výsledek:
+	- Stránka obsahuje popis práv, účel zpracování, kontakty aj.
+	- Žádná chyba 404
+
+Vstupní data:
+	- Žádná
+
+Postconditions:
+	- Stránka zůstává dostupná pro další testy
+
+Logy a úklid:
+	- Screenshot zobrazené stránky

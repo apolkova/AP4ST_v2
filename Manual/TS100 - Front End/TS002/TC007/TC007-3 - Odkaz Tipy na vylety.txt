@@ -1,0 +1,26 @@
+ID: TC007-3
+Název: Odkaz Tipy na výlet
+
+Stručný popis:
+Ověřuje funkčnost odkazu „Tipy na výlet“ v menu „Turismus“.
+
+Preconditions:
+	- Hlavní stránka načtena
+	- Menu „Turismus“ je rozbalitelné
+
+Testovací kroky:
+	1. Rozbal menu „Turismus“
+	2. Klikni na „Tipy na výlet“
+	3. Sleduj výsledek
+
+Očekávaný výsledek:
+	- Zobrazí se stránka se Tipy na výlet
+
+Vstupní data:
+	- Odkaz: Tipy na výlet
+
+Postconditions:
+	- Neprovádí se žádné změny
+
+Logy a úklid:
+	- Screenshot stránky

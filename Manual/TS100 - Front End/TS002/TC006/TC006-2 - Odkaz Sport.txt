@@ -1,0 +1,27 @@
+ID: TC006-2
+Název: Odkaz Sport
+
+Stručný popis:
+Testuje správnou funkci odkazu „Sport“ v rámci hlavního menu.
+
+Preconditions:
+	- Web je dostupný
+	- Navigační menu funkční
+
+Testovací kroky:
+	1. Otevři podmenu „Život ve městě“
+	2. Klikni na „Sport“
+	3. Ověř, že se stránka načte a obsahuje sportovní informace
+
+Očekávaný výsledek:
+	- Stránka se správně načte
+	- Obsahuje informace o sportovním vyžití ve městě
+
+Vstupní data:
+	- Žádná
+
+Postconditions:
+	- Nejsou vyžadovány žádné úpravy
+
+Logy a úklid:
+	- Screenshot sekce „Sport“

@@ -1,0 +1,27 @@
+ID: TC011
+Název: Funkčnost tlačítka hledat
+
+Stručný popis:
+Ověřuje, že tlačítko „Hledat“ u vyhledávacího pole funguje správně a spustí vyhledávání.
+
+Preconditions:
+	- Stránka s aktivním vyhledávacím polem
+	- Zadán libovolný text
+
+Testovací kroky:
+	1. Zadej text „zkouska“
+	2. Klikni na tlačítko hledat
+	3. Sleduj zobrazení výsledků
+
+Očekávaný výsledek:
+	- Vyhledávání se spustí
+	- Zobrazí se výsledky odpovídající dotazu
+
+Vstupní data:
+	- Text: zkouska
+
+Postconditions:
+	- Výsledky zůstávají zobrazeny
+
+Logy a úklid:
+	- Screenshot tlačítka a výsledků

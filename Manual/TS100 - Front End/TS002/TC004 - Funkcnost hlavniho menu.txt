@@ -1,0 +1,29 @@
+ID: TC004
+Název: Funkčnost hlavního menu
+
+Stručný popis:
+Ověření, že hlavní navigační menu je viditelné, funguje korektně a umožňuje přístup ke všem hlavním sekcím webu města Bzenec.
+
+Preconditions:
+	- Načtená hlavní stránka
+	- Webový prohlížeč s podporou JavaScriptu
+
+Testovací kroky:
+	1. Zkontroluj zobrazení hlavního horizontálního menu
+	2. Najeď kurzorem na každou hlavní položku
+	3. Sleduj rozbalení podmenu, pokud existuje
+	4. Klikni na každou položku a ověř načtení příslušné stránky
+
+Očekávaný výsledek:
+	- Menu se zobrazí správně
+	- Podmenu se zobrazí po hover efektu
+	- Každá položka vede na odpovídající stránku
+
+Vstupní data:
+	- Žádná specifická data
+
+Postconditions:
+	- Historie obsahuje navštívené stránky
+
+Logy a úklid:
+	- Screenshot rozbalených menu

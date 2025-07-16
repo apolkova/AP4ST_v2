@@ -1,0 +1,27 @@
+ID: TC018
+Název: Zobrazení kontaktů
+
+Stručný popis:
+Test ověřuje, že stránka s kontakty města a úřadu obsahuje veškeré potřebné údaje – telefon, e-mail, adresu a případně pracovníky s funkcemi.
+
+Preconditions:
+	- Webová stránka města je dostupná
+	- Navigační menu „Město a úřad“ je funkční
+
+Testovací kroky:
+	1. Klikni na „Město a úřad“ > „Kontakty“
+	2. Ověř, že se zobrazí stránka s kontakty
+	3. Zkontroluj přítomnost informací jako telefon, e-mail, adresa, jména osob
+
+Očekávaný výsledek:
+	- Všechny informace jsou zobrazeny správně
+	- Stránka neobsahuje žádné chyby nebo prázdné pole
+
+Vstupní data:
+	- Žádná
+
+Postconditions:
+	- Web zůstává nezměněn
+
+Logy a úklid:
+	- Screenshot stránky s kontakty

@@ -1,0 +1,27 @@
+ID: TC026
+Název: Zobrazení náhledů
+
+Stručný popis:
+Testuje načtení galerie obrázků a ověřuje, že se správně zobrazují náhledy všech fotografií.
+
+Preconditions:
+	- Stránka „Fotogalerie“ je dostupná
+	- Obrázky jsou nahrané
+
+Testovací kroky:
+	1. Otevři sekci „Fotogalerie“
+	2. Sleduj načítání galerie
+	3. Zkontroluj přítomnost a kvalitu náhledových obrázků
+
+Očekávaný výsledek:
+	- Všechny náhledy se zobrazí
+	- Obrázky nejsou rozmazané nebo chybné
+
+Vstupní data:
+	- Žádná
+
+Postconditions:
+	- Žádné změny
+
+Logy a úklid:
+	- Screenshot celé galerie

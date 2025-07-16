@@ -1,0 +1,30 @@
+ID: TC002
+Název: Funkčnost hlavního headeru
+
+Stručný popis:
+Test ověřuje, že hlavního headeru na úvodní stránce je viditelný, zobrazuje správný obsah, a případně přesměrovává na příslušnou stránku.
+
+Preconditions:
+	- Načtená hlavní stránka města Bzenec
+	- Prohlížeč podporuje zobrazení obrázků a skriptů
+
+Testovací kroky:
+	1. Na stránce https://www.bzenec.cz vyhledej hl
+	2. Zkontroluj, zda se header zobrazuje bez chyb
+	3. Pokud je header klikací, klikni na něj a sledujme chování
+
+Očekávaný výsledek:
+	- header je viditelný a jeho obsah je aktuální
+	- Pokud je header odkazem, vede na správnou cílovou stránku
+	- Žádné vizuální chyby 
+
+Vstupní data:
+	- Žádná specifická vstupní data
+
+Postconditions:
+	- Možnost návratu zpět na hlavní stránku
+	- Test nemění stav systému
+
+Logy a úklid:
+	- Screenshot zobrazeného headeruu
+	- Zaznamenání cílové URL po kliknutí (pokud existuje)

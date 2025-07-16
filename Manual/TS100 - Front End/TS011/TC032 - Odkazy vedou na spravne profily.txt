@@ -1,0 +1,26 @@
+ID: TC032
+Název: Odkazy vedou na správné profily
+
+Stručný popis:
+Ověřuje, že po kliknutí na ikonu sociální sítě je uživatel přesměrován na oficiální profil města Bzenec na dané síti.
+
+Preconditions:
+	- Ikony sociálních sítí jsou viditelné a aktivní
+
+Testovací kroky:
+	1. Klikni na každou ikonu (např. Facebook)
+	2. Sleduj, zda jsi přesměrován na správny dokaz
+	3. Zkontroluj, že profil odpovídá městu Bzenec
+
+Očekávaný výsledek:
+	- Každý odkaz vede na oficiální a funkční profil města
+	- Nezobrazí se chyba 404 nebo cizí profil
+
+Vstupní data:
+	- Ikony sociálních sítí
+
+Postconditions:
+	- Historie prohlížeče obsahuje odkazy
+
+Logy a úklid:
+	- Screenshoty cílových profilů

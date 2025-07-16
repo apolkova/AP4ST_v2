@@ -1,0 +1,25 @@
+ID: TC016-2
+Název: Dle data
+
+Stručný popis:
+Testuje funkčnost filtrování událostí dle měsíce nebo konkrétního období.
+
+Preconditions:
+	- Kalendář akcí aktivní
+	- Filtrovací prvek pro datum je funkční
+
+Testovací kroky:
+	1. Vyber konkrétní měsíc z kalendáře (např. květen)
+	2. Sleduj změnu v seznamu událostí
+
+Očekávaný výsledek:
+	- Výpis obsahuje pouze události z vybraného měsíce
+
+Vstupní data:
+	- Měsíc: květen
+
+Postconditions:
+	- Výběr lze změnit nebo zrušit
+
+Logy a úklid:
+	- Screenshot výsledků pro zvolený měsíc

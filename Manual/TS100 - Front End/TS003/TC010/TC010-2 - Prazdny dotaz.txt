@@ -1,0 +1,27 @@
+ID: TC010-2
+Název: Prázdný dotaz
+
+Stručný popis:
+Ověřuje, jak se systém chová při spuštění vyhledávání bez zadání textu.
+
+Preconditions:
+	- Načtená stránka
+	- Prázdné vyhledávací pole
+
+Testovací kroky:
+	1. Klikni do pole pro vyhledávání, ale nic nezadej
+	2. Klikni na tlačítko hledat nebo stiskni Enter
+	3. Sleduj, zda web zobrazí varování nebo výchozí výsledky
+
+Očekávaný výsledek:
+	- Zobrazí se vhodná zpráva nebo výchozí výsledky
+	- Zobrazí se notifikace - Neplatná vyhledávací fráze
+
+Vstupní data:
+	- Prázdný vstup
+
+Postconditions:
+	- Web zůstává nezměněn
+
+Logy a úklid:
+	- Screenshot výsledku hledání

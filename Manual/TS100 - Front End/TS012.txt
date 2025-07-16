@@ -1,0 +1,21 @@
+ID: TS012  
+Název: Přístupnost a dostupnost
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuální
+
+Očekávaný výsledek:  
+    Stránka je ovladatelná z klávesnice, obsahuje alternativní popisky a lze zvětšovat text.
+
+Stručný popis:  
+    Testuje se webová přístupnost dle základních pravidel WCAG.
+
+Pre-conditions:  
+    - Standardní nastavení prohlížeče  
+
+Obsahuje:  
+    TC033 - Navigace pomocí klávesnice  
+    TC034 - Zvětšení textu  
+    TC035 - Alt popisky obrázků  

@@ -1,0 +1,30 @@
+ID: TC007  
+Název: Menu Turismus
+
+Stručný popis:  
+Test ověřuje, zda je hlavní položka „Turismus“ přístupná a zda obsahuje správně funkční pododkazy „Tipy na výlet“, „Informační centrum“ a „Zažijte Bzenec“.
+
+Preconditions:
+	- Načtená hlavní stránka
+	- Navigační menu je k dispozici
+
+Testovací kroky:
+	1. Otevři hlavní menu a najdi položku „Turismus“
+	2. Najeď na ni myší a sleduj zobrazení podmenu
+	3. Zkontroluj, že všechny pododkazy jsou přítomné
+		- „Tipy na výlet“
+		- „Informační centrum“
+		- „Zažijte Bzenec“.
+
+Očekávaný výsledek:
+	- Všechny tři odkazy se zobrazí bez problému
+	- Kliknutím vede každý na správnou stránku
+
+Vstupní data:
+	- Není potřeba nic vyplňovat
+
+Postconditions:
+	- Žádné
+
+Logy a úklid:
+	- Screenshot rozbaleného menu

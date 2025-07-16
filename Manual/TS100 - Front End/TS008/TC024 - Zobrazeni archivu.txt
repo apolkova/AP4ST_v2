@@ -1,0 +1,27 @@
+ID: TC024
+Název: Zobrazení archivů
+
+Stručný popis:
+Testuje, zda je na webu dostupný archiv vydání Bzeneckého zpravodaje a že obsahuje přehledné odkazy na jednotlivé ročníky nebo čísla.
+
+Preconditions:
+	- Webová stránka načtena
+	- Sekce „Bzenecký zpravodaj“ je dostupná
+
+Testovací kroky:
+	1. Otevři sekci „Bzenecký zpravodaj“
+	2. Sleduj, zda se zobrazí výpis archivovaných čísel
+	3. Zkontroluj jejich názvy a roky
+
+Očekávaný výsledek:
+	- Archiv je dostupný
+	- Každé číslo má název, datum a odkaz
+
+Vstupní data:
+	- Není třeba
+
+Postconditions:
+	- Web zůstává beze změny
+
+Logy a úklid:
+	- Screenshot archivní stránky

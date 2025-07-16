@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:27:22.859010" rpa="false" schemaversion="5">
+<suite id="s1" name="TC005" source="C:\Users\Adelka\Desktop\v55\Automated\TC005.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři hlavní stránku města Bzenec" line="9">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:23.220446" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/'.</msg>
+<msg time="2025-05-11T04:27:23.586432" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:27:23.220181" elapsed="2.742424"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:27:25.963198" elapsed="0.067482"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:27:26.031054" elapsed="0.042075"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:27:26.073536" elapsed="0.043514"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:26.136090" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:27:26.117313" elapsed="0.018900"/>
+</kw>
+<arg>${URL_Bzenec_HomePage}</arg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:27:23.218944" elapsed="2.917438"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:27:23.217996" elapsed="2.918779"/>
+</test>
+<test id="s1-t2" name="TC005 - Ověření rozbalení a přítomnosti podmenu Pro občany" line="12">
+<kw name="Open and Verify Dropdown Menu" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:26.154522" level="INFO">Current page contains element 'xpath=//span[contains(text(),'Pro občany')]'.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:27:26.138522" elapsed="0.016166"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:26.179043" level="INFO">Element 'xpath=//span[contains(text(),'Pro občany')]' is displayed.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:27:26.154970" elapsed="0.024220"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:26.179659" level="INFO">Simulating Mouse Over on element 'xpath=//span[contains(text(),'Pro občany')]'.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:26.179417" elapsed="0.292633"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Menu_Item}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:27:26.472305" elapsed="0.012838"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:26.485635" level="INFO">Simulating Mouse Over on element 'xpath=//a[@class='navbar-item'][contains(text(),'Důležitá sdělení')]'.</msg>
+<arg>${Button_Item_Submenu}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:26.485390" elapsed="0.281411"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:26.767280" level="INFO">Clicking element 'xpath=//a[@class='navbar-item'][contains(text(),'Důležitá sdělení')]'.</msg>
+<arg>${Button_Item_Submenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:26.767035" elapsed="0.083697"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Submenu}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:27:26.850958" elapsed="0.620983"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:27.486941" level="INFO">Current page contains element 'xpath=//h1[contains(text(),'Důležitá sdělení')]'.</msg>
+<arg>${Heading_Submenu}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:27:27.472164" elapsed="0.014921"/>
+</kw>
+<arg>${Button_Menu_ProObcany_XPath}</arg>
+<arg>${Button_ProObcany_DulezitaSdeleni_XPath}</arg>
+<arg>${URL_Menu_DulezitaSdeleni}</arg>
+<arg>${Heading_DulezitaSdeleni_XPath}</arg>
+<status status="PASS" start="2025-05-11T04:27:26.137953" elapsed="1.349250"/>
+</kw>
+<kw name="Return to MainPage" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:27.488158" level="INFO">Clicking element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:27.487957" elapsed="0.095928"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Bzenec_HomePage}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:27:27.584167" elapsed="0.628446"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:28.221785" level="INFO">Current page contains element 'xpath=//h1[contains(text(), 'Město Bzenec')]'.</msg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:27:28.212866" elapsed="0.009024"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:27:27.487611" elapsed="0.734384"/>
+</kw>
+<kw name="Open and Verify Dropdown Menu" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:28.230008" level="INFO">Current page contains element 'xpath=//span[contains(text(),'Pro občany')]'.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:27:28.222951" elapsed="0.007171"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:28.245105" level="INFO">Element 'xpath=//span[contains(text(),'Pro občany')]' is displayed.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:27:28.230323" elapsed="0.014903"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:28.245747" level="INFO">Simulating Mouse Over on element 'xpath=//span[contains(text(),'Pro občany')]'.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:28.245443" elapsed="0.287654"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Menu_Item}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:27:28.533524" elapsed="0.016858"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:28.551001" level="INFO">Simulating Mouse Over on element 'xpath=//a[contains(text(),'Formuláře ke stažení')]'.</msg>
+<arg>${Button_Item_Submenu}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:28.550692" elapsed="0.289021"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:28.840164" level="INFO">Clicking element 'xpath=//a[contains(text(),'Formuláře ke stažení')]'.</msg>
+<arg>${Button_Item_Submenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:28.839935" elapsed="0.064250"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Submenu}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:27:28.904446" elapsed="0.825142"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:29.743658" level="INFO">Current page contains element 'xpath=//h1[@class='text-white text-3xl lg:text-6xl font-bold']'.</msg>
+<arg>${Heading_Submenu}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:27:29.729815" elapsed="0.013965"/>
+</kw>
+<arg>${Button_Menu_ProObcany_XPath}</arg>
+<arg>${Button_ProObcany_Formulare_XPath}</arg>
+<arg>${URL_Menu_Formulare}</arg>
+<arg>${Heading_Formulare_XPath}</arg>
+<status status="PASS" start="2025-05-11T04:27:28.222411" elapsed="1.521517"/>
+</kw>
+<kw name="Return to MainPage" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:29.745280" level="INFO">Clicking element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:29.744986" elapsed="0.060036"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Bzenec_HomePage}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:27:29.805268" elapsed="0.841093"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:30.655394" level="INFO">Current page contains element 'xpath=//h1[contains(text(), 'Město Bzenec')]'.</msg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:27:30.646649" elapsed="0.008848"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:27:29.744539" elapsed="0.911059"/>
+</kw>
+<kw name="Open and Verify Dropdown Menu" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:30.665326" level="INFO">Current page contains element 'xpath=//span[contains(text(),'Pro občany')]'.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:27:30.656529" elapsed="0.008925"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:30.686523" level="INFO">Element 'xpath=//span[contains(text(),'Pro občany')]' is displayed.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:27:30.665738" elapsed="0.020916"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:30.687209" level="INFO">Simulating Mouse Over on element 'xpath=//span[contains(text(),'Pro občany')]'.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:30.686916" elapsed="0.285525"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Menu_Item}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:27:30.972663" elapsed="0.013476"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:30.986566" level="INFO">Simulating Mouse Over on element 'xpath=//a[@class='navbar-item'][contains(text(),'Potřebuji vyřídit')]'.</msg>
+<arg>${Button_Item_Submenu}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:30.986345" elapsed="0.279812"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:31.266616" level="INFO">Clicking element 'xpath=//a[@class='navbar-item'][contains(text(),'Potřebuji vyřídit')]'.</msg>
+<arg>${Button_Item_Submenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:31.266383" elapsed="0.054468"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Submenu}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:27:31.321071" elapsed="1.033124"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:32.373849" level="INFO">Current page contains element 'xpath=//h1[contains(text(),'Potřebuji vyřídit')]'.</msg>
+<arg>${Heading_Submenu}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:27:32.354452" elapsed="0.019518"/>
+</kw>
+<arg>${Button_Menu_ProObcany_XPath}</arg>
+<arg>${Button_ProObcany_PotrebujiVyridit_XPath}</arg>
+<arg>${URL_Menu_PotrebujiVyridit}</arg>
+<arg>${Heading_PotrebujiVyridit_XPath}</arg>
+<status status="PASS" start="2025-05-11T04:27:30.656011" elapsed="1.718076"/>
+</kw>
+<kw name="Return to MainPage" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:32.375343" level="INFO">Clicking element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:27:32.375039" elapsed="0.070484"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Bzenec_HomePage}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:27:32.445869" elapsed="1.240259"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:27:33.700624" level="INFO">Current page contains element 'xpath=//h1[contains(text(), 'Město Bzenec')]'.</msg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:27:33.686451" elapsed="0.014313"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:27:32.374559" elapsed="1.326346"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC005</tag>
+<tag>TS002</tag>
+<status status="PASS" start="2025-05-11T04:27:26.137307" elapsed="7.563923"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="21">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:27:33.702508" elapsed="2.210761"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:27:33.701873" elapsed="2.211740"/>
+</test>
+<status status="PASS" start="2025-05-11T04:27:22.860749" elapsed="13.053562"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC005</stat>
+<stat pass="1" fail="0" skip="0">TS002</stat>
+</tag>
+<suite>
+<stat name="TC005" id="s1" pass="3" fail="0" skip="0">TC005</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:27:23.586432" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:34:31.980213" rpa="false" schemaversion="5">
+<suite id="s1" name="TC014" source="C:\Users\Adelka\Desktop\v55\Automated\TC014.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři stránku Úřední deska" line="13">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:32.311487" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/uredni-deska'.</msg>
+<msg time="2025-05-11T04:34:32.647671" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:34:32.311186" elapsed="2.406453"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.717914" elapsed="0.029797"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.747981" elapsed="0.008433"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.756674" elapsed="0.029732"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:34.800753" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.786641" elapsed="0.014229"/>
+</kw>
+<arg>${URL_Menu_UredniDeska}</arg>
+<arg>${Heading_UredniDeska_XPath}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:34:32.309818" elapsed="2.491173"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:34:32.308820" elapsed="2.492475"/>
+</test>
+<test id="s1-t2" name="TC014 - Ověření Detailů / Rozkliknuti oznameni" line="16">
+<kw name="Stranka Obsahuje" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:34.812126" level="INFO">Current page contains element 'xpath=//h1[contains(text(),'Úřední deska')]'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.802824" elapsed="0.009406"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:34.829340" level="INFO">Element 'xpath=//h1[contains(text(),'Úřední deska')]' is displayed.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.812444" elapsed="0.017003"/>
+</kw>
+<arg>${Heading_UredniDeska_XPath}</arg>
+<status status="PASS" start="2025-05-11T04:34:34.802440" elapsed="0.027128"/>
+</kw>
+<kw name="Stranka Obsahuje" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:34.900101" level="INFO">Current page contains element 'xpath=//div[@class='text-secondary-light font-bold']//span[contains(text(),'Vyvěšeno od')]'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.830410" elapsed="0.069797"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:34.916987" level="INFO">Element 'xpath=//div[@class='text-secondary-light font-bold']//span[contains(text(),'Vyvěšeno od')]' is displayed.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.900426" elapsed="0.016669"/>
+</kw>
+<arg>${Heading_UD_VyvysenoOd}</arg>
+<status status="PASS" start="2025-05-11T04:34:34.829999" elapsed="0.087209"/>
+</kw>
+<kw name="Stranka Obsahuje" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:34.933600" level="INFO">Current page contains element 'xpath=//div[@class='text-secondary-light font-bold']//span[contains(text(),'Vyvěšeno do')]'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.918188" elapsed="0.015514"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:34.949355" level="INFO">Element 'xpath=//div[@class='text-secondary-light font-bold']//span[contains(text(),'Vyvěšeno do')]' is displayed.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.933908" elapsed="0.015601"/>
+</kw>
+<arg>${Heading_UD_VyvysenoDo}</arg>
+<status status="PASS" start="2025-05-11T04:34:34.917776" elapsed="0.031853"/>
+</kw>
+<kw name="Stranka Obsahuje" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:34.965669" level="INFO">Current page contains element 'xpath=//span[normalize-space()='Kategorie']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.950579" elapsed="0.015222"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:34.980510" level="INFO">Element 'xpath=//span[normalize-space()='Kategorie']' is displayed.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.966095" elapsed="0.014519"/>
+</kw>
+<arg>${Heading_UD_Kategorie}</arg>
+<status status="PASS" start="2025-05-11T04:34:34.949997" elapsed="0.030726"/>
+</kw>
+<kw name="Stranka Obsahuje" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:34.995425" level="INFO">Current page contains element 'xpath=//span[normalize-space()='Název']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.981544" elapsed="0.013986"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:35.010040" level="INFO">Element 'xpath=//span[normalize-space()='Název']' is displayed.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:34.995735" elapsed="0.014405"/>
+</kw>
+<arg>${Heading_UD_Nazev}</arg>
+<status status="PASS" start="2025-05-11T04:34:34.981145" elapsed="0.029097"/>
+</kw>
+<kw name="Stranka Obsahuje" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:35.024923" level="INFO">Current page contains element 'xpath=//form[@class='flex flex-wrap gap-3 xs:flex-nowrap js-classic-search mt-5 md:mt-6']//input[@id='vyhledavani']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:35.010899" elapsed="0.014129"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:35.038997" level="INFO">Element 'xpath=//form[@class='flex flex-wrap gap-3 xs:flex-nowrap js-classic-search mt-5 md:mt-6']//input[@id='vyhledavani']' is displayed.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:35.025237" elapsed="0.014056"/>
+</kw>
+<arg>${Input_UD_vyhledavani}</arg>
+<status status="PASS" start="2025-05-11T04:34:35.010546" elapsed="0.028860"/>
+</kw>
+<kw name="Stranka Obsahuje" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:35.053099" level="INFO">Current page contains element 'xpath=//button[@class='btn btn-primary hover:bg-black flex justify-center items-center max-xs:flex-1']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:35.040051" elapsed="0.013144"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:35.066840" level="INFO">Element 'xpath=//button[@class='btn btn-primary hover:bg-black flex justify-center items-center max-xs:flex-1']' is displayed.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:35.053393" elapsed="0.013543"/>
+</kw>
+<arg>${Button_UD_Hledat}</arg>
+<status status="PASS" start="2025-05-11T04:34:35.039706" elapsed="0.027332"/>
+</kw>
+<kw name="Stranka Obsahuje" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:35.080337" level="INFO">Current page contains element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:35.067773" elapsed="0.012659"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:35.094974" level="INFO">Element 'xpath=//button[@class='text-white']' is displayed.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:35.080626" elapsed="0.014481"/>
+</kw>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<status status="PASS" start="2025-05-11T04:34:35.067343" elapsed="0.027866"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC014</tag>
+<tag>TS004</tag>
+<status status="PASS" start="2025-05-11T04:34:34.801887" elapsed="0.293560"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="27">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:35.096453" elapsed="2.147633"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:34:35.095938" elapsed="2.148441"/>
+</test>
+<status status="PASS" start="2025-05-11T04:34:31.981796" elapsed="5.263233"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC014</stat>
+<stat pass="1" fail="0" skip="0">TS004</stat>
+</tag>
+<suite>
+<stat name="TC014" id="s1" pass="3" fail="0" skip="0">TC014</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:34:32.647671" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

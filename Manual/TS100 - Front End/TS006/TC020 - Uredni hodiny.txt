@@ -1,0 +1,27 @@
+ID: TC020
+Název: Úřední hodiny
+
+Stručný popis:
+Test ověřuje dostupnost a správnost zobrazení úředních hodin městského úřadu.
+
+Preconditions:
+	- Web města je aktivní
+	- Sekce „Úřední hodiny“ je dostupná z hlavního menu
+
+Testovací kroky:
+	1. Klikni na „Město a úřad“ > „Úřední hodiny“
+	2. Ověř, že se zobrazí dny a časy úředních hodin
+	3. Zkontroluj formát i úplnost údajů
+
+Očekávaný výsledek:
+	- Úřední hodiny jsou přehledně zobrazeny
+	- Nechybí žádný den nebo čas
+
+Vstupní data:
+	- Žádná
+
+Postconditions:
+	- Žádné změny
+
+Logy a úklid:
+	- Screenshot výpisu úředních hodin

@@ -1,0 +1,27 @@
+ID: TC031
+Název: Ikony sociálních sítí
+
+Stručný popis:
+Testuje, zda jsou na webové stránce města Bzenec zobrazeny ikony sociálních sítí jako Facebook.
+
+Preconditions:
+	- Hlavní stránka webu je načtena
+	- Patička obsahuje ikonu Faceboku, která je zárověň odkazem.
+
+Testovací kroky:
+	1. Přejdi na hlavní stránku
+	2. Sjeď dolů do patičky 
+	3. Zkontroluj přítomnost ikon sociálních sítí
+
+Očekávaný výsledek:
+	- Ikony jsou viditelné, zarovnané a zřetelné
+	- Každá ikona odpovídá dané síti
+
+Vstupní data:
+	- Žádná
+
+Postconditions:
+	- Žádné změny na webu
+
+Logy a úklid:
+	- Screenshot zobrazených ikon

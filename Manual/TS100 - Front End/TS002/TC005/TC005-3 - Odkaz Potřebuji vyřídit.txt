@@ -1,0 +1,26 @@
+ID: TC005-3
+Název: Odkaz Potřebuji vyřídit
+
+Stručný popis:
+Ověření, že podmenu „Potřebuji vyřídit“ funguje správně a vede na příslušnou stránku.
+
+Preconditions:
+	- Načtena hlavní stránka
+	- Menu „Pro občany“ dostupné
+
+Testovací kroky:
+	1. Otevři podmenu „Pro občany“
+	2. Klikni na „Potřebuji vyřídit“
+	3. Ověř, že se zobrazí relevantní obsah
+
+Očekávaný výsledek:
+	- Zobrazená stránka obsahuje informace o Potřebuji vyřídit
+
+Vstupní data:
+	- Odkaz: Potřebuji vyřídit
+
+Postconditions:
+	- Neprovádí se změna dat
+
+Logy a úklid:
+	- Screenshot výstupu

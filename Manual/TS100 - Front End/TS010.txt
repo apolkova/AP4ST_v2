@@ -1,0 +1,24 @@
+ID: TS010  
+Název: Videoobsah
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuální a Automatizovaný  
+
+Očekávaný výsledek:  
+    Videa lze spustit a přehrávač funguje správně.
+
+Stručný popis:  
+    Ověření přehrání videa, funkčnosti ovládacích prvků a kompatibility s prohlížečem.
+
+Pre-conditions:  
+    - Aktivní připojení k internetu  
+    - Stránka s videem načtena  
+
+Post-conditions:  
+    - Video bylo přehráno nebo pozastaveno  
+
+Obsahuje:  
+    TC029 - Přehrávání videa  
+    TC030 - Funkčnost přehrávače  

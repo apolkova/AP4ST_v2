@@ -1,0 +1,25 @@
+--ID: TC027
+Název: Zvětšení obrázku
+
+Stručný popis:
+Ověřuje, že po kliknutí na obrázek v galerii se tento obrázek zvětší do přehledného náhledu (lightbox efekt).
+
+Preconditions:
+	- Náhledy v galerii načteny
+
+Testovací kroky:
+	1. Klikni na libovolný náhled
+	2. Sleduj zvětšení obrázku
+
+Očekávaný výsledek:
+	- Obrázek se zvětší ve formě pop-up okna
+	- Možnost zavřít náhled
+
+Vstupní data:
+	- Libovolný obrázek
+
+Postconditions:
+	- Náhled lze zavřít bez chyb
+
+Logy a úklid:
+	- Screenshot otevřeného náhledu

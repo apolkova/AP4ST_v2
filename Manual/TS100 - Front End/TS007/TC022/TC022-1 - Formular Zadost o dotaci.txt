@@ -1,0 +1,26 @@
+ID: TC022-1
+Název: Formulář Zadost o dotaci
+
+Stručný popis:
+Ověřuje, že formulář „Žádost o dotaci“ je ke stažení, otevře se bez chyb a odpovídá obsahu.
+
+Preconditions:
+	- Stránka s formuláři dostupná
+
+Testovací kroky:
+	1. Klikni na odkaz „Žádost o dotaci“
+	2. Ověř, že se stáhne správný dokument
+	3. Zkontroluj obsah a čitelnost
+
+Očekávaný výsledek:
+	- Formulář odpovídá svému názvu
+	- Je v editovatelném formátu (PDF, DOC)
+
+Vstupní data:
+	- Vybraný formulář
+
+Postconditions:
+	- Test nemění žádná data
+
+Logy a úklid:
+	- Uložený soubor

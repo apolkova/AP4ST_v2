@@ -1,0 +1,27 @@
+ID: TC025
+Název: Stahování PDF
+
+Stručný popis:
+Testuje funkčnost odkazů ke stažení PDF verzí zpravodaje a jejich čitelnost po stažení.
+
+Preconditions:
+	- Archiv zpravodaje dostupný
+	- Odkaz na PDF aktivní
+
+Testovací kroky:
+	1. Vyber libovolné vydání zpravodaje
+	2. Klikni na odkaz pro stažení PDF
+	3. Ověř, že se soubor stáhne
+
+Očekávaný výsledek:
+	- PDF se stáhne bez chyby
+	- Odpovídá názvu vydání
+
+Vstupní data:
+	- Vybraný ročník/číslo
+
+Postconditions:
+	- Soubor lze uložit nebo smazat
+
+Logy a úklid:
+	- Název a velikost PDF

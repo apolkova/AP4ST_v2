@@ -1,0 +1,24 @@
+ID: TC023
+Název: Obsah formulářů
+
+Stručný popis:
+Rodičovský test pro ověření správné struktury jednotlivých formulářů – hlavička, název, pole pro vyplnění.
+
+Preconditions:
+	- Stažené formuláře
+
+Testovací kroky:
+	1. Otevři vybraný formulář
+	2. Zkontroluj grafickou a datovou strukturu
+
+Očekávaný výsledek:
+	- Každý formulář obsahuje hlavičku města, jasná pole, případně podpis
+
+Vstupní data:
+	- Vybraný formulář
+
+Postconditions:
+	- Dokument lze archivovat nebo odstranit
+
+Logy a úklid:
+	- Screenshot formuláře

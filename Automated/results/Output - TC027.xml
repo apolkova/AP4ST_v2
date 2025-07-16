@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:36:27.267804" rpa="false" schemaversion="5">
+<suite id="s1" name="TC027" source="C:\Users\Adelka\Desktop\v55\Automated\TC027.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři stránku Fotogalerie" line="12">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:27.615838" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/zazijte-bzenec-fotogalerie-bzenec-z-vysky'.</msg>
+<msg time="2025-05-11T04:36:27.968706" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:36:27.615576" elapsed="2.390987"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.006955" elapsed="0.040412"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.047744" elapsed="0.011696"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.059783" elapsed="0.048172"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:30.125929" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.108254" elapsed="0.017818"/>
+</kw>
+<arg>${URL_Fotografie_BzenecZVysky}</arg>
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:36:27.614406" elapsed="2.511804"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:36:27.613507" elapsed="2.513138"/>
+</test>
+<test id="s1-t2" name="TC027 - Ověření zvětšení obrázku po kliknutí na náhled" line="15">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:30.137249" level="INFO">Current page contains element 'xpath=//h1[contains(text(),'Bzenec z výšky')]'.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.127873" elapsed="0.009510"/>
+</kw>
+<kw name="Rozkliknout a zavrit obrazek" owner="Keywords">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.138319" elapsed="0.015698"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:30.162363" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' did not exist.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.154275" elapsed="0.008202"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:30.172251" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, 'lg-inner')]//img'.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.162706" elapsed="0.009710"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:30.196976" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.172727" elapsed="0.024370"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:30.197573" level="INFO">Clicking element 'xpath=//a[1]//picture[1]//img[1]'.</msg>
+<arg>${Image}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.197348" elapsed="0.105547"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.303120" elapsed="0.236101"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:30.556911" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' is displayed.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.539449" elapsed="0.017565"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:30.587325" level="INFO">Current page contains element 'xpath=//div[contains(@class, 'lg-sub-html')]'.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.557217" elapsed="0.030226"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:30.587941" level="INFO">Clicking element 'xpath=//button[contains(@class, 'lg-close')]'.</msg>
+<arg>${Button_Fotografie_Close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.587676" elapsed="0.081910"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.669992" elapsed="0.233177"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:30.917677" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.903425" elapsed="0.014377"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.918042" elapsed="0.016675"/>
+</kw>
+<arg>${Image_Fotografie_BzenecZVysky_1}</arg>
+<status status="PASS" start="2025-05-11T04:36:30.137859" elapsed="0.796986"/>
+</kw>
+<kw name="Rozkliknout a zavrit obrazek" owner="Keywords">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:30.935623" elapsed="0.231141"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:31.176017" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' did not exist.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.167125" elapsed="0.009344"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:31.189173" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, 'lg-inner')]//img'.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.176792" elapsed="0.012496"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:31.203472" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.189504" elapsed="0.014066"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:31.203983" level="INFO">Clicking element 'xpath=//a[2]//picture[1]//img[1]'.</msg>
+<arg>${Image}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.203767" elapsed="0.149638"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.353665" elapsed="0.234546"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:31.604406" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' is displayed.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.588631" elapsed="0.015874"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:31.611919" level="INFO">Current page contains element 'xpath=//div[contains(@class, 'lg-sub-html')]'.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.604721" elapsed="0.007295"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:31.612438" level="INFO">Clicking element 'xpath=//button[contains(@class, 'lg-close')]'.</msg>
+<arg>${Button_Fotografie_Close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.612215" elapsed="0.058895"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.671345" elapsed="0.230945"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:31.917051" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.902516" elapsed="0.014693"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.917525" elapsed="0.029010"/>
+</kw>
+<arg>${Image_Fotografie_BzenecZVysky_2}</arg>
+<status status="PASS" start="2025-05-11T04:36:30.935225" elapsed="1.011430"/>
+</kw>
+<kw name="Rozkliknout a zavrit obrazek" owner="Keywords">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:31.947430" elapsed="0.221744"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:32.176823" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' did not exist.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.169411" elapsed="0.007534"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:32.185087" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, 'lg-inner')]//img'.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.177182" elapsed="0.008002"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:32.198094" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.185425" elapsed="0.012765"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:32.198604" level="INFO">Clicking element 'xpath=//a[3]//picture[1]//img[1]'.</msg>
+<arg>${Image}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.198383" elapsed="0.075945"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.274580" elapsed="0.233757"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:32.542434" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' is displayed.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.508657" elapsed="0.033957"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:32.553014" level="INFO">Current page contains element 'xpath=//div[contains(@class, 'lg-sub-html')]'.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.542912" elapsed="0.010246"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:32.553829" level="INFO">Clicking element 'xpath=//button[contains(@class, 'lg-close')]'.</msg>
+<arg>${Button_Fotografie_Close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.553455" elapsed="0.072107"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.625846" elapsed="0.232575"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:32.872789" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.858646" elapsed="0.014242"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.873146" elapsed="0.018335"/>
+</kw>
+<arg>${Image_Fotografie_BzenecZVysky_3}</arg>
+<status status="PASS" start="2025-05-11T04:36:31.947048" elapsed="0.944679"/>
+</kw>
+<kw name="Rozkliknout a zavrit obrazek" owner="Keywords">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:32.892533" elapsed="0.223074"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:33.122559" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' did not exist.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.115831" elapsed="0.006830"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:33.129929" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, 'lg-inner')]//img'.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.122870" elapsed="0.007197"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:33.142538" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.130296" elapsed="0.012340"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:33.143055" level="INFO">Clicking element 'xpath=//a[4]//picture[1]//img[1]'.</msg>
+<arg>${Image}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.142832" elapsed="0.095335"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.238388" elapsed="0.230922"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:33.483789" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' is displayed.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.469529" elapsed="0.014357"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:33.491373" level="INFO">Current page contains element 'xpath=//div[contains(@class, 'lg-sub-html')]'.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.484089" elapsed="0.007416"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:33.492172" level="INFO">Clicking element 'xpath=//button[contains(@class, 'lg-close')]'.</msg>
+<arg>${Button_Fotografie_Close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.491813" elapsed="0.103508"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.595599" elapsed="0.229249"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:33.841588" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.825142" elapsed="0.016595"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.842030" elapsed="0.015944"/>
+</kw>
+<arg>${Image_Fotografie_BzenecZVysky_4}</arg>
+<status status="PASS" start="2025-05-11T04:36:32.892152" elapsed="0.965942"/>
+</kw>
+<kw name="Rozkliknout a zavrit obrazek" owner="Keywords">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:33.858899" elapsed="0.222863"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:34.089662" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' did not exist.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.082076" elapsed="0.007693"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:34.097606" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, 'lg-inner')]//img'.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.089991" elapsed="0.007718"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:34.109862" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.097909" elapsed="0.012050"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:34.110362" level="INFO">Clicking element 'xpath=//a[5]//picture[1]//img[1]'.</msg>
+<arg>${Image}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.110150" elapsed="0.109105"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.219761" elapsed="0.250336"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:34.486862" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' is displayed.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.470421" elapsed="0.016551"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:34.495430" level="INFO">Current page contains element 'xpath=//div[contains(@class, 'lg-sub-html')]'.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.487184" elapsed="0.008357"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:34.495979" level="INFO">Clicking element 'xpath=//button[contains(@class, 'lg-close')]'.</msg>
+<arg>${Button_Fotografie_Close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.495745" elapsed="0.073578"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.569667" elapsed="0.230834"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:34.813094" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.800843" elapsed="0.012348"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.813394" elapsed="0.013252"/>
+</kw>
+<arg>${Image_Fotografie_BzenecZVysky_5}</arg>
+<status status="PASS" start="2025-05-11T04:36:33.858525" elapsed="0.968243"/>
+</kw>
+<kw name="Rozkliknout a zavrit obrazek" owner="Keywords">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:34.827598" elapsed="0.221987"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.058544" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' did not exist.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.049938" elapsed="0.008757"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.070195" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, 'lg-inner')]//img'.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.058993" elapsed="0.011362"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.086846" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.070757" elapsed="0.016188"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.087371" level="INFO">Clicking element 'xpath=//a[6]//picture[1]//img[1]'.</msg>
+<arg>${Image}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.087152" elapsed="0.116776"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.204173" elapsed="0.041100"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.266931" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' is displayed.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.245566" elapsed="0.021513"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.277954" level="INFO">Current page contains element 'xpath=//div[contains(@class, 'lg-sub-html')]'.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.267385" elapsed="0.010704"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.278704" level="INFO">Clicking element 'xpath=//button[contains(@class, 'lg-close')]'.</msg>
+<arg>${Button_Fotografie_Close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.278361" elapsed="0.084519"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.363100" elapsed="0.014604"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.413899" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.377918" elapsed="0.036080"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.414198" elapsed="0.017879"/>
+</kw>
+<arg>${Image_Fotografie_BzenecZVysky_6}</arg>
+<status status="PASS" start="2025-05-11T04:36:34.827211" elapsed="0.604983"/>
+</kw>
+<kw name="Rozkliknout a zavrit obrazek" owner="Keywords">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.433071" elapsed="0.435127"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.874978" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' did not exist.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.868412" elapsed="0.006664"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.882759" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, 'lg-inner')]//img'.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.875280" elapsed="0.007645"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.898440" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.883259" elapsed="0.015279"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:35.898982" level="INFO">Clicking element 'xpath=//a[7]//picture[1]//img[1]'.</msg>
+<arg>${Image}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.898764" elapsed="0.092156"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:35.991216" elapsed="0.233665"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:36.239353" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' is displayed.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.225101" elapsed="0.014366"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:36.247706" level="INFO">Current page contains element 'xpath=//div[contains(@class, 'lg-sub-html')]'.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.239683" elapsed="0.008263"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:36.248576" level="INFO">Clicking element 'xpath=//button[contains(@class, 'lg-close')]'.</msg>
+<arg>${Button_Fotografie_Close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.248232" elapsed="0.065549"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.314028" elapsed="0.231147"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:36.561401" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.545395" elapsed="0.016133"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.561754" elapsed="0.015629"/>
+</kw>
+<arg>${Image_Fotografie_BzenecZVysky_7}</arg>
+<status status="PASS" start="2025-05-11T04:36:35.432623" elapsed="1.144886"/>
+</kw>
+<kw name="Rozkliknout a zavrit obrazek" owner="Keywords">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.578375" elapsed="0.228013"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:36.814003" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' did not exist.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.806612" elapsed="0.007489"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:36.821594" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, 'lg-inner')]//img'.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.814297" elapsed="0.007397"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:36.836370" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.821905" elapsed="0.014563"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:36.836941" level="INFO">Clicking element 'xpath=//a[8]//picture[1]//img[1]'.</msg>
+<arg>${Image}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.836705" elapsed="0.117128"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:36.954073" elapsed="0.239182"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:37.209928" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' is displayed.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.193592" elapsed="0.016435"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:37.218991" level="INFO">Current page contains element 'xpath=//div[contains(@class, 'lg-sub-html')]'.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.210228" elapsed="0.008871"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:37.219511" level="INFO">Clicking element 'xpath=//button[contains(@class, 'lg-close')]'.</msg>
+<arg>${Button_Fotografie_Close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.219293" elapsed="0.063330"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.282935" elapsed="0.233988"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:37.531117" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.517144" elapsed="0.014069"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.531412" elapsed="0.014790"/>
+</kw>
+<arg>${Image_Fotografie_BzenecZVysky_8}</arg>
+<status status="PASS" start="2025-05-11T04:36:36.577945" elapsed="0.968372"/>
+</kw>
+<kw name="Rozkliknout a zavrit obrazek" owner="Keywords">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.547462" elapsed="0.222492"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:37.776845" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' did not exist.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.770176" elapsed="0.006765"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:37.783796" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, 'lg-inner')]//img'.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.777135" elapsed="0.006758"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:37.797411" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.784086" elapsed="0.013431"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:37.797956" level="INFO">Clicking element 'xpath=//a[9]//picture[1]//img[1]'.</msg>
+<arg>${Image}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.797718" elapsed="0.076207"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:37.874215" elapsed="0.241482"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:38.133514" level="INFO">Element 'xpath=//div[contains(@class, 'lg-inner')]//img' is displayed.</msg>
+<arg>${Image_Lightbox_ZvetsenyObrazek}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:38.115990" elapsed="0.017647"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:38.143301" level="INFO">Current page contains element 'xpath=//div[contains(@class, 'lg-sub-html')]'.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:38.133899" elapsed="0.009503"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:38.143868" level="INFO">Clicking element 'xpath=//button[contains(@class, 'lg-close')]'.</msg>
+<arg>${Button_Fotografie_Close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:38.143615" elapsed="0.071921"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:38.215911" elapsed="0.233899"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:38.465647" level="INFO">Element 'xpath=//div[contains(@class, 'lg-sub-html')]' exists but is not displayed.</msg>
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:38.450067" elapsed="0.015710"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:38.466198" elapsed="0.017530"/>
+</kw>
+<arg>${Image_Fotografie_BzenecZVysky_9}</arg>
+<status status="PASS" start="2025-05-11T04:36:37.546906" elapsed="0.936940"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC027</tag>
+<tag>TS009</tag>
+<status status="PASS" start="2025-05-11T04:36:30.127341" elapsed="8.357043"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="28">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:36:38.485709" elapsed="2.207330"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:36:38.485219" elapsed="2.208149"/>
+</test>
+<status status="PASS" start="2025-05-11T04:36:27.269437" elapsed="13.424569"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC027</stat>
+<stat pass="1" fail="0" skip="0">TS009</stat>
+</tag>
+<suite>
+<stat name="TC027" id="s1" pass="3" fail="0" skip="0">TC027</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:36:27.968706" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

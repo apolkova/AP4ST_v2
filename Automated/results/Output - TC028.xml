@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:36:45.217227" rpa="false" schemaversion="5">
+<suite id="s1" name="TC028" source="C:\Users\Adelka\Desktop\v55\Automated\TC028.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři stránku Fotogalerie" line="14">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:45.591264" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/zazijte-bzenec-fotogalerie-bzenec-z-vysky'.</msg>
+<msg time="2025-05-11T04:36:45.977766" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:36:45.590933" elapsed="2.407949"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:36:47.999166" elapsed="0.040234"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:36:48.039952" elapsed="0.009292"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:48.049470" elapsed="0.033335"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:48.099693" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:48.083095" elapsed="0.016734"/>
+</kw>
+<arg>${URL_Fotografie_BzenecZVysky}</arg>
+<arg>${Heading_Fotografie_ZazijteBzenec_BzenecZVysky}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:36:45.589670" elapsed="2.510303"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:48.100614" level="INFO">Clicking element 'xpath=//a[1]//picture[1]//img[1]'.</msg>
+<arg>${Image_Fotografie_BzenecZVysky_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:48.100349" elapsed="0.111731"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:48.212471" elapsed="0.462136"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:36:45.588692" elapsed="3.086211"/>
+</test>
+<test id="s1-t2" name="TC028 - Ověření posouvání galerie (další obrázky)" line="19">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:48.675837" elapsed="0.015414"/>
+</kw>
+<kw name="Posouvani obrayku with buttons" owner="Keywords">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${Hodnota_Selenium_Speed_0.2s}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-05-11T04:36:48.692245" elapsed="0.000647"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:48.693260" elapsed="0.424204"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:49.117953" level="INFO">Clicking element 'xpath=//button[@id='lg-next-1']'.</msg>
+<arg>${Button_Lightbox_Next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:49.117712" elapsed="0.471370"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:49.589498" elapsed="0.417025"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:50.007129" level="INFO">Clicking element 'xpath=//button[@id='lg-next-1']'.</msg>
+<arg>${Button_Lightbox_Next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:50.006806" elapsed="0.459777"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:50.466829" elapsed="0.414710"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:50.882026" level="INFO">Clicking element 'xpath=//button[@id='lg-next-1']'.</msg>
+<arg>${Button_Lightbox_Next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:50.881785" elapsed="0.452506"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:51.334536" elapsed="0.415445"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:51.750491" level="INFO">Clicking element 'xpath=//button[@id='lg-next-1']'.</msg>
+<arg>${Button_Lightbox_Next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:51.750238" elapsed="0.449501"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:52.200108" elapsed="0.415587"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:52.616237" level="INFO">Clicking element 'xpath=//button[@id='lg-next-1']'.</msg>
+<arg>${Button_Lightbox_Next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:52.615976" elapsed="0.459831"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:53.076181" elapsed="0.432479"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:53.509253" level="INFO">Clicking element 'xpath=//button[@id='lg-next-1']'.</msg>
+<arg>${Button_Lightbox_Next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:53.508978" elapsed="0.451853"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:53.961102" elapsed="0.415122"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:54.376924" level="INFO">Clicking element 'xpath=//button[@id='lg-next-1']'.</msg>
+<arg>${Button_Lightbox_Next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:54.376678" elapsed="0.458696"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:54.835619" elapsed="0.415340"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:55.251450" level="INFO">Clicking element 'xpath=//button[@id='lg-next-1']'.</msg>
+<arg>${Button_Lightbox_Next}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:55.251208" elapsed="0.456031"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:55.707508" elapsed="0.416456"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:56.124456" level="INFO">Clicking element 'xpath=//button[@id='lg-prev-1']'.</msg>
+<arg>${Button_Lightbox_Previous}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:56.124211" elapsed="0.462189"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:56.586638" elapsed="0.415338"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:57.002473" level="INFO">Clicking element 'xpath=//button[@id='lg-prev-1']'.</msg>
+<arg>${Button_Lightbox_Previous}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:57.002229" elapsed="0.462999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:57.465493" elapsed="0.417590"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:57.883607" level="INFO">Clicking element 'xpath=//button[@id='lg-prev-1']'.</msg>
+<arg>${Button_Lightbox_Previous}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:57.883338" elapsed="0.497823"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:58.381421" elapsed="0.414714"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:58.796660" level="INFO">Clicking element 'xpath=//button[@id='lg-prev-1']'.</msg>
+<arg>${Button_Lightbox_Previous}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:58.796385" elapsed="0.453477"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:59.250109" elapsed="0.417500"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:59.668100" level="INFO">Clicking element 'xpath=//button[@id='lg-prev-1']'.</msg>
+<arg>${Button_Lightbox_Previous}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:59.667855" elapsed="0.470964"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:00.139130" elapsed="0.416417"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:00.556025" level="INFO">Clicking element 'xpath=//button[@id='lg-prev-1']'.</msg>
+<arg>${Button_Lightbox_Previous}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:00.555787" elapsed="0.456787"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:01.012838" elapsed="0.414167"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:01.427489" level="INFO">Clicking element 'xpath=//button[@id='lg-prev-1']'.</msg>
+<arg>${Button_Lightbox_Previous}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:01.427249" elapsed="0.452022"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:01.879512" elapsed="0.414936"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:02.294936" level="INFO">Clicking element 'xpath=//button[@id='lg-prev-1']'.</msg>
+<arg>${Button_Lightbox_Previous}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:02.294693" elapsed="0.466400"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:36:48.691882" elapsed="14.069354"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Fotografie_ZazijteBzenec_PhotoLabel}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:02.761573" elapsed="0.414539"/>
+</kw>
+<kw name="Posouvani obrazku with arrows" owner="Keywords">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${Hodnota_Selenium_Speed_0.2s}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-05-11T04:37:03.177026" elapsed="0.000239"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:03.177406" elapsed="0.413761"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:03.591845" level="INFO">Sending key(s) ('ARROW_RIGHT',) to page.</msg>
+<msg time="2025-05-11T04:37:03.591947" level="INFO">Pressing special key ARROW_RIGHT to browser.</msg>
+<msg time="2025-05-11T04:37:03.592002" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doPrava}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:03.591411" elapsed="0.210362"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:03.802015" elapsed="0.418343"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:04.221221" level="INFO">Sending key(s) ('ARROW_RIGHT',) to page.</msg>
+<msg time="2025-05-11T04:37:04.221314" level="INFO">Pressing special key ARROW_RIGHT to browser.</msg>
+<msg time="2025-05-11T04:37:04.221378" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doPrava}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:04.220627" elapsed="0.210302"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:04.431252" elapsed="0.418301"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:04.850601" level="INFO">Sending key(s) ('ARROW_RIGHT',) to page.</msg>
+<msg time="2025-05-11T04:37:04.850732" level="INFO">Pressing special key ARROW_RIGHT to browser.</msg>
+<msg time="2025-05-11T04:37:04.850802" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doPrava}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:04.849920" elapsed="0.215871"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:05.066040" elapsed="0.416474"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:05.483443" level="INFO">Sending key(s) ('ARROW_RIGHT',) to page.</msg>
+<msg time="2025-05-11T04:37:05.483557" level="INFO">Pressing special key ARROW_RIGHT to browser.</msg>
+<msg time="2025-05-11T04:37:05.483629" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doPrava}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:05.482856" elapsed="0.207901"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:05.691024" elapsed="0.435836"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:06.127529" level="INFO">Sending key(s) ('ARROW_RIGHT',) to page.</msg>
+<msg time="2025-05-11T04:37:06.127609" level="INFO">Pressing special key ARROW_RIGHT to browser.</msg>
+<msg time="2025-05-11T04:37:06.127655" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doPrava}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:06.127106" elapsed="0.208102"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:06.335530" elapsed="0.426081"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:06.762366" level="INFO">Sending key(s) ('ARROW_RIGHT',) to page.</msg>
+<msg time="2025-05-11T04:37:06.762445" level="INFO">Pressing special key ARROW_RIGHT to browser.</msg>
+<msg time="2025-05-11T04:37:06.762492" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doPrava}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:06.761933" elapsed="0.208555"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:06.970796" elapsed="0.416487"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:07.387980" level="INFO">Sending key(s) ('ARROW_RIGHT',) to page.</msg>
+<msg time="2025-05-11T04:37:07.388058" level="INFO">Pressing special key ARROW_RIGHT to browser.</msg>
+<msg time="2025-05-11T04:37:07.388103" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doPrava}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:07.387530" elapsed="0.207910"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:07.595761" elapsed="0.419214"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:08.015652" level="INFO">Sending key(s) ('ARROW_RIGHT',) to page.</msg>
+<msg time="2025-05-11T04:37:08.015731" level="INFO">Pressing special key ARROW_RIGHT to browser.</msg>
+<msg time="2025-05-11T04:37:08.015776" level="INFO">Releasing special key ARROW_RIGHT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doPrava}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:08.015227" elapsed="0.208173"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:08.223670" elapsed="0.418337"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:08.642864" level="INFO">Sending key(s) ('ARROW_LEFT',) to page.</msg>
+<msg time="2025-05-11T04:37:08.642990" level="INFO">Pressing special key ARROW_LEFT to browser.</msg>
+<msg time="2025-05-11T04:37:08.643078" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doLeva}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:08.642330" elapsed="0.210264"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:08.852943" elapsed="0.416565"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:09.270170" level="INFO">Sending key(s) ('ARROW_LEFT',) to page.</msg>
+<msg time="2025-05-11T04:37:09.270246" level="INFO">Pressing special key ARROW_LEFT to browser.</msg>
+<msg time="2025-05-11T04:37:09.270291" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doLeva}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:09.269751" elapsed="0.207736"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:09.477754" elapsed="0.417603"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:09.896030" level="INFO">Sending key(s) ('ARROW_LEFT',) to page.</msg>
+<msg time="2025-05-11T04:37:09.896111" level="INFO">Pressing special key ARROW_LEFT to browser.</msg>
+<msg time="2025-05-11T04:37:09.896319" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doLeva}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:09.895609" elapsed="0.207079"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:10.102941" elapsed="0.417566"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:10.521179" level="INFO">Sending key(s) ('ARROW_LEFT',) to page.</msg>
+<msg time="2025-05-11T04:37:10.521258" level="INFO">Pressing special key ARROW_LEFT to browser.</msg>
+<msg time="2025-05-11T04:37:10.521303" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doLeva}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:10.520751" elapsed="0.207922"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:10.728924" elapsed="0.415765"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:11.145438" level="INFO">Sending key(s) ('ARROW_LEFT',) to page.</msg>
+<msg time="2025-05-11T04:37:11.145522" level="INFO">Pressing special key ARROW_LEFT to browser.</msg>
+<msg time="2025-05-11T04:37:11.145567" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doLeva}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:11.144938" elapsed="0.208182"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:11.353479" elapsed="0.416520"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:11.770676" level="INFO">Sending key(s) ('ARROW_LEFT',) to page.</msg>
+<msg time="2025-05-11T04:37:11.770755" level="INFO">Pressing special key ARROW_LEFT to browser.</msg>
+<msg time="2025-05-11T04:37:11.770800" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doLeva}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:11.770245" elapsed="0.207853"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:11.978352" elapsed="0.416290"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:12.395311" level="INFO">Sending key(s) ('ARROW_LEFT',) to page.</msg>
+<msg time="2025-05-11T04:37:12.395392" level="INFO">Pressing special key ARROW_LEFT to browser.</msg>
+<msg time="2025-05-11T04:37:12.395437" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doLeva}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:12.394887" elapsed="0.208319"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image_Fotografie_BzenecZVysky_CurrentImage}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:12.603568" elapsed="0.420550"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:13.024797" level="INFO">Sending key(s) ('ARROW_LEFT',) to page.</msg>
+<msg time="2025-05-11T04:37:13.024880" level="INFO">Pressing special key ARROW_LEFT to browser.</msg>
+<msg time="2025-05-11T04:37:13.024926" level="INFO">Releasing special key ARROW_LEFT.</msg>
+<arg>${Hodnota_None}</arg>
+<arg>${Hodnota_doLeva}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:13.024374" elapsed="0.207766"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:37:03.176709" elapsed="10.055574"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC028</tag>
+<tag>TS009</tag>
+<status status="PASS" start="2025-05-11T04:36:48.675364" elapsed="24.557197"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="28">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:13.233750" level="INFO">Clicking element 'xpath=//button[contains(@class, 'lg-close')]'.</msg>
+<arg>${Button_Fotografie_Close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:13.233542" elapsed="0.506208"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:37:13.740154" elapsed="2.302175"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:37:13.233121" elapsed="2.809540"/>
+</test>
+<status status="PASS" start="2025-05-11T04:36:45.218979" elapsed="30.824340"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC028</stat>
+<stat pass="1" fail="0" skip="0">TS009</stat>
+</tag>
+<suite>
+<stat name="TC028" id="s1" pass="3" fail="0" skip="0">TC028</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:36:45.977766" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

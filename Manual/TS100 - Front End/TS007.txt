@@ -1,0 +1,30 @@
+ID: TS007  
+Název: Formuláře ke stažení
+
+Autor: Adéla Polková  
+Datum: 08.05.2025 
+
+Typ testu: Manuální
+
+Očekávaný výsledek:  
+    Formuláře jsou dostupné, lze je stáhnout a obsahují správné údaje.
+
+Stručný popis:  
+    Testuje se dostupnost, funkčnost odkazů a obsah stažených PDF formulářů.
+
+Pre-conditions:  
+    - Načtená stránka s formuláři  
+
+Post-conditions:  
+    - Soubory se úspěšně stáhnou  
+
+Obsahuje:  
+    TC021 - Dostupnost formulářů  
+        TC021-1 - Formuláře v sekcích  
+        TC021-2 - Odkazy na soubory  
+    TC022 - Stahování formulářů  
+        TC022-1 - Formulář "Žádost o dotaci"  
+        TC022-2 - Formulář "Kácení dřevin"  
+    TC023 - Obsah formulářů  
+        TC023-1 - Hlavička města  
+        TC023-2 - Jasná pole k vyplnění  

@@ -1,0 +1,24 @@
+ID: TC040-2
+Název: Neplatný e-mail
+
+Stručný popis:
+Testuje validaci neplatného e-mailu při přihlašování k odběru (např. bez @, bez domény).
+
+Preconditions:
+	- Formulář pro newsletter dostupný
+
+Testovací kroky:
+	1. Zadej neplatný e-mail (např. uzivateltestcz)
+	2. Klikni na přihlášení
+
+Očekávaný výsledek:
+	- Zobrazí se chyba „Neplatná e-mailová adresa“ nebo jiná validační hláška
+
+Vstupní data:
+	- uzivateltestcz
+
+Postconditions:
+	- E-mail není uložen
+
+Logy a úklid:
+	- Screenshot validační chyby

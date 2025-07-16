@@ -1,0 +1,27 @@
+ID: TC033
+Název: Navigace pomocí klávesnice
+
+Stručný popis:
+Testuje, zda je možné procházet web města pomocí klávesnice, zejména pomocí klávesy Tab a Enter.
+
+Preconditions:
+	- Web je načten v prohlížeči
+	- Myš není použita během testu
+
+Testovací kroky:
+	1. Otevři hlavní stránku webu
+	2. Pomocí klávesy Tab se přesouvej mezi prvky
+	3. Pomocí Enter aktivuj vybrané položky
+
+Očekávaný výsledek:
+	- Fokus se přesouvá logicky mezi prvky
+	- Navigace bez myši je plně funkční
+
+Vstupní data:
+	- Klávesnice
+
+Postconditions:
+	- Web se vrací do výchozího stavu
+
+Logy a úklid:
+	- Screenshot aktivního prvku (fokus)

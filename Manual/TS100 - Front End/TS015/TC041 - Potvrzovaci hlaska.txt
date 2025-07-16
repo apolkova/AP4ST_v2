@@ -1,0 +1,24 @@
+ID: TC041
+Název: Potvrzovací hláška
+
+Stručný popis:
+Ověřuje, že po správném přihlášení k newsletteru se zobrazí vhodná hláška potvrzující úspěšné odeslání.
+
+Preconditions:
+	- Odeslaný platný e-mail
+
+Testovací kroky:
+	1. Zadej platný e-mail a odešli ho
+	2. Sleduj, zda systém zobrazí potvrzovací hlášku
+
+Očekávaný výsledek:
+	- Zobrazí se např. hláška „Děkujeme za přihlášení“
+
+Vstupní data:
+	- uzivatel@test.cz
+
+Postconditions:
+	- Možnost odhlášení nebo správy odběru
+
+Logy a úklid:
+	- Screenshot hlášky

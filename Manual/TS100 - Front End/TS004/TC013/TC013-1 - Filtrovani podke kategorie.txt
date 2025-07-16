@@ -1,0 +1,24 @@
+ID: TC013-1
+Název: Filtrování dle kategorie
+
+Stručný popis:
+Testuje výběr kategorie oznámení a sledování změny výpisu podle výběru.
+
+Preconditions:
+	- Filtrovací pole „Kategorie“ je aktivní
+
+Testovací kroky:
+	1. Vyber kategorii: Hospodaření 2022
+	2. Sleduj změnu výpisu
+
+Očekávaný výsledek:
+	- Zobrazí se pouze oznámení dané kategorie
+
+Vstupní data:
+	- Kategorie: Hospodaření 2022
+
+Postconditions:
+	- Filtr lze vymazat
+
+Logy a úklid:
+	- Screenshot filtrovaného výpisu

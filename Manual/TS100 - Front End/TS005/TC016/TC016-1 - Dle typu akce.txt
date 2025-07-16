@@ -1,0 +1,24 @@
+ID: TC016-1
+Název: Dle typu akce
+
+Stručný popis:
+Testuje filtrování událostí podle typu akce, např. kultura, sport, přednáška apod.
+
+Preconditions:
+	- Filtrovací pole pro výběr typu je funkční
+
+Testovací kroky:
+	1. Vyber filtr typu události (např. Kultura)
+	2. Sleduj, zda se výpis aktualizuje
+
+Očekávaný výsledek:
+	- Zobrazí se pouze kulturní akce
+
+Vstupní data:
+	- Typ: Kultura
+
+Postconditions:
+	- Výpis lze znovu resetovat
+
+Logy a úklid:
+	- Screenshot výsledného výpisu

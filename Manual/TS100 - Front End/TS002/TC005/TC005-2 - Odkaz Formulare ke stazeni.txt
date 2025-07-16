@@ -1,0 +1,27 @@
+ID: TC005-2
+Název: Odkaz Formuláře ke stažení
+
+Stručný popis:
+Testuje funkčnost odkazu „Formuláře ke stažení“ v menu „Pro občany“.
+
+Preconditions:
+	- Menu „Pro občany“ dostupné
+	- Web načten bez chyb
+
+Testovací kroky:
+	1. Najeď na „Pro občany“
+	2. Klikni na „Formuláře ke stažení“
+	3. Sleduj načtení stránky
+
+Očekávaný výsledek:
+	- Zobrazí se obsah týkající se Formuláře ke stažení
+	- Stránka obsahuje ikonky s PDFkama
+
+Vstupní data:
+	- Výběr: Formuláře ke stažení
+
+Postconditions:
+	- Web zůstává beze změn
+
+Logy a úklid:
+	- Screenshot stránky

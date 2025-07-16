@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-09T15:59:30.917953" rpa="false" schemaversion="5">
+<suite id="s1" name="TC003" source="C:\Users\Adelka\Desktop\v55\Automated\TC003.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři hlavní stránku města Bzenec" line="11">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-09T15:59:31.437080" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/'.</msg>
+<msg time="2025-05-09T15:59:32.045678" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-05-09T15:59:31.436527" elapsed="2.726125">Execution terminated by signal</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-05-09T15:59:34.163198" elapsed="0.000087"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2025-05-09T15:59:34.163518" elapsed="0.000044"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-09T15:59:34.163757" elapsed="0.000049"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" start="2025-05-09T15:59:34.164007" elapsed="0.000050"/>
+</kw>
+<arg>${URL_Bzenec_HomePage}</arg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="FAIL" start="2025-05-09T15:59:31.434464" elapsed="2.729811">Execution terminated by signal</status>
+</kw>
+<status status="FAIL" start="2025-05-09T15:59:31.433276" elapsed="2.731456">Execution terminated by signal</status>
+</test>
+<test id="s1-t2" name="TC003-a - Ověření zobrazení mobilního menu při zmenšení okna" line="14">
+<tag>FrontEnd</tag>
+<tag>robot:exit</tag>
+<tag>TC003-a</tag>
+<tag>TS001</tag>
+<status status="FAIL" start="2025-05-09T15:59:34.165784" elapsed="0.000843">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t3" name="TC003-b Ověření zobrazení Desktopov0ho menu při zmaximalizovaneho okna" line="21">
+<tag>FrontEnd</tag>
+<tag>robot:exit</tag>
+<tag>TC003-b</tag>
+<tag>TS001</tag>
+<status status="FAIL" start="2025-05-09T15:59:34.167803" elapsed="0.000678">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t4" name="TC003-c Ověření zobrazení tabletoveho menu" line="29">
+<tag>FrontEnd</tag>
+<tag>robot:exit</tag>
+<tag>TC003-c</tag>
+<tag>TS001</tag>
+<status status="FAIL" start="2025-05-09T15:59:34.169099" elapsed="0.000474">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t5" name="Post-conditions - Zavři prohlížeč" line="36">
+<tag>robot:exit</tag>
+<status status="FAIL" start="2025-05-09T15:59:34.170156" elapsed="0.000496">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" start="2025-05-09T15:59:30.920460" elapsed="3.251118"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat info="combined" combined="NOT robot:exit" pass="0" fail="1" skip="0">NOT robot:exit</stat>
+<stat pass="0" fail="3" skip="0">FrontEnd</stat>
+<stat pass="0" fail="1" skip="0">TC003-a</stat>
+<stat pass="0" fail="1" skip="0">TC003-b</stat>
+<stat pass="0" fail="1" skip="0">TC003-c</stat>
+<stat pass="0" fail="3" skip="0">TS001</stat>
+</tag>
+<suite>
+<stat name="TC003" id="s1" pass="0" fail="5" skip="0">TC003</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-09T15:59:32.045678" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

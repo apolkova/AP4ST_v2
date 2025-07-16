@@ -1,0 +1,27 @@
+ID: TS005  
+Název: Kalendář událostí
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuální
+
+Očekávaný výsledek:  
+    Události se zobrazují dle filtrování a rozkliknutí detailu funguje.
+
+Stručný popis:  
+    Testuje se výpis událostí v kalendáři, jejich filtrování a zobrazení detailu.
+
+Pre-conditions:  
+    - Načtená stránka s kalendářem  
+    - Události načteny  
+
+Post-conditions:  
+    - Filtrovaný výstup nebo zobrazený detail  
+
+Obsahuje:  
+    TC015 - Zobrazení seznamu událostí  
+    TC016 - Filtrování událostí  
+        TC016-1 - Dle typu akce  
+        TC016-2 - Dle data  
+    TC017 - Detail události  

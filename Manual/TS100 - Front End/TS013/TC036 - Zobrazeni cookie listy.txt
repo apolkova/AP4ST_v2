@@ -1,0 +1,27 @@
+ID: TC036
+Název: Zobrazení cookie lišty
+
+Stručný popis:
+Test ověřuje, zda se po načtení webu zobrazuje cookie lišta, která informuje uživatele o zpracování osobních údajů.
+
+Preconditions:
+	- Uživatel navštíví stránku poprvé (nebo v anonymním režimu)
+	- Vymazaná historie a cookies
+
+Testovací kroky:
+	1. Otevři hlavní stránku města Bzenec
+	2. Sleduj, zda se v dolní nebo horní části zobrazí cookie lišta
+	3. Zkontroluj, zda obsahuje základní informace a možnost souhlasu/odmítnutí
+
+Očekávaný výsledek:
+	- Cookie lišta je viditelná
+	- Obsahuje text, tlačítka a odkaz na podmínky
+
+Vstupní data:
+	- První návštěva webu
+
+Postconditions:
+	- Po akci může být lišta skrytá
+
+Logy a úklid:
+	- Screenshot cookie lišty

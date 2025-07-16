@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:31:45.592759" rpa="false" schemaversion="5">
+<suite id="s1" name="TC010-1" source="C:\Users\Adelka\Desktop\v55\Automated\TC010-1.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři hlavní stránku města Bzenec" line="12">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:45.955019" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/'.</msg>
+<msg time="2025-05-11T04:31:46.310953" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:31:45.954752" elapsed="2.653236"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:31:48.608305" elapsed="0.054242"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:31:48.663023" elapsed="0.024742"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:31:48.688022" elapsed="0.029297"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:48.733588" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:31:48.717694" elapsed="0.016003"/>
+</kw>
+<arg>${URL_Bzenec_HomePage}</arg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:31:45.953515" elapsed="2.780299"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:48.753687" level="INFO">Current page contains element 'xpath=//button[@title='Vyhledávání']//span[@class='icon-svg icon-svg__icon-search']//*[name()='svg']'.</msg>
+<arg>${Button_Vyhledat_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:31:48.734134" elapsed="0.019723"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:31:45.952510" elapsed="2.801848"/>
+</test>
+<test id="s1-t2" name="TC010-1 - Vyhledání nesmlyslneho výrazu &quot;asdasd&quot; a &quot;oklsdfhds&quot; a kontrola výsledků" line="16">
+<kw name="Searching" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:48.756892" level="INFO">Clicking element 'xpath=//button[@title='Vyhledávání']//span[@class='icon-svg icon-svg__icon-search']//*[name()='svg']'.</msg>
+<arg>${Button_Vyhledat_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:31:48.756530" elapsed="0.129976"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:48.887243" level="INFO">Typing text 'asdasd' into text field 'xpath=//input[@id='vyhledavani']'.</msg>
+<arg>${Input_Vyhledat_XPath}</arg>
+<arg>${Hodnota}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:31:48.886827" elapsed="0.125286"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>${Input_Vyhledat_XPath}</arg>
+<arg>${Hodnota_Enter}</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:31:49.012437" elapsed="0.038432"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Vyhledavani_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:31:49.051218" elapsed="0.656019"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:49.726769" level="INFO">Current page contains text 'asdasd'.</msg>
+<arg>${Hodnota}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:31:49.707647" elapsed="0.019225"/>
+</kw>
+<arg>${Hodnota_asdasd}</arg>
+<status status="PASS" start="2025-05-11T04:31:48.755977" elapsed="0.971003"/>
+</kw>
+<kw name="Return to MainPage" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:49.727809" level="INFO">Clicking element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:31:49.727615" elapsed="0.122672"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Bzenec_HomePage}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:31:49.850721" elapsed="0.650831"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:50.512513" level="INFO">Current page contains element 'xpath=//h1[contains(text(), 'Město Bzenec')]'.</msg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:31:50.501964" elapsed="0.010658"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:31:49.727304" elapsed="0.785424"/>
+</kw>
+<kw name="Searching" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:50.513787" level="INFO">Clicking element 'xpath=//button[@title='Vyhledávání']//span[@class='icon-svg icon-svg__icon-search']//*[name()='svg']'.</msg>
+<arg>${Button_Vyhledat_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:31:50.513568" elapsed="0.099875"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:50.614053" level="INFO">Typing text 'oklsdfhds' into text field 'xpath=//input[@id='vyhledavani']'.</msg>
+<arg>${Input_Vyhledat_XPath}</arg>
+<arg>${Hodnota}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:31:50.613741" elapsed="0.086013"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>${Input_Vyhledat_XPath}</arg>
+<arg>${Hodnota_Enter}</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:31:50.699992" elapsed="0.036306"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Vyhledavani_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:31:50.736522" elapsed="0.445244"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:51.200124" level="INFO">Current page contains text 'oklsdfhds'.</msg>
+<arg>${Hodnota}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:31:51.182061" elapsed="0.018161"/>
+</kw>
+<arg>${Hodnota_oklsdfhds}</arg>
+<status status="PASS" start="2025-05-11T04:31:50.513098" elapsed="0.687224"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:51.217320" level="INFO">Current page contains text 'Na Váš dotaz se nepodařilo vyhledat žádné výsledky'.</msg>
+<arg>${Hodnota_ZadneVysledky}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:31:51.200608" elapsed="0.017056"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC010-1</tag>
+<tag>TS003</tag>
+<status status="PASS" start="2025-05-11T04:31:48.755083" elapsed="2.462898"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="23">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:31:51.219089" elapsed="2.189654"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:31:51.218581" elapsed="2.190476"/>
+</test>
+<status status="PASS" start="2025-05-11T04:31:45.594768" elapsed="7.815084"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC010-1</stat>
+<stat pass="1" fail="0" skip="0">TS003</stat>
+</tag>
+<suite>
+<stat name="TC010-1" id="s1" pass="3" fail="0" skip="0">TC010-1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:31:46.310953" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

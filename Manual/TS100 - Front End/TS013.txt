@@ -1,0 +1,24 @@
+ID: TS013  
+Název: Cookies a GDPR
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuální  
+
+Očekávaný výsledek:  
+    Zobrazí se cookie lišta a odkaz vede na zásady ochrany osobních údajů.
+
+Stručný popis:  
+    Testuje se právní náležitost ohledně cookies a GDPR.
+
+Pre-conditions:  
+    - První přístup na stránku  
+    - Vymazané cookies  
+
+Post-conditions:  
+    - Odsouhlasení nebo odmítnutí cookies  
+
+Obsahuje:  
+    TC036 - Zobrazení cookie lišty  
+    TC037 - Funkčnost odkazu "Zásady ochrany osobních údajů"  

@@ -1,0 +1,24 @@
+ID: TC040-1
+Název: Správně zadaný e-mail
+
+Stručný popis:
+Testuje, zda přihlášení k newsletteru proběhne úspěšně při zadání platného e-mailu.
+
+Preconditions:
+	- Pole pro e-mail je dostupné
+
+Testovací kroky:
+	1. Zadej platný e-mail (např. uzivatel@test.cz)
+	2. Klikni na tlačítko přihlášení
+
+Očekávaný výsledek:
+	- Zobrazí se potvrzovací hláška o úspěšném přihlášení
+
+Vstupní data:
+	- uzivatel@test.cz
+
+Postconditions:
+	- Adresa může být přidána do systému
+
+Logy a úklid:
+	- Screenshot hlášky

@@ -1,0 +1,106 @@
+TS100 - Front End
+    TS001 - Hlavní stránka
+        TC001 - Načtení hlavní stránky
+        TC002 - Funkčnost hlavního banneru
+        TC003 - Responzivita a mobilní zobrazení
+
+    TS002 - Navigační menu
+        TC004 - Funkčnost hlavního menu
+        TC005 - Menu "Pro občany"
+            TC005-1 - Odkaz "Důležité sdělení"
+            TC005-2 - Odkaz "Formuláře ke stažení"
+            TC005-3 - Odkaz "Potřebuji vyřídit"
+        TC006 - Menu "Život ve městě"
+            TC006-1 - Odkaz "Kultura"
+            TC006-2 - Odkaz "Sport"
+            TC006-3 - Odkaz "Bzenecky zpravodaj"
+        TC007 - Menu "Turismus"
+            TC007-1 - Odkaz "Zažijte Bzenec"
+            TC007-2 - Odkaz "Informační centrum"
+            TC007-3 - Odkaz "Tipy na výlet"
+        TC008 - Menu "Město a úřad"
+            TC008-1 - Odkaz "Město"
+            TC008-2 - Odkaz "Městský úřad"
+            TC008-3 - Odkaz "Úřední deska"
+        TC008-4 - Odkaz "Kontakty"
+
+    TS003 - Vyhledávání
+        TC009 - Vyhledání platného dotazu
+            TC009-1 - Hledání "formulář"
+            TC009-2 - Hledání "Bzenecký zpravodaj"
+        TC010 - Neplatné dotazy
+            TC010-1 - Hledání "asdasd" a "oklsdfhds"
+            TC010-2 - Prázdný dotaz
+        TC011 - Funkčnost tlačítka hledat
+
+    TS004 - Úřední deska
+        TC012 - Zobrazení oznámení
+            TC012-1 - Zobrazení názvů a dat
+            TC012-2 - Oznámení mají přílohy
+        TC013 - Filtrování oznámení
+            TC013-1 - Filtrování podle kategorie
+            TC013-2 - Filtrování podle typu
+        TC014 - Detail oznámení
+            TC014-1 - Kliknutí na detail
+            TC014-2 - Zobrazení PDF
+
+    TS005 - Kalendář událostí
+        TC015 - Zobrazení seznamu událostí
+        TC016 - Filtrování událostí
+            TC016-1 - Dle typu akce
+            TC016-2 - Dle data
+        TC017 - Detail události
+
+    TS006 - Kontakty a úřad
+        TC018 - Zobrazení kontaktů
+        TC019 - Odkazy na e-maily
+        TC020 - Úřední hodiny
+
+    TS007 - Formuláře ke stažení
+        TC021 - Dostupnost formulářů
+            TC021-1 - Formuláře v sekcích
+            TC021-2 - Odkazy na soubory
+        TC022 - Stahování formulářů
+            TC022-1 - Formulář "Žádost o dotaci"
+            TC022-2 - Formulář "Kácení dřevin"
+        TC023 - Obsah formulářů
+            TC023-1 - Hlavička města
+            TC023-2 - Jasná pole k vyplnění
+
+    TS008 - Bzenecký zpravodaj
+        TC024 - Zobrazení archivů
+        TC025 - Stahování PDF
+            TC025-1 - Správné otevření
+            TC025-2 - Čitelnost souboru
+
+    TS009 - Fotogalerie
+        TC026 - Zobrazení náhledů
+        TC027 - Zvětšení obrázku
+        TC028 - Posouvání galerie
+
+    TS010 - Videoobsah
+        TC029 - Přehrávání videa
+        TC030 - Funkčnost přehrávače
+
+    TS011 - Sociální sítě
+        TC031 - Ikona sociálních sítí
+        TC032 - Odkazy vedou na správné profily
+
+    TS012 - Přístupnost a dostupnost
+        TC033 - Navigace pomocí klávesnice
+        TC034 - Zvětšení textu
+        TC035 - Alt popisky obrázků
+
+    TS013 - Cookies a GDPR
+        TC036 - Zobrazení cookie lišty
+        TC037 - Funkčnost odkazu "Zásady ochrany osobních údajů"
+
+    TS014 - Mapa stránek
+        TC038 - Struktura webu
+        TC039 - Funkčnost všech odkazů
+
+    TS015 - Newsletter
+        TC040 - Přihlášení k odběru
+            TC040-1 - Správně zadaný e-mail
+            TC040-2 - Neplatný e-mail
+        TC041 - Potvrzovací hláška

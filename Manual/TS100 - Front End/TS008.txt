@@ -1,0 +1,25 @@
+ID: TS008  
+Název: Bzenecký zpravodaj
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuální a Automatizovaný  
+
+Očekávaný výsledek:  
+    Archiv zpravodajů je dostupný a PDF soubory jsou čitelné.
+
+Stručný popis:  
+    Testuje se zobrazení archivovaných čísel zpravodaje a funkčnost jejich stahování.
+
+Pre-conditions:  
+    - Načtená stránka zpravodaje  
+
+Post-conditions:  
+    - Otevřená/stažená PDF fungují správně  
+
+Obsahuje:  
+    TC024 - Zobrazení archivů  
+    TC025 - Stahování PDF  
+        TC025-1 - Správné otevření  
+        TC025-2 - Čitelnost souboru  

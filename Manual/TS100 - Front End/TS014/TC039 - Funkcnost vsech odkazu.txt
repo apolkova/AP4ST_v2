@@ -1,0 +1,25 @@
+ID: TC039
+Název: Funkčnost všech odkazů
+
+Stručný popis:
+Testuje, zda všechny odkazy v mapě stránek fungují a vedou na správné části webu bez chybových stránek.
+
+Preconditions:
+	- Načtená stránka mapy webu
+
+Testovací kroky:
+	1. Klikni postupně na všechny odkazy v mapě
+	2. Sleduj, zda se každá cílová stránka načte správně (HTTP 200)
+
+Očekávaný výsledek:
+	- Každý odkaz je funkční
+	- Nedochází k přesměrování na chybovou stránku
+
+Vstupní data:
+	- Odkazy z mapy stránek
+
+Postconditions:
+	- Historie obsahuje navštívené stránky
+
+Logy a úklid:
+	- Seznam otestovaných odkazů

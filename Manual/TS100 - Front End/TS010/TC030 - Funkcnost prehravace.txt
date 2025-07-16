@@ -1,0 +1,26 @@
+ID: TC030
+Název: Funkčnost přehrávače
+
+Stručný popis:
+Ověřuje funkčnost ovládacích prvků přehrávače videa – pauza, posun v čase, ovládání hlasitosti a fullscreen režim. Budeme testovat stejne video na sttejne strance jak v TC029
+
+Preconditions:
+	- Video na stránce https://www.bzenec.cz/videoreportaze/383-bzenecka-pout-prinesla-duchovni-zamysleni-folklor-i-zabavu je přehratelné
+
+Testovací kroky:
+	1. Spusť video
+	2. Použij tlačítka pauza, hlasitost, resolution a fullscreen
+	3. Sleduj reakci přehrávače
+
+Očekávaný výsledek:
+	- Všechny ovládací prvky reagují správně
+	- Nedochází k výpadku nebo zadrhávání
+
+Vstupní data:
+	- Video vložené na stránce
+
+Postconditions:
+	- Video může být pozastaveno nebo uzavřeno
+
+Logy a úklid:
+	- Screenshot přehrávače při interakci

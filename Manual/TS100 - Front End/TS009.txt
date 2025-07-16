@@ -1,0 +1,24 @@
+ID: TS009  
+Název: Fotogalerie
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuální a Automatizovaný  
+
+Očekávaný výsledek:  
+    Fotogalerie správně načítá náhledy a umožňuje interakci.
+
+Stručný popis:  
+    Testuje se načítání galerie, zvětšování obrázků a procházení fotografií.
+
+Pre-conditions:  
+    - Otevřená sekce galerie  
+
+Post-conditions:  
+    - Obrázky zobrazitelné a funkčně přepínatelné  
+
+Obsahuje:  
+    TC026 - Zobrazení náhledů  
+    TC027 - Zvětšení obrázku  
+    TC028 - Posouvání galerie  

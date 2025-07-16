@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:38:17.430949" rpa="false" schemaversion="5">
+<suite id="s1" name="TC040-1" source="C:\Users\Adelka\Desktop\v55\Automated\TC040-1.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři hlavní stránku Bzence" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:17.732649" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/'.</msg>
+<msg time="2025-05-11T04:38:18.112281" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL_Bzenec_HomePage}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:38:17.732342" elapsed="2.942499"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Bzenec_HomePage}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:38:20.675272" elapsed="0.008072"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_OdberNovinek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:38:20.683682" elapsed="0.037333"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${Heading_OdberNovinek}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-05-11T04:38:20.721350" elapsed="0.283348"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:38:17.731142" elapsed="3.273968"/>
+</test>
+<test id="s1-t2" name="TC040-1 - Přihlášení k odběru s platným e-mailem" line="18">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${Hodnota_Selenium_Speed_0.5s}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-05-11T04:38:21.006361" elapsed="0.000289"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_OdberNovinek}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:38:21.006868" elapsed="1.021708"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:23.053113" level="INFO">Element 'xpath=//input[@id='frm-modules-footer-module4-form-email']' is displayed.</msg>
+<arg>${Input_OdberNovinek}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:38:22.028923" elapsed="1.024441"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:24.076092" level="INFO">Element 'xpath=//button[@name='_submit']' is displayed.</msg>
+<arg>${Buton_OdberNovinek}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:38:23.053882" elapsed="1.022421"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:24.077106" level="INFO">Typing text 'a_polkova@utb.cz' into text field 'xpath=//input[@id='frm-modules-footer-module4-form-email']'.</msg>
+<arg>${Input_OdberNovinek}</arg>
+<arg>${Hodnota_OdberNovinek_platny}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:38:24.076726" elapsed="1.624109"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:25.701562" level="INFO">Simulating Mouse Over on element 'xpath=//button[@name='_submit']'.</msg>
+<arg>${Buton_OdberNovinek}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:38:25.701284" elapsed="1.273957"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${Buton_OdberNovinek}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-05-11T04:38:26.975633" elapsed="1.523762"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:28.500131" level="INFO">Clicking element 'xpath=//button[@name='_submit']'.</msg>
+<arg>${Buton_OdberNovinek}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:38:28.499846" elapsed="1.087068"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC040-1</tag>
+<tag>TS015</tag>
+<status status="PASS" start="2025-05-11T04:38:21.005837" elapsed="8.581490"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="29">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:38:29.589319" elapsed="3.718657"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:38:29.588159" elapsed="3.720208"/>
+</test>
+<status status="PASS" start="2025-05-11T04:38:17.433152" elapsed="15.876104"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC040-1</stat>
+<stat pass="1" fail="0" skip="0">TS015</stat>
+</tag>
+<suite>
+<stat name="TC040-1" id="s1" pass="3" fail="0" skip="0">TC040-1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:38:18.112281" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

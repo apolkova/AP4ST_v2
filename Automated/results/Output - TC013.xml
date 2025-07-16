@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:32:44.643802" rpa="false" schemaversion="5">
+<suite id="s1" name="TC013" source="C:\Users\Adelka\Desktop\v55\Automated\TC013.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři stránku Úřední deska" line="12">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:45.002275" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/uredni-deska'.</msg>
+<msg time="2025-05-11T04:32:45.359832" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:32:45.002007" elapsed="2.599663"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.601961" elapsed="0.081247"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.683466" elapsed="0.008724"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.692457" elapsed="0.036111"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.755006" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.728828" elapsed="0.026309"/>
+</kw>
+<arg>${URL_Menu_UredniDeska}</arg>
+<arg>${Heading_UredniDeska_XPath}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:32:45.000793" elapsed="2.754471"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:32:44.999808" elapsed="2.755745"/>
+</test>
+<test id="s1-t2" name="TC013 - Ověření zobrazení filtračních prvků na Úřední desce" line="15">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.826411" level="INFO">Current page contains element 'xpath=//form[@class='flex flex-wrap gap-3 xs:flex-nowrap js-classic-search mt-5 md:mt-6']//input[@id='vyhledavani']'.</msg>
+<arg>${Input_UD_vyhledavani}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.756875" elapsed="0.069713"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.844546" level="INFO">Current page contains element 'xpath=//button[@class='btn btn-primary hover:bg-black flex justify-center items-center max-xs:flex-1']'.</msg>
+<arg>${Button_UD_Hledat}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.827222" elapsed="0.017422"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.859164" level="INFO">Current page contains element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.844950" elapsed="0.014311"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.874283" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[@class='c-custom-select__items']//div[2]'.</msg>
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.859555" elapsed="0.014856"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.890586" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[3]'.</msg>
+<arg>${Input_UD_Kategorie_Hospodareni2023_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.874747" elapsed="0.015938"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.905202" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[4]'.</msg>
+<arg>${Input_UD_Kategorie_Informator_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.890983" elapsed="0.014324"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.923680" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[5]'.</msg>
+<arg>${Input_UD_Kategorie_Mikroregion_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.905622" elapsed="0.018177"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.937346" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[6]'.</msg>
+<arg>${Input_UD_Kategorie_NarizeniMesta_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.924233" elapsed="0.013213"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.951776" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[7]'.</msg>
+<arg>${Input_UD_Kategorie_Vyhlasky_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.937743" elapsed="0.014170"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.971056" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[8]'.</msg>
+<arg>${Input_UD_Kategorie_PostaProObcany_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.952869" elapsed="0.018304"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:47.988628" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[9]'.</msg>
+<arg>${Input_UD_Kategorie_Rozpocet2023_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.971622" elapsed="0.017126"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.004784" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[10]'.</msg>
+<arg>${Input_UD_Kategorie_Rozpocet2024_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:47.989094" elapsed="0.015800"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.018678" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[11]'.</msg>
+<arg>${Input_UD_Kategorie_Rozpocet2025_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.005235" elapsed="0.013755"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.033419" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[12]'.</msg>
+<arg>${Input_UD_Kategorie_SocialniOdbor_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.019316" elapsed="0.014215"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.048857" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[13]'.</msg>
+<arg>${Input_UD_Kategorie_SpravaMajetku_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.033949" elapsed="0.015026"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.062733" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[14]'.</msg>
+<arg>${Input_UD_Kategorie_StavebniUrad_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.049317" elapsed="0.013518"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.079624" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[15]'.</msg>
+<arg>${Input_UD_Kategorie_Tajemnik_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.063229" elapsed="0.016510"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.096140" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[16]'.</msg>
+<arg>${Input_UD_Kategorie_UsneseniRady_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.080181" elapsed="0.016085"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.110604" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[17]'.</msg>
+<arg>${Input_UD_Kategorie_ZastupovaniStat_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.096684" elapsed="0.014027"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.126680" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[18]'.</msg>
+<arg>${Input_UD_Kategorie_VerejnopravniSmlouvy_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.111079" elapsed="0.015712"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.140655" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[19]'.</msg>
+<arg>${Input_UD_Kategorie_Volby_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.127104" elapsed="0.013654"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.148409" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[7]'.</msg>
+<arg>${Input_UD_Kategorie_Vyhlasky_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.141066" elapsed="0.007441"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.164024" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[21]'.</msg>
+<arg>${Input_UD_Kategorie_VypisZeZapisu_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.148821" elapsed="0.015330"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.180571" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[22]'.</msg>
+<arg>${Input_UD_Kategorie_ZastupitelstvoPozvanky_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.164498" elapsed="0.016179"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.195750" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[23]'.</msg>
+<arg>${Input_UD_Kategorie_ZtratyNalezy_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.181097" elapsed="0.014783"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.212532" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[24]'.</msg>
+<arg>${Input_UD_Kategorie_ZivotniProstredi_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.196379" elapsed="0.016253"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.234703" level="INFO">Element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]' exists but is not displayed.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.212928" elapsed="0.021880"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.235529" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.235205" elapsed="0.086872"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.322541" elapsed="0.019137"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.350597" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[@class='c-custom-select__items']//div[2]'.</msg>
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.342039" elapsed="0.008712"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.359338" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[3]'.</msg>
+<arg>${Input_UD_Kategorie_Hospodareni2023_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.351197" elapsed="0.008241"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.367494" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[4]'.</msg>
+<arg>${Input_UD_Kategorie_Informator_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.359733" elapsed="0.008118"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.376835" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[5]'.</msg>
+<arg>${Input_UD_Kategorie_Mikroregion_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.368351" elapsed="0.008581"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.384493" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[6]'.</msg>
+<arg>${Input_UD_Kategorie_NarizeniMesta_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.377307" elapsed="0.007282"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.392371" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[7]'.</msg>
+<arg>${Input_UD_Kategorie_Vyhlasky_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.384891" elapsed="0.007577"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.399895" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[8]'.</msg>
+<arg>${Input_UD_Kategorie_PostaProObcany_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.392783" elapsed="0.007208"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.408102" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[9]'.</msg>
+<arg>${Input_UD_Kategorie_Rozpocet2023_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.400286" elapsed="0.007913"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.419284" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[10]'.</msg>
+<arg>${Input_UD_Kategorie_Rozpocet2024_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.408501" elapsed="0.010891"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.427675" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[11]'.</msg>
+<arg>${Input_UD_Kategorie_Rozpocet2025_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.419715" elapsed="0.008061"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.435450" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[12]'.</msg>
+<arg>${Input_UD_Kategorie_SocialniOdbor_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.428079" elapsed="0.007471"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.443411" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[13]'.</msg>
+<arg>${Input_UD_Kategorie_SpravaMajetku_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.435852" elapsed="0.007661"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.453577" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[14]'.</msg>
+<arg>${Input_UD_Kategorie_StavebniUrad_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.444159" elapsed="0.009549"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.463480" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[15]'.</msg>
+<arg>${Input_UD_Kategorie_Tajemnik_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.454073" elapsed="0.009505"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.471570" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[16]'.</msg>
+<arg>${Input_UD_Kategorie_UsneseniRady_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.463882" elapsed="0.007863"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.480436" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[17]'.</msg>
+<arg>${Input_UD_Kategorie_ZastupovaniStat_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.472205" elapsed="0.008330"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.488381" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[18]'.</msg>
+<arg>${Input_UD_Kategorie_VerejnopravniSmlouvy_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.480830" elapsed="0.007656"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.497512" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[19]'.</msg>
+<arg>${Input_UD_Kategorie_Volby_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.488775" elapsed="0.008853"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.506770" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[7]'.</msg>
+<arg>${Input_UD_Kategorie_Vyhlasky_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.497960" elapsed="0.008920"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.514553" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[21]'.</msg>
+<arg>${Input_UD_Kategorie_VypisZeZapisu_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.507369" elapsed="0.007280"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.522770" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[22]'.</msg>
+<arg>${Input_UD_Kategorie_ZastupitelstvoPozvanky_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.515024" elapsed="0.007839"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.530765" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[23]'.</msg>
+<arg>${Input_UD_Kategorie_ZtratyNalezy_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.523149" elapsed="0.007718"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.540680" level="INFO">Current page does not contain element 'xpath=//div[@class='c-custom-select opened']//div[24]'.</msg>
+<arg>${Input_UD_Kategorie_ZivotniProstredi_XPath}</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.531208" elapsed="0.009614"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.541897" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.541455" elapsed="0.067789"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.609568" elapsed="0.022255"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.641668" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[@class='c-custom-select__items']//div[2]'.</msg>
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.632383" elapsed="0.009396"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.649654" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[3]'.</msg>
+<arg>${Input_UD_Kategorie_Hospodareni2023_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.642094" elapsed="0.007670"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.659262" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[4]'.</msg>
+<arg>${Input_UD_Kategorie_Informator_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.650071" elapsed="0.009393"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.670327" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[5]'.</msg>
+<arg>${Input_UD_Kategorie_Mikroregion_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.660250" elapsed="0.010181"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.682237" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[6]'.</msg>
+<arg>${Input_UD_Kategorie_NarizeniMesta_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.670752" elapsed="0.011602"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.693480" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[7]'.</msg>
+<arg>${Input_UD_Kategorie_Vyhlasky_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.682692" elapsed="0.010994"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.707116" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[8]'.</msg>
+<arg>${Input_UD_Kategorie_PostaProObcany_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.694258" elapsed="0.012976"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.718656" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[9]'.</msg>
+<arg>${Input_UD_Kategorie_Rozpocet2023_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.708026" elapsed="0.010739"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.727841" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[10]'.</msg>
+<arg>${Input_UD_Kategorie_Rozpocet2024_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.719085" elapsed="0.008873"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.767992" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[11]'.</msg>
+<arg>${Input_UD_Kategorie_Rozpocet2025_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.728283" elapsed="0.039814"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.778382" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[12]'.</msg>
+<arg>${Input_UD_Kategorie_SocialniOdbor_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.768597" elapsed="0.010097"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.799673" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[13]'.</msg>
+<arg>${Input_UD_Kategorie_SpravaMajetku_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.779311" elapsed="0.020465"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.808339" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[14]'.</msg>
+<arg>${Input_UD_Kategorie_StavebniUrad_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.800073" elapsed="0.008362"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.816768" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[15]'.</msg>
+<arg>${Input_UD_Kategorie_Tajemnik_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.808758" elapsed="0.008109"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.826248" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[16]'.</msg>
+<arg>${Input_UD_Kategorie_UsneseniRady_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.817178" elapsed="0.009263"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.837732" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[17]'.</msg>
+<arg>${Input_UD_Kategorie_ZastupovaniStat_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.826949" elapsed="0.010883"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.847855" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[18]'.</msg>
+<arg>${Input_UD_Kategorie_VerejnopravniSmlouvy_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.838246" elapsed="0.009747"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.920814" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[19]'.</msg>
+<arg>${Input_UD_Kategorie_Volby_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.848328" elapsed="0.072597"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.929381" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[7]'.</msg>
+<arg>${Input_UD_Kategorie_Vyhlasky_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.921263" elapsed="0.008223"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.938382" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[21]'.</msg>
+<arg>${Input_UD_Kategorie_VypisZeZapisu_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.929938" elapsed="0.008549"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.947130" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[22]'.</msg>
+<arg>${Input_UD_Kategorie_ZastupitelstvoPozvanky_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.938802" elapsed="0.008428"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.956852" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[23]'.</msg>
+<arg>${Input_UD_Kategorie_ZtratyNalezy_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.947525" elapsed="0.009481"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.966365" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[24]'.</msg>
+<arg>${Input_UD_Kategorie_ZivotniProstredi_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.957444" elapsed="0.009028"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:48.982370" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select__selected'][normalize-space()='Aktuální záznamy']'.</msg>
+<arg>${Input_UD_Typ_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.966879" elapsed="0.015618"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:49.007917" level="INFO">Element 'xpath=//div[@class='c-custom-select__items-item'][normalize-space()='Aktuální záznamy']' exists but is not displayed.</msg>
+<arg>${Input_UD_Typ_Aktualni_XPath}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:48.982846" elapsed="0.025204"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:49.033223" level="INFO">Element 'xpath=//div[normalize-space()='Archivované záznamy']' exists but is not displayed.</msg>
+<arg>${Input_UD_Typ_Archivovane_XPath}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:49.008433" elapsed="0.024890"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:49.033880" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][normalize-space()='Aktuální záznamy']'.</msg>
+<arg>${Input_UD_Typ_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:32:49.033622" elapsed="0.066139"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Typ_Aktualni_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:49.100269" elapsed="0.016083"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:49.128498" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select__items-item'][normalize-space()='Aktuální záznamy']'.</msg>
+<arg>${Input_UD_Typ_Aktualni_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:49.116684" elapsed="0.011920"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:49.142159" level="INFO">Current page contains element 'xpath=//div[normalize-space()='Archivované záznamy']'.</msg>
+<arg>${Input_UD_Typ_Archivovane_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:49.129019" elapsed="0.013271"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:49.161458" level="INFO">Current page contains element 'xpath=//div[@class='c-custom-select opened']//div[3]'.</msg>
+<arg>${Input_UD_Typ_Vsechny_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:49.142627" elapsed="0.018980"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC013</tag>
+<tag>TS004</tag>
+<status status="PASS" start="2025-05-11T04:32:47.756074" elapsed="1.405959"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="111">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:32:49.163187" elapsed="2.194124"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:32:49.162695" elapsed="2.195036"/>
+</test>
+<status status="PASS" start="2025-05-11T04:32:44.645494" elapsed="6.712956"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC013</stat>
+<stat pass="1" fail="0" skip="0">TS004</stat>
+</tag>
+<suite>
+<stat name="TC013" id="s1" pass="3" fail="0" skip="0">TC013</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:32:45.359832" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

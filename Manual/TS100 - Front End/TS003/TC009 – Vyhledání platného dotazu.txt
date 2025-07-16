@@ -1,0 +1,30 @@
+ID: TC009  
+Název: Vyhledání platného dotazu
+
+Stručný popis:  
+Testovací případ ověřuje, že systém správně zpracovává běžné vyhledávací dotazy zadané uživatelem a vrací relevantní výsledky. Pokrývá různé typy platných klíčových slov (např. „formulář“, „Bzenecký zpravodaj“).
+
+Preconditions:
+	- Hlavní stránka města Bzenec je načtena
+	- Vyhledávací pole je dostupné a aktivní
+	- Internetové připojení funguje
+
+Testovací kroky:
+	1. Do vyhledávacího pole zadej libovolný platný výraz (např. „formulář“)
+	2. Klikni na tlačítko hledat nebo stiskni Enter
+	3. Sleduj výsledky hledání
+
+Očekávaný výsledek:
+	- Systém zobrazí výsledky odpovídající zadanému výrazu
+	- Odkazy vedou na relevantní podstránky
+	- Stránka nezobrazí žádné technické chyby
+
+Vstupní data:
+	- Příklad: „formulář“, „Bzenecký zpravodaj“
+
+Postconditions:
+	- Výsledky zůstanou zobrazené do ručního přechodu
+	- Historie prohlížeče uchová vyhledávací frázi
+
+Logy a úklid:
+	-

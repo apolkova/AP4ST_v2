@@ -1,0 +1,26 @@
+ID: TC021-2
+Název: Odkazy na soubory
+
+Stručný popis:
+Ověřuje, že každý formulář má funkční odkaz ke stažení nebo náhledu.
+
+Preconditions:
+	- Formuláře jsou zobrazeny
+
+Testovací kroky:
+	1. Najdi několik různých formulářů
+	2. Klikni na jejich odkaz
+	3. Sleduj, zda se otevře nebo stáhne soubor
+
+Očekávaný výsledek:
+	- Odkazy jsou funkční
+	- Formulář je v dostupném formátu
+
+Vstupní data:
+	- Vybrané formuláře
+
+Postconditions:
+	- Stažené soubory mohou být odstraněny
+
+Logy a úklid:
+	- Záznam názvů a formátů

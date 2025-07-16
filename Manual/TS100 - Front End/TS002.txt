@@ -1,0 +1,40 @@
+ID: TS002  
+Název: Navigační menu
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuální a Automatizovaný  
+
+Očekávaný výsledek:  
+    Navigace funguje, všechny odkazy jsou dostupné a přesměrovávají správně.
+
+Stručný popis:  
+    Testuje se funkčnost hlavního menu a všech podkategorií.
+
+Pre-conditions:  
+    - Načtená hlavní stránka  
+    - Viditelné menu  
+
+Post-conditions:  
+    - Přesměrování funguje  
+
+Obsahuje:  
+    TC004 - Funkčnost hlavního menu  
+    TC005 - Menu "Pro občany"  
+        TC005-1 - Odkaz "Důležité sdělení"  
+        TC005-2 - Odkaz "Formuláře ke stažení"  
+        TC005-3 - Odkaz "Potřebuji vyřídit"  
+    TC006 - Menu "Život ve městě"  
+        TC006-1 - Odkaz "Kultura"  
+        TC006-2 - Odkaz "Sport"  
+        TC006-3 - Odkaz "Bzenecky zpravodaj"  
+    TC007 - Menu "Turismus"  
+        TC007-1 - Odkaz "Zažijte Bzenec"  
+        TC007-2 - Odkaz "Informační centrum"  
+        TC007-3 - Odkaz "Tipy na výlet"  
+    TC008 - Menu "Město a úřad"  
+        TC008-1 - Odkaz "Město"  
+        TC008-2 - Odkaz "Městský úřad"  
+        TC008-3 - Odkaz "Úřední deska"  
+        TC008-4 - Odkaz "Kontakty"  

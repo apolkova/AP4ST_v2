@@ -1,0 +1,25 @@
+ID: TC035
+Název: Alt popisky obrázků
+
+Stručný popis:
+Testuje, zda mají všechny důležité obrázky na stránce alternativní text (atribut alt), pro zajištění přístupnosti.
+
+Preconditions:
+	- Stránka obsahuje obrázky
+	- Vývojářské nástroje nebo čtečka obrazovky
+
+Testovací kroky:
+	1. Pomocí vývojářských nástrojů zkontroluj <img> tagy
+	2. Sleduj, zda obsahují atribut alt
+
+Očekávaný výsledek:
+	- Všechny klíčové obrázky mají smysluplný alt text
+
+Vstupní data:
+	- HTML obsah stránky
+
+Postconditions:
+	- Žádná úprava dat
+
+Logy a úklid:
+	- Screenshot HTML inspektoru s alt texty

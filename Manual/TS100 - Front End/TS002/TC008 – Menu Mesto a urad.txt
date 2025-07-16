@@ -1,0 +1,30 @@
+ID: TC008  
+Název: Menu Mesto a urad
+
+Stručný popis:  
+Testuje položku hlavního menu „Město a úřad“ a ověřuje správnou funkčnost odkazů na „Kontakty“, „Úřední deska“, „Mětský úřad“ a „Město“.
+
+Preconditions:
+	- Webová stránka je dostupná
+
+Testovací kroky:
+	1. Najdi položku „Město a úřad“ v hlavním menu
+	2. Najeď na ni kurzorem a sleduj podmenu
+	3. Zkontroluj odkazy:
+		- Město
+		- Městský úřad
+		- Úřední deska
+		- Kontakty
+
+Očekávaný výsledek:
+	- Podmenu je kompletní a funkční
+	- Všechny odkazy vedou na správné stránky
+
+Vstupní data:
+	- Není třeba žádný vstup
+
+Postconditions:
+	- Stav stránky zůstává nezměněn
+
+Logy a úklid:
+	- Screenshot každé otevřené sekce

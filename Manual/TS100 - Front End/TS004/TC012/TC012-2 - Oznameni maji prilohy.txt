@@ -1,0 +1,25 @@
+ID: TC012-2
+Název: Oznámení mají přílohy
+
+Stručný popis:
+Test ověřuje, že oznámení na úřední desce mohou obsahovat přílohy, a že tyto přílohy jsou přístupné.
+
+Preconditions:
+	- Vybrané oznámení má přílohu
+
+Testovací kroky:
+	1. Vyber oznámení s přílohou
+	2. Klikni na odkaz přílohy
+	3. Sleduj, zda se otevře nebo stáhne
+
+Očekávaný výsledek:
+	- Příloha je dostupná ke stažení nebo náhledu
+
+Vstupní data:
+	- Oznámení s přílohou
+
+Postconditions:
+	- Stáhnutý soubor může být smazán
+
+Logy a úklid:
+	- Screenshot + název souboru

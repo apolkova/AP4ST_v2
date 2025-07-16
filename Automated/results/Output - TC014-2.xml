@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:36:00.472277" rpa="false" schemaversion="5">
+<suite id="s1" name="TC014-2" source="C:\Users\Adelka\Desktop\v55\Automated\TC014-2.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři stránku Úřední deska" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:00.823300" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/uredni-deska'.</msg>
+<msg time="2025-05-11T04:36:01.193319" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL_Menu_UredniDeska}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:36:00.822900" elapsed="3.718552"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:36:00.821236" elapsed="3.720816"/>
+</test>
+<test id="s1-t2" name="TC014-2 - Ověření zobrazení PDF přílohy" line="16">
+<kw name="Stahnout a otevrit PDF" owner="Keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:04.544096" level="INFO">Opening url 'https://www.bzenec.cz/uredni-deska/684-eg-d-oznameni-o-preruseni-dodavky-elektricke-energie'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:36:04.543922" elapsed="0.619378"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:36:05.163645" elapsed="0.010466"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Button_UD_PDF}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:05.174346" elapsed="0.034456"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:05.241229" level="INFO">Current page contains element 'xpath=//span[@class='text-white font-bold']'.</msg>
+<arg>${Button_UD_PDF}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:05.209122" elapsed="0.032298"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:05.242194" level="INFO">Clicking element 'xpath=//span[@class='icon-svg icon-svg__icon-download']//*[name()='svg']'.</msg>
+<arg>${Button_UD_PDF_Download}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:05.241821" elapsed="0.122032"/>
+</kw>
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-05-11T04:36:05.364473" level="INFO" html="true">File '&lt;a href="file://C:\Users\Adelka\Downloads\eg-d.pdf"&gt;C:\Users\Adelka\Downloads\eg-d.pdf&lt;/a&gt;' exists.</msg>
+<arg>${Path_Downlaod}${NamePDF}${Hondota_PDF_ending}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2025-05-11T04:36:05.364103" elapsed="0.000435"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:36:05.364684" elapsed="1.248834"/>
+</kw>
+<arg>${URL_UD_eg-d}</arg>
+<arg>${Hodnota_eg-d}</arg>
+<status status="PASS" start="2025-05-11T04:36:04.543395" elapsed="2.070331"/>
+</kw>
+<kw name="Stahnout a otevrit PDF" owner="Keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:06.615063" level="INFO">Opening url 'https://www.bzenec.cz/uredni-deska/651-meu-bzenec-odbor-zivotniho-prostredi'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:36:06.614855" elapsed="0.629858"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:36:07.244993" elapsed="0.013899"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Button_UD_PDF}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:07.259203" elapsed="0.031799"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:07.298980" level="INFO">Current page contains element 'xpath=//span[@class='text-white font-bold']'.</msg>
+<arg>${Button_UD_PDF}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:07.291317" elapsed="0.007789"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:07.299690" level="INFO">Clicking element 'xpath=//span[@class='icon-svg icon-svg__icon-download']//*[name()='svg']'.</msg>
+<arg>${Button_UD_PDF_Download}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:07.299380" elapsed="0.064388"/>
+</kw>
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-05-11T04:36:07.364510" level="INFO" html="true">File '&lt;a href="file://C:\Users\Adelka\Downloads\xerox-scan-18032025103339.pdf"&gt;C:\Users\Adelka\Downloads\xerox-scan-18032025103339.pdf&lt;/a&gt;' exists.</msg>
+<arg>${Path_Downlaod}${NamePDF}${Hondota_PDF_ending}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2025-05-11T04:36:07.364066" elapsed="0.000511"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:36:07.364723" elapsed="0.767432"/>
+</kw>
+<arg>${URL_UD_XeroxScan}</arg>
+<arg>${Hodnota_XeroxScan}</arg>
+<status status="PASS" start="2025-05-11T04:36:06.614323" elapsed="1.517975"/>
+</kw>
+<kw name="Stahnout a otevrit PDF" owner="Keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:08.133821" level="INFO">Opening url 'https://www.bzenec.cz/uredni-deska/733-financni-urad-pro-jihomoravsky-kraj'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:36:08.133174" elapsed="0.864994"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:36:08.998527" elapsed="0.015342"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Button_UD_PDF}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:09.014180" elapsed="0.014713"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:09.037692" level="INFO">Current page contains element 'xpath=//span[@class='text-white font-bold']'.</msg>
+<arg>${Button_UD_PDF}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:09.029193" elapsed="0.008707"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:09.038402" level="INFO">Clicking element 'xpath=//span[@class='icon-svg icon-svg__icon-download']//*[name()='svg']'.</msg>
+<arg>${Button_UD_PDF_Download}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:36:09.038139" elapsed="0.084477"/>
+</kw>
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-05-11T04:36:09.123854" level="INFO" html="true">File '&lt;a href="file://C:\Users\Adelka\Downloads\verejna-vyhlaska-fu.pdf"&gt;C:\Users\Adelka\Downloads\verejna-vyhlaska-fu.pdf&lt;/a&gt;' exists.</msg>
+<arg>${Path_Downlaod}${NamePDF}${Hondota_PDF_ending}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2025-05-11T04:36:09.122918" elapsed="0.001100"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:36:09.124308" elapsed="0.605978"/>
+</kw>
+<arg>${URL_UD_Verejna_Vyhlaska-fu}</arg>
+<arg>${Hodnota_Verejna_Vyhlaska-fu}</arg>
+<status status="PASS" start="2025-05-11T04:36:08.132738" elapsed="1.597715"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC014-2</tag>
+<tag>TS004</tag>
+<status status="PASS" start="2025-05-11T04:36:04.542651" elapsed="5.188174"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="22">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:36:09.732067" elapsed="2.195556"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:36:09.731421" elapsed="2.196538"/>
+</test>
+<status status="PASS" start="2025-05-11T04:36:00.473923" elapsed="11.454702"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC014-2</stat>
+<stat pass="1" fail="0" skip="0">TS004</stat>
+</tag>
+<suite>
+<stat name="TC014-2" id="s1" pass="3" fail="0" skip="0">TC014-2</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:36:01.193319" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:36:16.473001" rpa="false" schemaversion="5">
+<suite id="s1" name="TC026" source="C:\Users\Adelka\Desktop\v55\Automated\TC026.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři hlavní stránku města Bzenec" line="9">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:16.877893" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/fotogalerie'.</msg>
+<msg time="2025-05-11T04:36:17.258743" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:36:16.877593" elapsed="2.422162"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.300123" elapsed="0.058489"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.358968" elapsed="0.017491"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.376724" elapsed="0.035996"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.432562" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.413020" elapsed="0.019656"/>
+</kw>
+<arg>${URL_Menu_Fotogalerie}</arg>
+<arg>${Heading_Fotografie}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:36:16.876234" elapsed="2.556567"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.452601" level="INFO">Current page contains element 'xpath=//button[@title='Vyhledávání']//span[@class='icon-svg icon-svg__icon-search']//*[name()='svg']'.</msg>
+<arg>${Button_Vyhledat_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.433150" elapsed="0.019567"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:36:16.874991" elapsed="2.578044"/>
+</test>
+<test id="s1-t2" name="TC026 - Ověření zobrazení náhledů ve fotogalerii" line="13">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.461888" level="INFO">Current page contains element 'xpath=//h1[normalize-space()='Fotogalerie']'.</msg>
+<arg>${Heading_Fotografie}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.454136" elapsed="0.007868"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.462904" elapsed="0.026325"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.501837" level="INFO">Current page contains element 'xpath=//a[@href='/vitani-obcanku']//div[@class='p-4 bg-white gap-2']//h2[@class='text-xl font-bold group-hover:text-secondary transition ease-in-out'][contains(text(),'Vítání občánků')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.489549" elapsed="0.012401"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.515486" level="INFO">Current page contains element 'xpath=//img[@loading='eager']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.502165" elapsed="0.013429"/>
+</kw>
+<arg>${Heading_Fotografie_VitaniObcanu}</arg>
+<arg>${Image_Fotografie_VitaniObcanu}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.462419" elapsed="0.053295"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.516503" elapsed="0.022975"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.550424" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Vítání občánků - březen 2025')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.539763" elapsed="0.010774"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.564924" level="INFO">Current page contains element 'xpath=//img[@alt='Vítání občánků - březen 2025']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.550747" elapsed="0.014279"/>
+</kw>
+<arg>${Heading_Fotografie_VitaniObcanu2025}</arg>
+<arg>${Image_Fotografie_VitaniObcanu2025}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.516078" elapsed="0.049049"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.565857" elapsed="0.028053"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.600666" level="INFO">Current page contains element 'xpath=//a[3]//div[2]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.594136" elapsed="0.006626"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.615045" level="INFO">Current page contains element 'xpath=//img[@alt='Vítání občánků - říjen 2024']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.600960" elapsed="0.014194"/>
+</kw>
+<arg>${Heading_Fotografie_VitaniObcanu2024}</arg>
+<arg>${Image_Fotografie_VitaniObcanu2024}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.565448" elapsed="0.049811"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.616053" elapsed="0.021126"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.644193" level="INFO">Current page contains element 'xpath=//h2[normalize-space()='Bzenecké vinobraní - sobota 21.9.2024']'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.637411" elapsed="0.006889"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.658114" level="INFO">Current page contains element 'xpath=//a[4]//div[1]//picture[1]//img[1]'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.644788" elapsed="0.013427"/>
+</kw>
+<arg>${Heading_Fotografie_VinobraniSobota2024}</arg>
+<arg>${Image_Fotografie_VinobraniSobota2024}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.615618" elapsed="0.042699"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.659104" elapsed="0.021433"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.688583" level="INFO">Current page contains element 'xpath=//h2[normalize-space()='Bzenecké vinobraní - pátek 20.9.2024']'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.680788" elapsed="0.007901"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.703694" level="INFO">Current page contains element 'xpath=//a[5]//div[1]//picture[1]//img[1]'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.688896" elapsed="0.014901"/>
+</kw>
+<arg>${Heading_Fotografie_VinobraniPatek2024}</arg>
+<arg>${Image_Fotografie_VinobraniPatek2024}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.658667" elapsed="0.045231"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.704661" elapsed="0.019346"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.731493" level="INFO">Current page contains element 'xpath=//h2[normalize-space()='Kultura - fotogalerie']'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.724246" elapsed="0.007346"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.746025" level="INFO">Current page contains element 'xpath=//a[@href='/kultura-fotogalerie']//div[@class='flex-grow']//img'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.731792" elapsed="0.014336"/>
+</kw>
+<arg>${Heading_Fotografie_Kultura}</arg>
+<arg>${Image_Fotografie_Kultura}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.704227" elapsed="0.042000"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.746964" elapsed="0.020322"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.776615" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Zažijte Bzenec fotogalerie')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.767538" elapsed="0.009263"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.793020" level="INFO">Current page contains element 'xpath=//a[@href='/zazijte-bzenec-fotogalerie']//div[@class='flex-grow']//img'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.777119" elapsed="0.016006"/>
+</kw>
+<arg>${Heading_Fotografie_ZayijteBzenec}</arg>
+<arg>${Image_Fotografie_ZayijteBzenec}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.746554" elapsed="0.046672"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.794280" elapsed="0.023286"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.827227" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Vítání občánků 2023')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.817817" elapsed="0.009517"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.841404" level="INFO">Current page contains element 'xpath=//img[@alt='Vítání občánků 2023 - březen']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.827553" elapsed="0.013949"/>
+</kw>
+<arg>${Heading_Fotografie_VitaniObcanu2023}</arg>
+<arg>${Image_Fotografie_VitaniObcanu2023}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.793681" elapsed="0.047921"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.842431" elapsed="0.020426"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.870618" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Vítání občánků 2022 - prosinec')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.863082" elapsed="0.007632"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.884252" level="INFO">Current page contains element 'xpath=//img[@alt='Vítání občánků 2022 - prosinec']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.870911" elapsed="0.013439"/>
+</kw>
+<arg>${Heading_Fotografie_VitaniObcanu2022prosinec}</arg>
+<arg>${Image_Fotografie_VitaniObcanu2022prosinec}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.842015" elapsed="0.042435"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.885194" elapsed="0.021186"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.916145" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Vítání občánků 2022 duben')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.906680" elapsed="0.009571"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.929586" level="INFO">Current page contains element 'xpath=//img[@alt='Vítání občánků 2022 - duben']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.916458" elapsed="0.013351"/>
+</kw>
+<arg>${Heading_Fotografie_VitaniObcanu2022duben}</arg>
+<arg>${Image_Fotografie_VitaniObcanu2022duben}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.884766" elapsed="0.045144"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.930682" elapsed="0.022255"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.961327" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Vítání občánků 2021')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.953354" elapsed="0.008072"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:19.975307" level="INFO">Current page contains element 'xpath=//img[@alt='Vítání občánků 2021 říjen']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.961685" elapsed="0.013719"/>
+</kw>
+<arg>${Heading_Fotografie_VitaniObcanu2021}</arg>
+<arg>${Image_Fotografie_VitaniObcanu2021}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.930263" elapsed="0.045241"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:19.976235" elapsed="0.023612"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.008297" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Bzenecký fašaňk')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.000099" elapsed="0.008297"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.021913" level="INFO">Current page contains element 'xpath=//img[@alt='Bzenecký fašaňk_@Jitka fotí folklor']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.008603" elapsed="0.013407"/>
+</kw>
+<arg>${Heading_Fotografie_BzeneckyFasank}</arg>
+<arg>${Image_Fotografie_BzeneckyFasank}</arg>
+<status status="PASS" start="2025-05-11T04:36:19.975829" elapsed="0.046282"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.022846" elapsed="0.021290"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.076381" level="INFO">Current page contains element 'xpath=//h2[normalize-space()='Jarní výstava']'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.044380" elapsed="0.032119"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.091741" level="INFO">Current page contains element 'xpath=//img[@alt='Jarní výstava_FCB SRPŠ Bzenec']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.076720" elapsed="0.015130"/>
+</kw>
+<arg>${Heading_Fotografie_JarniVysatava}</arg>
+<arg>${Image_Fotografie_JarniVysatava}</arg>
+<status status="PASS" start="2025-05-11T04:36:20.022429" elapsed="0.069530"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.092738" elapsed="0.020697"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.122494" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Pálení čarodějnic')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.113680" elapsed="0.008933"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.140598" level="INFO">Current page contains element 'xpath=//img[@alt='Pálení čarodějnic']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.122847" elapsed="0.017870"/>
+</kw>
+<arg>${Heading_Fotografie_PaleniCarodejnic}</arg>
+<arg>${Image_Fotografie_PaleniCarodejnic}</arg>
+<status status="PASS" start="2025-05-11T04:36:20.092304" elapsed="0.048522"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.141648" elapsed="0.025855"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.175960" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Bzenecký guláš')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.167722" elapsed="0.008334"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.190302" level="INFO">Current page contains element 'xpath=//img[@alt='Bzenecký guláš']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.176253" elapsed="0.014143"/>
+</kw>
+<arg>${Heading_Fotografie_BzeneckyGulas}</arg>
+<arg>${Image_Fotografie_BzeneckyGulas}</arg>
+<status status="PASS" start="2025-05-11T04:36:20.141194" elapsed="0.049298"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.191205" elapsed="0.021634"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.221804" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Bzenecká pouť')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.213053" elapsed="0.008853"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.237787" level="INFO">Current page contains element 'xpath=//img[@alt='Bzenecká pouť_autor Filip Radosta']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.222112" elapsed="0.015813"/>
+</kw>
+<arg>${Heading_Fotografie_BzeneckaPout}</arg>
+<arg>${Image_Fotografie_BzeneckaPout}</arg>
+<status status="PASS" start="2025-05-11T04:36:20.190811" elapsed="0.047254"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.239338" elapsed="0.023538"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.272219" level="INFO">Current page contains element 'xpath=//h2[normalize-space()='Vinobraní 2022']'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.263130" elapsed="0.009186"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.294284" level="INFO">Current page contains element 'xpath=//img[@alt='Bzenecké krojované vinobraní 2022_foto Filip Radosta (3)']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.272517" elapsed="0.021879"/>
+</kw>
+<arg>${Heading_Fotografie_Vinobrani2022}</arg>
+<arg>${Image_Fotografie_Vinobrani2022}</arg>
+<status status="PASS" start="2025-05-11T04:36:20.238841" elapsed="0.055665"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.295349" elapsed="0.040567"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.348254" level="INFO">Current page contains element 'xpath=//h2[normalize-space()='Vánoce na zámku']'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.336162" elapsed="0.012192"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.364319" level="INFO">Current page contains element 'xpath=//img[@alt='Vánoce na zámku']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.348570" elapsed="0.015868"/>
+</kw>
+<arg>${Heading_Fotografie_VanoceNaZamku}</arg>
+<arg>${Image_Fotografie_VanoceNaZamku}</arg>
+<status status="PASS" start="2025-05-11T04:36:20.294890" elapsed="0.069685"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.365459" elapsed="0.023628"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.398209" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Bzenec z výšky')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.389305" elapsed="0.009008"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.416676" level="INFO">Current page contains element 'xpath=//img[@alt='Bzenec z výšky_autor Marek Svoboda']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.398509" elapsed="0.018269"/>
+</kw>
+<arg>${Heading_Fotografie_BzenecZVysky}</arg>
+<arg>${Image_Fotografie_BzenecZVysky}</arg>
+<status status="PASS" start="2025-05-11T04:36:20.364983" elapsed="0.051898"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.417638" elapsed="0.037699"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.485269" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Město v průběhu roku')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.455570" elapsed="0.029892"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.509967" level="INFO">Current page contains element 'xpath=//img[@alt='jaro 2024_autor Filip Radosta']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.485780" elapsed="0.024284"/>
+</kw>
+<arg>${Heading_Fotografie_MestoVPrubehuRoku}</arg>
+<arg>${Image_Fotografie_MestoVPrubehuRoku}</arg>
+<status status="PASS" start="2025-05-11T04:36:20.417227" elapsed="0.092937"/>
+</kw>
+<kw name="Stranka Obsahuje Nahled a Nazev" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Image}</arg>
+<arg>timeout=${Hodnota_Timeout_5s}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.510876" elapsed="0.023201"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.541937" level="INFO">Current page contains element 'xpath=//h2[contains(text(),'Příroda')]'.</msg>
+<arg>${Image}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.534310" elapsed="0.007724"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:36:20.557293" level="INFO">Current page contains element 'xpath=//img[@alt='Bzenecká doubrava_autor Filip Radosta']'.</msg>
+<arg>${Heading}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.542229" elapsed="0.015174"/>
+</kw>
+<arg>${Heading_Fotografie_Priorda}</arg>
+<arg>${Image_Fotografie_Priorda}</arg>
+<status status="PASS" start="2025-05-11T04:36:20.510483" elapsed="0.047025"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC026</tag>
+<tag>TS009</tag>
+<status status="PASS" start="2025-05-11T04:36:19.453525" elapsed="1.104363"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="38">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:36:20.558863" elapsed="2.168554"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:36:20.558390" elapsed="2.169361"/>
+</test>
+<status status="PASS" start="2025-05-11T04:36:16.474727" elapsed="6.253787"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC026</stat>
+<stat pass="1" fail="0" skip="0">TS009</stat>
+</tag>
+<suite>
+<stat name="TC026" id="s1" pass="3" fail="0" skip="0">TC026</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:36:17.258743" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

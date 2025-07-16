@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:37:35.880821" rpa="false" schemaversion="5">
+<suite id="s1" name="TC030" source="C:\Users\Adelka\Desktop\v55\Automated\TC030.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři stránku Videoreportáže" line="14">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:36.270496" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/videoreportaze'.</msg>
+<msg time="2025-05-11T04:37:36.654180" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL_VideoReportaze}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:37:36.270120" elapsed="2.533448"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_VideoReportaze}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:37:38.804118" elapsed="0.007417"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Videoreportaze}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:38.811921" elapsed="0.034222"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:38.846982" level="INFO">Clicking element 'xpath=//article[1]//a'.</msg>
+<arg>${Button_Videoreportaz_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:38.846616" elapsed="0.113512"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:37:36.268357" elapsed="2.692269"/>
+</test>
+<test id="s1-t2" name="TC030 - Ověření funkčnosti přehrávače" line="20">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${Hodnota_Selenium_Speed_0.5s}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-05-11T04:37:38.962005" elapsed="0.000341"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Video_Kontejner}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:38.962616" elapsed="1.736172"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:40.699595" level="INFO">Clicking element 'xpath=//iframe[@class='News-video']'.</msg>
+<arg>${Video_Kontejner}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:40.699276" elapsed="1.067298"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:41.767344" level="INFO">Selecting frame 'xpath=//iframe[@class='News-video']'.</msg>
+<arg>${Video_Kontejner}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-05-11T04:37:41.767047" elapsed="1.058747"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC030</tag>
+<tag>TS010</tag>
+<status status="PASS" start="2025-05-11T04:37:38.961442" elapsed="3.864863"/>
+</test>
+<test id="s1-t3" name="Fullscreen" line="27">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:42.827951" level="INFO">Clicking element 'xpath=//a[@class='fp-fullscreen fp-icon']'.</msg>
+<arg>${Button_Videoreportaz_Fullscreen}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:42.827628" elapsed="1.263441"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:37:42.827092" elapsed="1.264311"/>
+</test>
+<test id="s1-t4" name="Play Button" line="30">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:44.092779" level="INFO">Clicking element 'xpath=//div[@class='fp-controls']//a[@class='fp-icon fp-playbtn']'.</msg>
+<arg>${Button_Videoreportaz_PlayButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:44.092524" elapsed="1.127130"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:45.220677" level="INFO">Clicking element 'xpath=//div[@class='fp-controls']//a[@class='fp-icon fp-playbtn']'.</msg>
+<arg>${Button_Videoreportaz_PlayButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:45.220302" elapsed="1.092333"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:37:44.091895" elapsed="2.221290"/>
+</test>
+<test id="s1-t5" name="Volumebtn" line="33">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:46.314691" level="INFO">Clicking element 'xpath=//em[@class='fp-color']'.</msg>
+<arg>${Button_Videoreportaz_Volume1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:46.314378" elapsed="1.139916"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:47.455012" level="INFO">Clicking element 'xpath=//em[4]'.</msg>
+<arg>${Button_Videoreportaz_Volume4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:47.454752" elapsed="1.137135"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:48.592930" level="INFO">Clicking element 'xpath=//em[7]'.</msg>
+<arg>${Button_Videoreportaz_Volume7}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:48.592445" elapsed="1.154600"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:49.747871" level="INFO">Clicking element 'xpath=//em[5]'.</msg>
+<arg>${Button_Videoreportaz_Volume5}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:49.747496" elapsed="1.128021"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:50.876214" level="INFO">Clicking element 'xpath=//em[2]'.</msg>
+<arg>${Button_Videoreportaz_Volume2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:50.875946" elapsed="1.121046"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:51.997773" level="INFO">Clicking element 'xpath=//em[6]'.</msg>
+<arg>${Button_Videoreportaz_Volume6}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:51.997419" elapsed="1.149514"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:53.147598" level="INFO">Clicking element 'xpath=//em[3]'.</msg>
+<arg>${Button_Videoreportaz_Volume3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:53.147330" elapsed="1.121861"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:54.270129" level="INFO">Clicking element 'xpath=//a[@class='fp-icon fp-volumebtn']'.</msg>
+<arg>${Button_Videoreportaz_Mute}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:54.269812" elapsed="1.122203"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:37:46.313868" elapsed="9.078519"/>
+</test>
+<test id="s1-t6" name="Resolution" line="43">
+<kw name="Testing Ressolution" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:55.394131" level="INFO">Clicking element 'xpath=//strong[@class='fp-qsel']'.</msg>
+<arg>${Button_Videoreportaz_ResolutionButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:55.393925" elapsed="1.115068"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Videoreportaz_Resolution360}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:56.509264" elapsed="1.027712"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:57.537463" level="INFO">Clicking element 'xpath=//a[normalize-space()='360p (950k)']'.</msg>
+<arg>${Resolution}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:57.537220" elapsed="1.130640"/>
+</kw>
+<arg>${Button_Videoreportaz_Resolution360}</arg>
+<status status="PASS" start="2025-05-11T04:37:55.393481" elapsed="3.274529"/>
+</kw>
+<kw name="Testing Ressolution" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:37:58.669013" level="INFO">Clicking element 'xpath=//strong[@class='fp-qsel']'.</msg>
+<arg>${Button_Videoreportaz_ResolutionButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:37:58.668817" elapsed="1.122463"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Videoreportaz_Resolution360}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:37:59.791609" elapsed="1.018808"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:00.811277" level="INFO">Clicking element 'xpath=//a[normalize-space()='480p (1667k)']'.</msg>
+<arg>${Resolution}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:38:00.810845" elapsed="1.122060"/>
+</kw>
+<arg>${Button_Videoreportaz_Resolution480}</arg>
+<status status="PASS" start="2025-05-11T04:37:58.668427" elapsed="3.264634"/>
+</kw>
+<kw name="Testing Ressolution" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:01.934116" level="INFO">Clicking element 'xpath=//strong[@class='fp-qsel']'.</msg>
+<arg>${Button_Videoreportaz_ResolutionButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:38:01.933866" elapsed="1.102538"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Videoreportaz_Resolution360}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:38:03.036656" elapsed="1.016099"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:04.053641" level="INFO">Clicking element 'xpath=//a[normalize-space()='720p (2691k)']'.</msg>
+<arg>${Resolution}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:38:04.053110" elapsed="1.132245"/>
+</kw>
+<arg>${Button_Videoreportaz_Resolution720}</arg>
+<status status="PASS" start="2025-05-11T04:38:01.933446" elapsed="3.252100"/>
+</kw>
+<kw name="Testing Ressolution" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:05.186698" level="INFO">Clicking element 'xpath=//strong[@class='fp-qsel']'.</msg>
+<arg>${Button_Videoreportaz_ResolutionButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:38:05.186452" elapsed="1.108883"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Videoreportaz_Resolution360}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:38:06.295583" elapsed="1.017535"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:07.313689" level="INFO">Clicking element 'xpath=//a[normalize-space()='1080p (5251k)']'.</msg>
+<arg>${Resolution}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:38:07.313387" elapsed="1.130782"/>
+</kw>
+<arg>${Button_Videoreportaz_Resolution1080}</arg>
+<status status="PASS" start="2025-05-11T04:38:05.185985" elapsed="3.258456"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:37:55.392908" elapsed="13.052032"/>
+</test>
+<test id="s1-t7" name="Closing video" line="49">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:38:08.446786" level="INFO">Clicking element 'xpath=//a[@class='fp-fullscreen fp-icon']'.</msg>
+<arg>${Button_Videoreportaz_Fullscreen}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:38:08.446458" elapsed="1.275004"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2025-05-11T04:38:09.721882" elapsed="0.502685"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:38:08.445817" elapsed="1.779176"/>
+</test>
+<test id="s1-t8" name="Post-conditions - Zavři prohlížeč" line="53">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:38:10.226033" elapsed="2.616155"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:38:10.225575" elapsed="2.616963"/>
+</test>
+<status status="PASS" start="2025-05-11T04:37:35.882487" elapsed="36.960745"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC030</stat>
+<stat pass="1" fail="0" skip="0">TS010</stat>
+</tag>
+<suite>
+<stat name="TC030" id="s1" pass="8" fail="0" skip="0">TC030</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:37:36.654180" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

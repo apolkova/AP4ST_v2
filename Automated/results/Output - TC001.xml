@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:26:05.631824" rpa="false" schemaversion="5">
+<suite id="s1" name="TC001" source="C:\Users\Adelka\Desktop\v55\Automated\TC001.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři hlavní stránku města Bzenec" line="9">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:26:06.020720" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/'.</msg>
+<msg time="2025-05-11T04:26:06.987228" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:26:06.020449" elapsed="3.616539"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:26:09.638566" elapsed="0.057240"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:26:09.696167" elapsed="0.014643"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:26:09.711249" elapsed="0.076569"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:26:09.811242" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:26:09.788063" elapsed="0.023295"/>
+</kw>
+<arg>${URL_Bzenec_HomePage}</arg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:26:06.019213" elapsed="3.792274"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:26:06.018296" elapsed="3.793581"/>
+</test>
+<test id="s1-t2" name="TC001 - Ověření načtení a viditelnosti hlavního nadpisu" line="12">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:26:09.824081" level="INFO">Current page contains element 'xpath=//h1[contains(text(), 'Město Bzenec')]'.</msg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:26:09.812830" elapsed="0.011418"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:26:09.865212" level="INFO">Element 'xpath=//h1[contains(text(), 'Město Bzenec')]' is displayed.</msg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:26:09.824956" elapsed="0.040525"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:26:09.880721" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:26:09.866094" elapsed="0.014775"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:26:09.906821" level="INFO">Element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']' is displayed.</msg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:26:09.881441" elapsed="0.025495"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:26:09.907245" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2025-05-11T04:26:09.907961" level="INFO">Verifying element 'xpath=//p[contains(text(),'Bzenec, malebné městečko, které okouzluje svou klidnou atmosférou a bohatou historií. Jeho půvabné uličky zdobí zachované historické budovy, které vyprávějí příběhy minulých dob.')]' contains exact text 'Bzenec, malebné městečko, které okouzluje svou klidnou atmosférou a bohatou historií. Jeho půvabné uličky zdobí zachované historické budovy, které vyprávějí příběhy minulých dob.'.</msg>
+<arg>${Heading_HomePage_IntroductionText_XPath}</arg>
+<arg>${Heading_HomePage_IntroductionText_Expected}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:26:09.907303" elapsed="0.054532"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC001</tag>
+<tag>TS001</tag>
+<status status="PASS" start="2025-05-11T04:26:09.812316" elapsed="0.149812"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="20">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:26:09.963084" elapsed="2.181419"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:26:09.962639" elapsed="2.182166"/>
+</test>
+<status status="PASS" start="2025-05-11T04:26:05.633578" elapsed="6.511985"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC001</stat>
+<stat pass="1" fail="0" skip="0">TS001</stat>
+</tag>
+<suite>
+<stat name="TC001" id="s1" pass="3" fail="0" skip="0">TC001</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:26:06.987228" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-11T04:26:09.907245" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+</errors>
+</robot>

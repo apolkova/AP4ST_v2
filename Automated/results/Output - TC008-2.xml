@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:30:24.147973" rpa="false" schemaversion="5">
+<suite id="s1" name="TC008-2" source="C:\Users\Adelka\Desktop\v55\Automated\TC008-2.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři hlavní stránku města Bzenec" line="9">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:30:24.511279" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/'.</msg>
+<msg time="2025-05-11T04:30:24.905439" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:30:24.510992" elapsed="2.700846"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:30:27.212128" elapsed="0.060749"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:30:27.273154" elapsed="0.025843"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:30:27.299417" elapsed="0.035473"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:30:27.353466" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:30:27.335256" elapsed="0.018328"/>
+</kw>
+<arg>${URL_Bzenec_HomePage}</arg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:30:24.509669" elapsed="2.844041"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:30:24.508658" elapsed="2.845355"/>
+</test>
+<test id="s1-t2" name="TC008-2 - Ověření načtení stránky Mestsky Urad a jejího nadpisu" line="12">
+<kw name="Open and Verify Dropdown Menu" owner="Keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:30:27.371671" level="INFO">Current page contains element 'xpath=(//li[@data-is-dropdown='true'])[4]'.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:30:27.355653" elapsed="0.016134"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:30:27.388213" level="INFO">Element 'xpath=(//li[@data-is-dropdown='true'])[4]' is displayed.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:30:27.372011" elapsed="0.016324"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:30:27.388815" level="INFO">Simulating Mouse Over on element 'xpath=(//li[@data-is-dropdown='true'])[4]'.</msg>
+<arg>${Button_Menu_Item}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:30:27.388560" elapsed="0.284466"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Menu_Item}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:30:27.673303" elapsed="0.012818"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:30:27.686578" level="INFO">Simulating Mouse Over on element 'xpath=//a[contains(text(),'Městský úřad')]'.</msg>
+<arg>${Button_Item_Submenu}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:30:27.686336" elapsed="0.281140"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:30:27.967980" level="INFO">Clicking element 'xpath=//a[contains(text(),'Městský úřad')]'.</msg>
+<arg>${Button_Item_Submenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:30:27.967746" elapsed="0.080702"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Submenu}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:30:28.048810" elapsed="0.705750"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:30:28.768579" level="INFO">Current page contains element 'xpath=//h1[contains(text(),'Městský úřad')]'.</msg>
+<arg>${Heading_Submenu}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:30:28.754785" elapsed="0.013903"/>
+</kw>
+<arg>${Button_Menu_Urad_XPath}</arg>
+<arg>${Button_Menu_MestskyUrad_XPath}</arg>
+<arg>${URL_Menu_MestskyUrad}</arg>
+<arg>${Heading_MestskyUrad_XPath}</arg>
+<status status="PASS" start="2025-05-11T04:30:27.355119" elapsed="1.413681"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC008-2</tag>
+<tag>TS002</tag>
+<status status="PASS" start="2025-05-11T04:30:27.354487" elapsed="1.414580"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="16">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:30:28.769950" elapsed="2.235737"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:30:28.769534" elapsed="2.236501"/>
+</test>
+<status status="PASS" start="2025-05-11T04:30:24.149784" elapsed="6.856995"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC008-2</stat>
+<stat pass="1" fail="0" skip="0">TS002</stat>
+</tag>
+<suite>
+<stat name="TC008-2" id="s1" pass="3" fail="0" skip="0">TC008-2</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:30:24.905439" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

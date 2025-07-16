@@ -1,0 +1,50 @@
+ID: TS100
+Název: Front End
+
+Datum: 5. 4. 2025
+Autor: Adéla Polková
+Verze: 1.0
+
+Stručný popis:
+Tato testovací sada zastřešuje všechny sady TS001–TS015, které se věnují manuálnímu testování frontendové části webu města Bzenec (https://www.bzenec.cz/).
+
+Účelem je ověřit funkčnost uživatelského rozhraní, chování a zobrazení prvků na webové stránce. Všechny testy se zaměřují na vizuální a interaktivní část webu, nikoliv na backend nebo datovou vrstvu.
+
+Vstupní podmínky:
+	- Webová stránka https://www.bzenec.cz/ je dostupná
+	- Použití moderního webového prohlížeče (Chrome, Firefox, Edge)
+	- Přístup k vývojářským nástrojům (např. Chrome DevTools) – volitelné
+
+Výstupní podmínky:
+	- Systémová data se nemění
+	- Možnost použití výstupů pro automatizaci v Robot Frameworku
+
+Obsahuje:
+	- 15 testovacích sad: TS001 až TS015
+	- Více než 60 testovacích případů (TC001 až TC041 včetně sub-testů)
+
+Zahrnuté oblasti testování:
+	- Viditelnost a funkčnost UI prvků
+	- Navigace mezi stránkami
+	- Responzivita a zobrazení na různých zařízeních
+	- Ověření správné validace vstupních dat
+	- Ověření funkcionality (tlačítka, bannery, galerie, videa, formuláře)
+	- Přístupnost (alt texty, klávesnice, zvětšování textu)
+	- Zobrazení cookies a právních informací
+
+Struktura složky:
+	TS001 – Hlavní stránka
+	TS002 – Navigační menu
+	TS003 – Vyhledávání
+	TS004 – Úřední deska
+	TS005 – Kalendář událostí
+	TS006 – Kontakty a úřad
+	TS007 – Formuláře ke stažení
+	TS008 – Bzenecký zpravodaj
+	TS009 – Fotogalerie
+	TS010 – Videoobsah
+	TS011 – Sociální sítě
+	TS012 – Přístupnost a dostupnost
+	TS013 – Cookies a GDPR
+	TS014 – Mapa stránek
+	TS015 – Newsletter

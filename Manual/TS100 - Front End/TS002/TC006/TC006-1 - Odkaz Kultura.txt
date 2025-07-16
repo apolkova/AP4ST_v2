@@ -1,0 +1,27 @@
+ID: TC006-1
+Název: Odkaz Kultura
+
+Stručný popis:
+Testuje funkčnost odkazu „Kultura“ v podmenu „Život ve městě“ a načtení stránky s kulturními informacemi.
+
+Preconditions:
+	- Načtená hlavní stránka
+	- Menu „Život ve městě“ je dostupné
+
+Testovací kroky:
+	1. Najeď kurzorem na „Život ve městě“
+	2. Klikni na položku „Kultura“
+	3. Sleduj, zda se načte odpovídající stránka
+
+Očekávaný výsledek:
+	- Zobrazí se stránka s kulturním obsahem
+	- Stránka není prázdná a neobsahuje chybu
+
+Vstupní data:
+	- Výběr: Kultura
+
+Postconditions:
+	- Web zůstává nezměněn
+
+Logy a úklid:
+	- Screenshot zobrazené stránky

@@ -1,0 +1,25 @@
+ID: TC022-2
+Název: Formulář Kaceni drevin
+
+Stručný popis:
+Ověřuje dostupnost formuláře pro kácení dřevin a jeho funkčnost po stažení.
+
+Preconditions:
+	- Formuláře jsou dostupné
+
+Testovací kroky:
+	1. Klikni na odkaz „Kácení dřevin“
+	2. Ověř, že se soubor stáhne a otevře
+
+Očekávaný výsledek:
+	- Správný dokument je dostupný
+	- Formulář je čitelný
+
+Vstupní data:
+	- Název souboru: Kácení dřevin
+
+Postconditions:
+	- Dokument lze smazat po ověření
+
+Logy a úklid:
+	- Snímek formuláře

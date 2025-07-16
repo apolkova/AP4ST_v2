@@ -1,0 +1,23 @@
+ID: TS011  
+Název: Sociální sítě
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuální
+
+Očekávaný výsledek:  
+    Ikony jsou viditelné a odkazy vedou na správné profily.
+
+Stručný popis:  
+    Testuje se přítomnost ikon sociálních sítí a správnost odkazovaných URL.
+
+Pre-conditions:  
+    - Načtená hlavní stránka  
+
+Post-conditions:  
+    - Nová karta otevřena s profilem  
+
+Obsahuje:  
+    TC031 - Ikony sociálních sítí  
+    TC032 - Odkazy vedou na správné profily  

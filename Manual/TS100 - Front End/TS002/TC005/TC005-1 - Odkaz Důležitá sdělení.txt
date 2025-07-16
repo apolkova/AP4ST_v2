@@ -1,0 +1,27 @@
+ID: TC005-1
+Název: Odkaz Důležitá sdělení
+
+Stručný popis:
+Testuje, zda odkaz "Důležitá sdělení" v sekci "Pro občany" v hlavním menu funguje správně a vede na stránku s informacemi o odpadech.
+
+Preconditions:
+	- Webová stránka načtena
+	- Viditelné menu „Pro občany“
+
+Testovací kroky:
+	1. Najeď kurzorem na „Pro občany“
+	2. Klikni na podmenu „Důležitá sdělení“
+	3. Ověř, že se načte stránka s důležitými sděleními
+
+Očekávaný výsledek:
+	- Zobrazí se správná stránka
+	- Stránka obsahuje nadpis a aktuální sdělení pro občany
+
+Vstupní data:
+	- Výběr: Důležitá sdělení
+
+Postconditions:
+	- Test nezanechává žádné změny
+
+Logy a úklid:
+	- Screenshot stránky „Důležitá sdělení“

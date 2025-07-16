@@ -1,0 +1,26 @@
+ID: TC034
+Název: Zvětšení textu
+
+Stručný popis:
+Ověřuje, zda je možné zvětšit text stránky bez narušení rozložení obsahu.
+
+Preconditions:
+	- Webová stránka je aktivní
+	- Používán moderní prohlížeč s podporou zoomu
+
+Testovací kroky:
+	1. Pomocí Ctrl + zvětši zobrazení na 150 % a 200 %
+	2. Sleduj rozložení stránky a čitelnost
+
+Očekávaný výsledek:
+	- Obsah zůstane přehledný a nerozpadne se
+	- Texty nejsou useknuté ani přes sebe
+
+Vstupní data:
+	- Zoom 150 %, 200 %
+
+Postconditions:
+	- Zvětšení lze resetovat
+
+Logy a úklid:
+	- Screenshot při zvětšení

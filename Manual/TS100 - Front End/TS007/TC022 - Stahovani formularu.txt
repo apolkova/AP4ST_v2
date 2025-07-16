@@ -1,0 +1,25 @@
+ID: TC022
+Název: Stahování formulářů
+
+Stručný popis:
+Testuje proces stahování konkrétních formulářů z webu města a ověřuje, zda soubory odpovídají svému názvu.
+
+Preconditions:
+	- Stránka s formuláři je načtena
+
+Testovací kroky:
+	1. Klikni na formulář „Žádost o dotaci“
+	2. Klikni na formulář „Kácení dřevin“
+	3. Sleduj, zda se oba soubory stáhnou a otevřou
+
+Očekávaný výsledek:
+	- Oba soubory jsou dostupné a čitelné
+
+Vstupní data:
+	- Žádost o dotaci, Kácení dřevin
+
+Postconditions:
+	- Soubory mohou být odstraněny
+
+Logy a úklid:
+	- Název, formát a velikost souboru

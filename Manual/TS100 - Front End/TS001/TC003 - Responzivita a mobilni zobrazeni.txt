@@ -1,0 +1,31 @@
+ID: TC003
+Název: Responzivita a mobilní zobrazení
+
+Stručný popis:
+Test ověřuje správné zobrazení hlavní stránky na různých zařízeních (desktop, tablet, mobil). Zaměřuje se na přizpůsobení rozložení, čitelnost a funkčnost hlavních prvků.
+
+Preconditions:
+	- Webová stránka načtena v moderním prohlížeči
+	- Možnost změny velikosti okna nebo emulace zařízení
+
+Testovací kroky:
+	1. Otevři stránku https://www.bzenec.cz na desktopu
+	2. Postupně změň velikost okna nebo použij vývojářský režim a emuluj tablet a mobil
+	3. Sleduj, jak se přizpůsobuje rozložení (menu, text, obrázky, tlačítka)
+	4. Zkontroluj, zda lze stránku pohodlně používat i v mobilním režimu
+
+Očekávaný výsledek:
+	- Rozložení se přizpůsobí velikosti obrazovky bez chyb
+	- Obsah zůstane čitelný, ovládací prvky zůstanou funkční
+	- Menu se změní na hamburger nebo jiný přehledný režim
+
+Vstupní data:
+	- Zařízení/rozlišení: desktop (1920px), tablet (768px), mobil (375px)
+
+Postconditions:
+	- Rozložení se vrátí po obnovení původního zobrazení
+	- Test nezanechává změny
+
+Logy a úklid:
+	- Screenshoty pro každé zařízení
+	- Vymazání dočasných souborů v prohlížeči (volitelně)

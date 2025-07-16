@@ -1,0 +1,26 @@
+ID: TC009-2
+Název: Hledání „Bzenecký zpravodaj“
+
+Stručný popis:
+Testuje, zda vyhledání fráze „Bzenecký zpravodaj“ vede ke stránce s archivem zpravodajů.
+
+Preconditions:
+	- Hlavní stránka je aktivní
+	- Funkční vyhledávací komponenta
+
+Testovací kroky:
+	1. Do pole pro hledání napiš: „Bzenecký zpravodaj“
+	2. Spusť hledání
+	3. Ověř, že výsledky obsahují odpovídající odkazy
+
+Očekávaný výsledek:
+	- Zobrazí se stránka nebo odkazy na archiv zpravodajů
+
+Vstupní data:
+	- Dotaz: Bzenecký zpravodaj
+
+Postconditions:
+	- Historie prohlížeče zaznamená vyhledání
+
+Logy a úklid:
+	- Screenshot výsledků hledání

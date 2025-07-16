@@ -1,0 +1,29 @@
+ID: TC010  
+Název: Neplatné dotazy
+
+Stručný popis:  
+Test ověřuje, jak se vyhledávací pole chová při zadání neplatných nebo prázdných dotazů. Cílem je ověřit správné ošetření vstupu a zobrazení vhodné systémové reakce.
+
+Preconditions:
+	- Webová stránka je načtena
+	- Vyhledávací pole funkční
+
+Testovací kroky:
+	1. Do vyhledávacího pole zadej nesmyslný výraz (např. „asdasd“)
+	2. Sleduj výsledek vyhledávání
+	3. Poté spusť vyhledávání bez zadání textu (prázdný dotaz)
+
+Očekávaný výsledek:
+	- Při neznámém dotazu se zobrazí zpráva o nenalezení výsledků
+	- Při prázdném dotazu se buď zobrazí upozornění, nebo výchozí výsledky
+	- Žádná chyba v kódu nebo zhroucení stránky
+
+Vstupní data:
+	- „asdasd“, (prázdný vstup)
+
+Postconditions:
+	- Web zůstává ve stabilním stavu
+	- Není vytvořen žádný nechtěný požadavek
+
+Logy a úklid:
+	- Screenshot chybové hlášky a/nebo výchozího stavu

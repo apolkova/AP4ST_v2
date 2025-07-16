@@ -1,0 +1,24 @@
+ID: TC013-2
+Název: Filtrování podle typu
+
+Stručný popis:
+Testuje výběr tyou a zobrazení pouze oznámení z vybraného typu.
+
+Preconditions:
+	- Filtrovací pole „Typ“ je aktivní
+
+Testovací kroky:
+	1. Vyber typ aktuální záznamy
+	2. Sleduj aktualizaci výpisu
+
+Očekávaný výsledek:
+	- Výpis obsahuje pouze oznámení z typu Aktuální záznamy
+
+Vstupní data:
+	- Typ: Aktuální záznamy
+
+Postconditions:
+	- Typ lze přepnout
+
+Logy a úklid:
+	- Screenshot výsledků

@@ -1,0 +1,29 @@
+ID: TS003  
+Název: Vyhledávání
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuální a Automatizovaný  
+
+Očekávaný výsledek:  
+    Vyhledávání vrací výsledky odpovídající dotazu, chybové dotazy se ošetří.
+
+Stručný popis:  
+    Testuje se funkčnost vyhledávacího pole a tlačítka hledat v různých scénářích.
+
+Pre-conditions:  
+    - Načtená hlavní stránka  
+    - Viditelné pole pro vyhledávání  
+
+Post-conditions:  
+    - Výsledky vyhledávání nebo chybové hlášky  
+
+Obsahuje:  
+    TC009 - Vyhledání platného dotazu  
+        TC009-1 - Hledání "formulář"  
+        TC009-2 - Hledání "Bzenecký zpravodaj"  
+    TC010 - Neplatné dotazy  
+        TC010-1 - Hledání "asdasd" a "oklsdfhds"  
+        TC010-2 - Prázdný dotaz  
+    TC011 - Funkčnost tlačítka hledat  

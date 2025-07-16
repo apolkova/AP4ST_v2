@@ -1,0 +1,26 @@
+ID: TC014
+Název: Detail oznámení
+
+Stručný popis:
+Testuje přechod z výpisu oznámení na detailní stránku oznámení. Ověřuje zobrazení všech údajů, příloh a případně náhledů PDF.
+
+Preconditions:
+	- Načtená stránka úřední desky
+
+Testovací kroky:
+	1. Klikni na název oznámení
+	2. Ověř, že se otevře stránka detailu
+	3. Zkontroluj text, data, přílohy
+
+Očekávaný výsledek:
+	- Detail se zobrazí správně
+	- Informace odpovídají výpisu
+
+Vstupní data:
+	- Oznámení z výpisu
+
+Postconditions:
+	- Web se nezmění
+
+Logy a úklid:
+	- Screenshot detailu oznámení

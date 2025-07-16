@@ -1,0 +1,27 @@
+ID: TC013
+Název: Filtrování oznámení
+
+Stručný popis:
+Test ověřuje funkčnost filtrování oznámení na úřední desce dle různých kritérií – kategorie a typu.
+
+Preconditions:
+	- Filtrovací prvky dostupné na stránce úřední desky
+
+Testovací kroky:
+	1. Otevři stránku úřední desky
+	2. Použij filtr dle kategorie a pak dle typu
+	3. Sleduj změnu výpisu
+
+Očekávaný výsledek:
+	- Zobrazí se jen odpovídající oznámení
+	- Filtrování funguje bez reloadu nebo chyb
+
+Vstupní data:
+	- Kategorie: Hospodaření 2022
+	- typ: Aktuální záznam
+
+Postconditions:
+	- Výběr může být resetován
+
+Logy a úklid:
+	- Screenshoty filtrovaných výsledků

@@ -1,0 +1,27 @@
+ID: TC007-1
+Název: Odkaz Zažijte Bzenec
+
+Stručný popis:
+Testuje funkčnost odkazu „Zažijte Bzenec“ v menu „Turismus“.
+
+Preconditions:
+	- Web načten
+	- Menu „Turismus“ dostupné
+
+Testovací kroky:
+	1. Rozbal menu „Turismus“
+	2. Klikni na „Zažijte Bzenec“
+	3. Sleduj, zda se stránka správně načte
+
+Očekávaný výsledek:
+	- Stránka se správně zobrazí
+	- Obsahuje Zažijte Bzenec v okolí
+
+Vstupní data:
+	- Výběr: Zažijte Bzenec
+
+Postconditions:
+	- Žádné
+
+Logy a úklid:
+	- Screenshot výstupu

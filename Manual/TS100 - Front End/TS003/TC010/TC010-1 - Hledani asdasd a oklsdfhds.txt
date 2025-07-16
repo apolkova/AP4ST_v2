@@ -1,0 +1,27 @@
+ID: TC010-1
+Název: Hledání „asdasd“ a „oklsdfhds“.
+
+Stručný popis:
+Testuje reakci systému na neexistující výraz „asdasd“ a „oklsdfhds“.
+
+Preconditions:
+	- Vyhledávač dostupný
+	- Web aktivní
+
+Testovací kroky:
+	1. Zadej výraz „asdasd“ a „oklsdfhds“ do vyhledávacího pole
+	2. Spusť hledání
+	3. Sleduj reakci webu
+
+Očekávaný výsledek:
+	- Pro asdasd nalezneme nesmyslny odkaz na Testovací clanek 
+	- Pro oklsdfhds nenalezneme nic a objeci se chybne hlaseni
+
+Vstupní data:
+	- Dotaz: asdasd, oklsdfhds
+
+Postconditions:
+	- Žádné změny
+
+Logy a úklid:
+	- Screenshot chybové hlášky

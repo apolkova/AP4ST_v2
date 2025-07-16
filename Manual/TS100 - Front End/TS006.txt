@@ -1,0 +1,24 @@
+ID: TS006  
+Název: Kontakty a úřad
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuáln9
+
+Očekávaný výsledek:  
+    Kontaktní údaje jsou správně zobrazeny a odkazy fungují.
+
+Stručný popis:  
+    Testuje se přítomnost kontaktních informací městského úřadu včetně e-mailů a úředních hodin.
+
+Pre-conditions:  
+    - Načtená stránka s kontakty  
+
+Post-conditions:  
+    - Zobrazené informace odpovídají obsahu  
+
+Obsahuje:  
+    TC018 - Zobrazení kontaktů  
+    TC019 - Odkazy na e-maily  
+    TC020 - Úřední hodiny  

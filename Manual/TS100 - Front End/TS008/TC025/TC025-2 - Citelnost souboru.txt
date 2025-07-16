@@ -1,0 +1,25 @@
+ID: TC025-2
+Název: Čitelnost souboru
+
+Stručný popis:
+Testuje, zda je obsah PDF čitelný, graficky správně zarovnaný a obsahuje text, nikoli pouze obrázky.
+
+Preconditions:
+	- Stažený a otevřený PDF soubor
+
+Testovací kroky:
+	1. Přečti obsah dokumentu
+	2. Sleduj čitelnost textu, rozložení stránky a formátování
+
+Očekávaný výsledek:
+	- Text je ostrý a čitelný
+	- Žádné části nejsou rozmazané nebo chybí
+
+Vstupní data:
+	- PDF soubor
+
+Postconditions:
+	- Možnost archivace nebo odstranění
+
+Logy a úklid:
+	- Screenshot části dokumentu

@@ -1,0 +1,26 @@
+ID: TC017
+Název: Detail události
+
+Stručný popis:
+Testuje přechod na stránku detailu konkrétní události a zobrazení všech dostupných informací včetně místa, času a popisu.
+
+Preconditions:
+	- Načtený seznam událostí
+
+Testovací kroky:
+	1. Klikni na název libovolné události
+	2. Ověř, že se otevře stránka detailu
+	3. Zkontroluj název, datum, místo konání a popis
+
+Očekávaný výsledek:
+	- Stránka s detailem události se načte bez chyby
+	- Všechny informace jsou kompletní
+
+Vstupní data:
+	- Vybraná událost
+
+Postconditions:
+	- Detail může být znovu navštíven
+
+Logy a úklid:
+	- Screenshot celé stránky detailu

@@ -1,0 +1,24 @@
+ID: TC012-1
+Název: Zobrazení názvů a dat
+
+Stručný popis:
+Ověřuje, že každé oznámení na úřední desce obsahuje název a datum vyvěšení/sejmutí.
+
+Preconditions:
+	- Načtený výpis oznámení
+
+Testovací kroky:
+	1. Prohlédni několik oznámení
+	2. Sleduj zobrazení názvu a dat
+
+Očekávaný výsledek:
+	- Každé oznámení obsahuje správně formátovaný název a datum
+
+Vstupní data:
+	- Žádná
+
+Postconditions:
+	- Žádné
+
+Logy a úklid:
+	- Screenshoty s názvy a daty

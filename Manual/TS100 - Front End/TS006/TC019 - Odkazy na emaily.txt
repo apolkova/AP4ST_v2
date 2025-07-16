@@ -1,0 +1,27 @@
+ID: TC019
+Název: Odkazy na e-maily
+
+Stručný popis:
+Ověřuje, že kliknutí na e-mailové adresy na stránce kontaktů spustí výchozí e-mailovou aplikaci nebo otevře e-mailový klient.
+
+Preconditions:
+	- Stránka s kontakty je načtena
+	- Prohlížeč podporuje mailto odkazy
+
+Testovací kroky:
+	1. Najdi na stránce libovolnou e-mailovou adresu
+	2. Klikni na e-mail
+	3. Sleduj, zda se otevře poštovní klient nebo nové e-mailové okno
+
+Očekávaný výsledek:
+	- Kliknutí spustí výchozí e-mailový klient
+	- Pole „Komu“ obsahuje správnou adresu
+
+Vstupní data:
+	- E-mailová adresa z kontaktů
+
+Postconditions:
+	- Klient lze zavřít bez odeslání
+
+Logy a úklid:
+	- Screenshot otevřeného klienta nebo odkazu

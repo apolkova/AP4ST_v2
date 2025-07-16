@@ -1,0 +1,24 @@
+ID: TC023-1
+Název: Hlavička města
+
+Stručný popis:
+Testuje, zda je v horní části formuláře uvedeno logo nebo název města Bzenec.
+
+Preconditions:
+	- Otevřený formulář
+
+Testovací kroky:
+	1. Zkontroluj horní část dokumentu
+	2. Sleduj přítomnost hlavičky nebo znaku města
+
+Očekávaný výsledek:
+	- Hlavička je přítomná a korektní
+
+Vstupní data:
+	- Vybraný formulář
+
+Postconditions:
+	- Formulář lze dále použít
+
+Logy a úklid:
+	- Screenshot hlavičky

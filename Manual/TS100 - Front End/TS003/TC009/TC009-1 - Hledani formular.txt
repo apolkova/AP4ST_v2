@@ -1,0 +1,27 @@
+ID: TC009-1
+Název: Hledání „formulář“
+
+Stručný popis:
+Ověřuje, že po zadání existujícího klíčového slova „formulář“ do vyhledávače se zobrazí relevantní výsledky.
+
+Preconditions:
+	- Načtená hlavní stránka
+	- Vyhledávací pole je dostupné
+
+Testovací kroky:
+	1. Do vyhledávacího pole napiš výraz: „formulář“
+	2. Klikni na tlačítko hledat nebo stiskni Enter
+	3. Sleduj zobrazené výsledky
+
+Očekávaný výsledek:
+	- Výsledky obsahují odkazy na formuláře nebo sekci ke stažení
+	- Stránka se nezhroutí a zobrazí se bez chyby
+
+Vstupní data:
+	- Vyhledávací dotaz: „formulář“
+
+Postconditions:
+	- Výsledky lze prokliknout
+
+Logy a úklid:
+	- Screenshot výsledků hledání

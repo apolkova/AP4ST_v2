@@ -1,0 +1,28 @@
+ID: TC015
+Název: Zobrazení seznamu událostí
+
+Stručný popis:
+Test ověřuje načtení a správné zobrazení seznamu událostí na stránce Kalendář akcí. Ověřuje, že každá událost obsahuje název, datum a případně popis.
+
+Preconditions:
+	- Webová stránka města Bzenec je dostupná
+	- Kalendář událostí je aktivní sekce
+
+Testovací kroky:
+	1. Otevři hlavní stránku města
+	2. Sjedeme dolů po stránce, kde se nachází „Kalendář akcí“
+	3. Sleduj, zda se načte seznam aktuálních událostí
+	4. Ověř, že u každé události je uveden název, datum a popis
+
+Očekávaný výsledek:
+	- Seznam událostí je přehledný
+	- Informace o každé události jsou úplné
+
+Vstupní data:
+	- Žádná specifická
+
+Postconditions:
+	- Seznam může být použit v dalších testech
+
+Logy a úklid:
+	- Screenshot výpisu událostí

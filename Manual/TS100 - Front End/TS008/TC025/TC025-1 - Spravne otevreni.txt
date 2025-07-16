@@ -1,0 +1,25 @@
+ID: TC025-1
+Název: Správné otevření
+
+Stručný popis:
+Ověřuje, že stažený PDF soubor se otevře bez chyby a odpovídá vydání, na které uživatel klikl.
+
+Preconditions:
+	- PDF soubor stažen
+
+Testovací kroky:
+	1. Otevři stažený soubor PDF
+	2. Zkontroluj obsah
+
+Očekávaný výsledek:
+	- Soubor se otevře v PDF prohlížeči
+	- Obsah odpovídá očekávanému číslu zpravodaje
+
+Vstupní data:
+	- Soubor z předchozího testu
+
+Postconditions:
+	- Dokument může být uložen nebo odstraněn
+
+Logy a úklid:
+	- Screenshot otevřeného PDF

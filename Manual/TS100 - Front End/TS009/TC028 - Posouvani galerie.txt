@@ -1,0 +1,27 @@
+ID: TC028
+Název: Posouvání galerie
+
+Stručný popis:
+Test ověřuje funkčnost procházení mezi obrázky v galerii, např. pomocí šipek nebo klikáním na další/ předchozí.
+
+Preconditions:
+	- Galerie obsahuje více obrázků
+	- Klikni na prvni obrazek a cekej na jeho nacteni
+
+Testovací kroky:
+	1. Použij tlacitka pro přechod na další obrázek nebo na predchozi
+	2. Použij šipky pro přechod na další obrázek nebo na predchozi
+	3. Sleduj reakci a načítání
+
+Očekávaný výsledek:
+	- Obrázky se přepínají bez prodlevy nebo chyb
+	- Navigace je intuitivní
+
+Vstupní data:
+	- Obrázky z galerie
+
+Postconditions:
+	- Galerie se vrátí do výchozího stavu
+
+Logy a úklid:
+	- Screenshot sekvence přechodu

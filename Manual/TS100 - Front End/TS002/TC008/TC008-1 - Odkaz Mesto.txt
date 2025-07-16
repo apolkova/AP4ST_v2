@@ -1,0 +1,24 @@
+ID: TC008-1
+Název: Odkaz Město
+
+Stručný popis:
+Testuje, zda odkaz „Město“ v sekci „Město a úřad“ vede na stránku s informacemi o městě Bzenec.
+
+Preconditions:
+	- Navigační menu dostupné
+
+Testovací kroky:
+	1. Otevři „Město a úřad“ > „Město“
+	2. Ověř přítomnost Headeru a různých odkazy o městě
+
+Očekávaný výsledek:
+	- Stránka zobrazuje správné kontaktní údaje
+
+Vstupní data:
+	- Odkaz: Město
+
+Postconditions:
+	- Web zůstává nezměněn
+
+Logy a úklid:
+	- Screenshot kontaktní stránky

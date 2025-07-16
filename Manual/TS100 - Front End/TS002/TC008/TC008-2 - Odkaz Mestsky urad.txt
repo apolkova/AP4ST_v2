@@ -1,0 +1,25 @@
+ID: TC008-2
+Název: Odkaz Městský úřad
+
+Stručný popis:
+Ověřuje, že odkaz „Městský úřad“ v sekci „Město a úřad“ funguje správně a načte stránku s informacemi o mětském úřadě.
+
+Preconditions:
+	- Webová stránka aktivní
+
+Testovací kroky:
+	1. Otevři sekci „Město a úřad“ > „Městský úřad“
+	2. Zkontroluj obsah stránky
+
+Očekávaný výsledek:
+	- Stránka se načte bez chyb
+	- Obsahuje časy úředních hodin
+
+Vstupní data:
+	- Odkaz: Městský úřad
+
+Postconditions:
+	- Žádné změny systému
+
+Logy a úklid:
+	- Screenshot stránky

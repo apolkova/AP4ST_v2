@@ -1,0 +1,31 @@
+ID: TS004  
+Název: Úřední deska
+
+Autor: Adéla Polková  
+Datum: 08.05.2025 
+
+Typ testu: Manuální a Automatizovaný  
+
+Očekávaný výsledek:  
+    Úřední deska správně zobrazuje oznámení, funguje filtrování a detail záznamu.
+
+Stručný popis:  
+    Testuje se přehled oznámení, jejich přílohy a možnosti filtrování.
+
+Pre-conditions:  
+    - Přístup na stránku "Úřední deska"  
+    - Aktivní internet  
+
+Post-conditions:  
+    - Zobrazení příloh a detailů oznámení  
+
+Obsahuje:  
+    TC012 - Zobrazení oznámení  
+        TC012-1 - Zobrazení názvů a dat  
+        TC012-2 - Oznámení mají přílohy  
+    TC013 - Filtrování oznámení  
+        TC013-1 - Filtrování podle kategorie  
+        TC013-2 - Filtrování podle typu  
+    TC014 - Detail oznámení  
+        TC014-1 - Kliknutí na detail  
+        TC014-2 - Zobrazení PDF  

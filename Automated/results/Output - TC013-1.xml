@@ -1,0 +1,2029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:32:55.916275" rpa="false" schemaversion="5">
+<suite id="s1" name="TC013-1" source="C:\Users\Adelka\Desktop\v55\Automated\TC013-1.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři stránku Úřední deska a rozšířit vyhledávání" line="12">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:56.273870" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/uredni-deska'.</msg>
+<msg time="2025-05-11T04:32:56.631381" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:32:56.273604" elapsed="2.568874"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:32:58.842880" elapsed="0.058371"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:32:58.901548" elapsed="0.007722"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:58.909527" elapsed="0.034162"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:58.958895" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:58.944100" elapsed="0.014931"/>
+</kw>
+<arg>${URL_Menu_UredniDeska}</arg>
+<arg>${Heading_UredniDeska_XPath}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:32:56.272350" elapsed="2.686830"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:58.960157" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:32:58.959663" elapsed="0.161308"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:32:56.271353" elapsed="2.849919"/>
+</test>
+<test id="s1-t2" name="TC013-1 - Ověření funkcnosti a zobrazení filtračního prvku Kategorie na Úřední desce" line="16">
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:59.122998" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:32:59.122805" elapsed="0.107113"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:59.230180" elapsed="0.024232"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:59.254853" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[@class='c-custom-select__items']//div[2]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:32:59.254629" elapsed="0.069562"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:59.324422" elapsed="0.025844"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:59.350738" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:32:59.350501" elapsed="0.104785"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:32:59.455508" elapsed="0.622917"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:00.169711" level="INFO">Current page contains text 'Hospodaření 2022'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:00.078653" elapsed="0.091163"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:00.170021" elapsed="0.008881"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:00.179170" elapsed="0.010610"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:00.190055" elapsed="3.584737"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:03.775046" elapsed="0.025476"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:03.800749" elapsed="0.029361"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:03.830785" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:03.830446" elapsed="0.073227"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:03.904029" elapsed="0.015993"/>
+</kw>
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<arg>Hospodaření 2022</arg>
+<status status="PASS" start="2025-05-11T04:32:59.122423" elapsed="4.797760"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:03.921293" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:03.921086" elapsed="0.071106"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:03.992430" elapsed="0.016949"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:04.010260" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[3]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:04.009958" elapsed="0.099614"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:04.109853" elapsed="0.016951"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:04.127311" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:04.127081" elapsed="0.081405"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:04.208767" elapsed="0.656009"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:04.884064" level="INFO">Current page contains text 'Hospodaření 2023'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:04.865008" elapsed="0.019155"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:04.884358" elapsed="0.011012"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:04.895620" elapsed="0.004938"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:04.900785" elapsed="8.075783"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:12.976887" elapsed="0.033537"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:13.010644" elapsed="0.017312"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:13.028527" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:13.028261" elapsed="0.066607"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:13.095120" elapsed="0.020775"/>
+</kw>
+<arg>${Input_UD_Kategorie_Hospodareni2023_XPath}</arg>
+<arg>Hospodaření 2023</arg>
+<status status="PASS" start="2025-05-11T04:33:03.920676" elapsed="9.195355"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:13.117512" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:13.117154" elapsed="0.110459"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:13.227945" elapsed="0.042845"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:13.271641" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[@class='c-custom-select__items']//div[2]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:13.271184" elapsed="0.081284"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:13.352737" elapsed="0.045200"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:13.398653" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:13.398284" elapsed="0.120682"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:13.519284" elapsed="0.625298"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:14.173392" level="INFO">Current page contains text 'Hospodaření 2022'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:14.144918" elapsed="0.028597"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:14.173734" elapsed="0.007763"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:14.181817" elapsed="0.006963"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:14.189074" elapsed="1.216909"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:15.406296" elapsed="0.024735"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:15.431283" elapsed="0.014352"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:15.446079" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:15.445850" elapsed="0.057363"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:15.503436" elapsed="0.018554"/>
+</kw>
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<arg>Hospodaření 2022</arg>
+<status status="PASS" start="2025-05-11T04:33:13.116517" elapsed="2.405637"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:15.523388" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:15.523188" elapsed="0.072866"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:15.596546" elapsed="0.017149"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:15.614173" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[3]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:15.613933" elapsed="0.062874"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:15.677027" elapsed="0.019345"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:15.696892" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:15.696629" elapsed="0.063023"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:15.759892" elapsed="0.619812"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:16.394479" level="INFO">Current page contains text 'Hospodaření 2023'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:16.379925" elapsed="0.014657"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:16.394784" elapsed="0.025449"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:16.420535" elapsed="0.036331"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:16.457144" elapsed="1.037211"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:17.494612" elapsed="0.032710"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:17.527615" elapsed="0.019488"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:17.547561" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:17.547322" elapsed="0.068832"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:17.616459" elapsed="0.019530"/>
+</kw>
+<arg>${Input_UD_Kategorie_Hospodareni2023_XPath}</arg>
+<arg>Hospodaření 2023</arg>
+<status status="PASS" start="2025-05-11T04:33:15.522749" elapsed="2.113359"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:17.637261" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:17.637063" elapsed="0.076291"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:17.713597" elapsed="0.016860"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:17.730936" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[4]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:17.730706" elapsed="0.076996"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:17.807923" elapsed="0.019951"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:17.828427" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:17.828158" elapsed="0.065328"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:17.893715" elapsed="0.643546"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:18.558099" level="INFO">Current page contains text 'Informátor'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:18.537498" elapsed="0.020738"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:18.558470" elapsed="0.007688"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:18.566379" elapsed="0.008418"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:18.575020" elapsed="1.124498"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:19.699771" elapsed="0.037683"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:19.737721" elapsed="0.015057"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:19.753274" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:19.753023" elapsed="0.057887"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:19.811144" elapsed="0.022785"/>
+</kw>
+<arg>${Input_UD_Kategorie_Informator_XPath}</arg>
+<arg>Informátor</arg>
+<status status="PASS" start="2025-05-11T04:33:17.636644" elapsed="2.197413"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:19.835279" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:19.835079" elapsed="0.075900"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:19.911245" elapsed="0.017169"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:19.928904" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[5]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:19.928654" elapsed="0.074049"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:20.002922" elapsed="0.014146"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:20.017510" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:20.017284" elapsed="0.083849"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:20.101356" elapsed="0.650640"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:20.770104" level="INFO">Current page contains text 'Mikroregion'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:20.752234" elapsed="0.017986"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:20.770451" elapsed="0.007521"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:20.778325" elapsed="0.007343"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:20.785913" elapsed="1.060409"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:21.846770" elapsed="0.032912"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:21.879912" elapsed="0.014960"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:21.895567" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:21.895208" elapsed="0.069790"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:21.965244" elapsed="0.016864"/>
+</kw>
+<arg>${Input_UD_Kategorie_Mikroregion_XPath}</arg>
+<arg>Mikroregion</arg>
+<status status="PASS" start="2025-05-11T04:33:19.834659" elapsed="2.147570"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:21.983278" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:21.983062" elapsed="0.080356"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:22.063708" elapsed="0.022759"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:22.086967" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[6]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:22.086719" elapsed="0.091676"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:22.178618" elapsed="0.020198"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:22.199294" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:22.199037" elapsed="0.078322"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:22.277688" elapsed="0.629860"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:22.931063" level="INFO">Current page contains text 'Nařízení města'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:22.907769" elapsed="0.023395"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:22.931360" elapsed="0.007071"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:22.938663" elapsed="0.007675"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:22.946550" elapsed="1.061431"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:24.008350" elapsed="0.035760"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:24.044426" elapsed="0.015743"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:24.060633" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:24.060394" elapsed="0.067673"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:24.128327" elapsed="0.030476"/>
+</kw>
+<arg>${Input_UD_Kategorie_NarizeniMesta_XPath}</arg>
+<arg>Nařízení města</arg>
+<status status="PASS" start="2025-05-11T04:33:21.982639" elapsed="2.176330"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:24.160963" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:24.160622" elapsed="0.072116"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:24.232958" elapsed="0.020021"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:24.253460" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[7]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:24.253216" elapsed="0.078320"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:24.331855" elapsed="0.041217"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:24.373534" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:24.373292" elapsed="0.067660"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:24.441285" elapsed="0.638148"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:25.109082" level="INFO">Current page contains text 'Obecně závazné vyhlášky'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:25.079647" elapsed="0.029537"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:25.109382" elapsed="0.007553"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:25.117209" elapsed="0.013147"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:25.130644" elapsed="1.063756"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:26.194756" elapsed="0.033579"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:26.228565" elapsed="0.018658"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:26.247663" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:26.247437" elapsed="0.084293"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:26.331973" elapsed="0.023668"/>
+</kw>
+<arg>${Input_UD_Kategorie_Vyhlasky_XPath}</arg>
+<arg>Obecně závazné vyhlášky</arg>
+<status status="PASS" start="2025-05-11T04:33:24.159584" elapsed="2.196181"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:26.357020" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:26.356819" elapsed="0.081070"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:26.438110" elapsed="0.018973"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:26.457639" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[8]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:26.457360" elapsed="0.082577"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:26.540245" elapsed="0.016337"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:26.557021" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:26.556794" elapsed="0.063963"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:26.621174" elapsed="0.627592"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:27.269832" level="INFO">Current page contains text 'Pošta pro občany'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:27.249032" elapsed="0.020915"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:27.270161" elapsed="0.007501"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:27.277965" elapsed="0.010335"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:27.288526" elapsed="1.088958"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:28.377746" elapsed="0.034205"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:28.412175" elapsed="0.021149"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:28.433986" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:28.433618" elapsed="0.103760"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:28.537706" elapsed="0.023190"/>
+</kw>
+<arg>${Input_UD_Kategorie_PostaProObcany_XPath}</arg>
+<arg>Pošta pro občany</arg>
+<status status="PASS" start="2025-05-11T04:33:26.356382" elapsed="2.204632"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:28.562449" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:28.562222" elapsed="0.085638"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:28.648081" elapsed="0.021908"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:28.670548" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[9]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:28.670280" elapsed="0.095942"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:28.766440" elapsed="0.016554"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:28.783431" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:28.783207" elapsed="0.081595"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:28.865019" elapsed="0.630890"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:29.515371" level="INFO">Current page contains text 'Rozpočet 2023'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:29.496133" elapsed="0.019341"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:29.515673" elapsed="0.006881"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:29.522794" elapsed="0.006681"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:29.529682" elapsed="1.066320"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:30.596334" elapsed="0.025664"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:30.622213" elapsed="0.020368"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:30.643020" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:30.642792" elapsed="0.090017"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:30.733026" elapsed="0.024069"/>
+</kw>
+<arg>${Input_UD_Kategorie_Rozpocet2023_XPath}</arg>
+<arg>Rozpočet 2023</arg>
+<status status="PASS" start="2025-05-11T04:33:28.561749" elapsed="2.195463"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:30.758355" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:30.758159" elapsed="0.112408"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:30.870864" elapsed="0.025839"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:30.897141" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[10]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:30.896921" elapsed="0.107745"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:31.004977" elapsed="0.051855"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:31.057296" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:31.057063" elapsed="0.087187"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:31.144469" elapsed="0.625755"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:31.789282" level="INFO">Current page contains text 'Rozpočet 2024'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:31.770561" elapsed="0.018820"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:31.789574" elapsed="0.009913"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:31.799832" elapsed="0.009035"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:31.809079" elapsed="1.043750"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:32.853087" elapsed="0.037734"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:32.891177" elapsed="0.021701"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:32.913476" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:32.913171" elapsed="0.122223"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:33.035832" elapsed="0.027642"/>
+</kw>
+<arg>${Input_UD_Kategorie_Rozpocet2024_XPath}</arg>
+<arg>Rozpočet 2024</arg>
+<status status="PASS" start="2025-05-11T04:33:30.757741" elapsed="2.305865"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:33.064802" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:33.064603" elapsed="0.119088"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:33.183984" elapsed="0.033802"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:33.218273" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[11]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:33.218027" elapsed="0.165116"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:33.383441" elapsed="0.025376"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:33.409532" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:33.409122" elapsed="0.139804"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:33.549167" elapsed="0.639023"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:34.213649" level="INFO">Current page contains text 'Rozpočet 2025'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:34.188405" elapsed="0.025378"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:34.214046" elapsed="0.008729"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:34.223030" elapsed="0.010759"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:34.234004" elapsed="1.051663"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:35.285936" elapsed="0.031963"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:35.318114" elapsed="0.022035"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:35.340598" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:35.340365" elapsed="0.120396"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:35.460990" elapsed="0.029402"/>
+</kw>
+<arg>${Input_UD_Kategorie_Rozpocet2025_XPath}</arg>
+<arg>Rozpočet 2025</arg>
+<status status="PASS" start="2025-05-11T04:33:33.064183" elapsed="2.426341"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:35.491689" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:35.491494" elapsed="0.104200"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:35.596020" elapsed="0.020929"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:35.617416" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[12]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:35.617184" elapsed="0.121511"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:35.738912" elapsed="0.020294"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:35.759642" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:35.759416" elapsed="0.078049"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:35.837683" elapsed="0.634280"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:36.509742" level="INFO">Current page contains text 'Sociální odbor'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:36.472713" elapsed="0.037186"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:36.510190" elapsed="0.008932"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:36.519460" elapsed="0.010588"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:36.530263" elapsed="1.071357"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:37.601834" elapsed="0.026194"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:37.628246" elapsed="0.017434"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:37.646151" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:37.645907" elapsed="0.080505"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:37.726676" elapsed="0.017607"/>
+</kw>
+<arg>${Input_UD_Kategorie_SocialniOdbor_XPath}</arg>
+<arg>Sociální odbor</arg>
+<status status="PASS" start="2025-05-11T04:33:35.491078" elapsed="2.253322"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:37.745547" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:37.745352" elapsed="0.071691"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:37.817262" elapsed="0.018343"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:37.836042" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[13]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:37.835820" elapsed="0.083796"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:37.919919" elapsed="0.025187"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:37.945574" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:37.945344" elapsed="0.137445"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:38.083062" elapsed="0.856561"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:38.963101" level="INFO">Current page contains text 'Správa majetku'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:38.939839" elapsed="0.023365"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:38.963418" elapsed="0.010119"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:38.973849" elapsed="0.011349"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:38.985424" elapsed="1.255574"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:40.241214" elapsed="0.027982"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:40.269408" elapsed="0.019146"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:40.288990" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:40.288764" elapsed="0.107175"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:40.396157" elapsed="0.024698"/>
+</kw>
+<arg>${Input_UD_Kategorie_SpravaMajetku_XPath}</arg>
+<arg>Správa majetku</arg>
+<status status="PASS" start="2025-05-11T04:33:37.744933" elapsed="2.676128"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:40.422109" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:40.421913" elapsed="0.100313"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:40.522443" elapsed="0.021248"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:40.544130" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[14]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:40.543909" elapsed="0.126446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:40.670577" elapsed="0.024992"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:40.696058" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:40.695807" elapsed="0.101351"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:40.797373" elapsed="0.544538"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:41.365833" level="INFO">Current page contains text 'Stavební úřad'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:41.342236" elapsed="0.023752"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:41.366235" elapsed="0.013112"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:41.379855" elapsed="0.012923"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:41.393080" elapsed="1.127196"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:42.520530" elapsed="0.025904"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:42.546649" elapsed="0.017510"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:42.564746" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:42.564419" elapsed="0.062819"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:42.627455" elapsed="0.021896"/>
+</kw>
+<arg>${Input_UD_Kategorie_StavebniUrad_XPath}</arg>
+<arg>Stavební úřad</arg>
+<status status="PASS" start="2025-05-11T04:33:40.421487" elapsed="2.227993"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:42.650692" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:42.650488" elapsed="0.093723"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:42.744427" elapsed="0.032383"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:42.777340" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[15]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:42.777098" elapsed="0.170086"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:42.947405" elapsed="0.041146"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:42.988995" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:42.988765" elapsed="0.169405"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:43.158385" elapsed="0.666180"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:43.848434" level="INFO">Current page contains text 'Tajemník'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:43.824777" elapsed="0.023818"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:43.848885" elapsed="0.008365"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:43.857505" elapsed="0.011802"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:43.869513" elapsed="1.017061"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:44.886801" elapsed="0.036548"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:44.923610" elapsed="0.023752"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:44.947804" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:44.947574" elapsed="0.130543"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:45.078357" elapsed="0.028130"/>
+</kw>
+<arg>${Input_UD_Kategorie_Tajemnik_XPath}</arg>
+<arg>Tajemník</arg>
+<status status="PASS" start="2025-05-11T04:33:42.650048" elapsed="2.456563"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:45.107741" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:45.107549" elapsed="0.136863"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:45.244633" elapsed="0.039351"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:45.284488" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[16]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:45.284227" elapsed="0.145997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:45.430537" elapsed="0.025846"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:45.456842" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:45.456608" elapsed="0.153729"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:45.610572" elapsed="0.443365"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:46.077145" level="INFO">Current page contains text 'Usnesení rady města'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:46.054152" elapsed="0.023158"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:46.077501" elapsed="0.007475"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:46.085280" elapsed="0.009649"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:46.095143" elapsed="1.042931"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:47.138443" elapsed="0.031276"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:47.170006" elapsed="0.020080"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:47.190537" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:47.190307" elapsed="0.091038"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:47.281669" elapsed="0.024391"/>
+</kw>
+<arg>${Input_UD_Kategorie_UsneseniRady_XPath}</arg>
+<arg>Usnesení rady města</arg>
+<status status="PASS" start="2025-05-11T04:33:45.107135" elapsed="2.199114"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:47.307750" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:47.307520" elapsed="0.088695"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:47.396458" elapsed="0.021170"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:47.418202" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[17]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:47.417911" elapsed="0.106839"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:47.524970" elapsed="0.021587"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:47.546989" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:47.546768" elapsed="0.103526"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:47.650514" elapsed="0.666267"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:48.365687" level="INFO">Current page contains text 'Úřad pro zastupování státu ve věcech majetkových'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:48.317073" elapsed="0.048724"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:48.366014" elapsed="0.014330"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:48.380556" elapsed="0.020459"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:48.401262" elapsed="1.308503"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:49.710074" elapsed="0.015868"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:49.726152" elapsed="0.015414"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:49.742048" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:49.741784" elapsed="0.064482"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:49.806492" elapsed="0.021965"/>
+</kw>
+<arg>${Input_UD_Kategorie_ZastupovaniStat_XPath}</arg>
+<arg>Úřad pro zastupování státu ve věcech majetkových</arg>
+<status status="PASS" start="2025-05-11T04:33:47.306988" elapsed="2.521596"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:49.829734" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:49.829539" elapsed="0.078487"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:49.908254" elapsed="0.019067"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:49.927761" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[18]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:49.927538" elapsed="0.089856"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:50.017611" elapsed="0.017652"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:50.035696" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:50.035474" elapsed="0.088144"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:50.124205" elapsed="0.627859"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:50.781292" level="INFO">Current page contains text 'Veřejnoprávní smlouvy'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:50.752279" elapsed="0.029123"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:50.781622" elapsed="0.010088"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:50.792001" elapsed="0.011715"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:50.803948" elapsed="1.068416"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:51.872678" elapsed="0.026829"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:51.899737" elapsed="0.015854"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:51.916107" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:51.915826" elapsed="0.097173"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:52.013263" elapsed="0.018635"/>
+</kw>
+<arg>${Input_UD_Kategorie_VerejnopravniSmlouvy_XPath}</arg>
+<arg>Veřejnoprávní smlouvy</arg>
+<status status="PASS" start="2025-05-11T04:33:49.829116" elapsed="2.202902"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:52.033152" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:52.032954" elapsed="0.067200"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:52.100371" elapsed="0.036270"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:52.137099" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[19]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:52.136857" elapsed="0.081403"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:52.218502" elapsed="0.041354"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:52.260356" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:52.260092" elapsed="0.093798"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:52.354315" elapsed="0.633778"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:53.005625" level="INFO">Current page contains text 'Volby'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:52.988330" elapsed="0.017400"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:53.005974" elapsed="0.006931"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:53.013165" elapsed="0.006619"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:53.020115" elapsed="1.144619"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:54.165022" elapsed="0.024990"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:54.190231" elapsed="0.015199"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:54.205877" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:54.205648" elapsed="0.092355"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:54.298256" elapsed="0.016415"/>
+</kw>
+<arg>${Input_UD_Kategorie_Volby_XPath}</arg>
+<arg>Volby</arg>
+<status status="PASS" start="2025-05-11T04:33:52.032542" elapsed="2.282252"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:54.315919" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:54.315726" elapsed="0.068581"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:54.384548" elapsed="0.019386"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:54.404706" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[7]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:54.404326" elapsed="0.078171"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:54.482719" elapsed="0.019979"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:54.503210" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:54.502981" elapsed="0.071502"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:54.574765" elapsed="0.637702"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:55.231474" level="INFO">Current page contains text 'Vyhlášky'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:55.212682" elapsed="0.018899"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:55.231773" elapsed="0.007657"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:55.239664" elapsed="0.007580"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:55.247452" elapsed="1.071894"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:56.319716" elapsed="0.029758"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:56.349742" elapsed="0.017631"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:56.368011" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:56.367687" elapsed="0.066362"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:56.434270" elapsed="0.024890"/>
+</kw>
+<arg>${Input_UD_Kategorie_Vyhlasky_XPath}</arg>
+<arg>Vyhlášky</arg>
+<status status="PASS" start="2025-05-11T04:33:54.315316" elapsed="2.143963"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:56.460421" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:56.460225" elapsed="0.066810"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:56.527338" elapsed="0.023191"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:56.551202" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[21]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:56.550858" elapsed="0.078575"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:56.629660" elapsed="0.015917"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:56.646123" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:56.645870" elapsed="0.081328"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:56.727498" elapsed="0.672067"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:57.434012" level="INFO">Current page contains text 'VÝPIS ZE ZÁPISU ZASTUPITELSTVA'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:57.399786" elapsed="0.034323"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:57.434303" elapsed="0.014424"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:57.449067" elapsed="0.009336"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:57.458845" elapsed="1.184903"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:58.643967" elapsed="0.033296"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:58.677557" elapsed="0.016031"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:58.694266" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:58.693867" elapsed="0.061670"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:58.755767" elapsed="0.017550"/>
+</kw>
+<arg>${Input_UD_Kategorie_VypisZeZapisu_XPath}</arg>
+<arg>VÝPIS ZE ZÁPISU ZASTUPITELSTVA</arg>
+<status status="PASS" start="2025-05-11T04:33:56.459806" elapsed="2.313627"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:58.774569" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:58.774372" elapsed="0.068251"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:58.842839" elapsed="0.017220"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:58.860724" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[22]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:58.860402" elapsed="0.091966"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:33:58.952718" elapsed="0.018124"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:58.971578" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:33:58.971213" elapsed="0.110190"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:33:59.081619" elapsed="0.630418"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:33:59.733196" level="INFO">Current page contains text 'Zastupitelstvo pozvánky na zasedání zastupitelstva a záměry města nakládat s majetkem'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:33:59.712270" elapsed="0.021029"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:33:59.733493" elapsed="0.008130"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:33:59.741864" elapsed="0.010738"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:33:59.752821" elapsed="0.988082"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:00.741204" elapsed="0.028627"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:00.770066" elapsed="0.023080"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:00.793649" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:00.793393" elapsed="0.084302"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:00.877943" elapsed="0.017966"/>
+</kw>
+<arg>${Input_UD_Kategorie_ZastupitelstvoPozvanky_XPath}</arg>
+<arg>Zastupitelstvo pozvánky na zasedání zastupitelstva a záměry města nakládat s majetkem</arg>
+<status status="PASS" start="2025-05-11T04:33:58.773955" elapsed="2.122073"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:00.897186" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:00.896989" elapsed="0.087626"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:00.984853" elapsed="0.038793"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:01.024092" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[23]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:01.023868" elapsed="0.120679"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:01.144803" elapsed="0.028793"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:01.174188" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:01.173885" elapsed="0.108255"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:34:01.282358" elapsed="3.132066"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:04.436539" level="INFO">Current page contains text 'Ztráty a nálezy'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:34:04.414656" elapsed="0.022042"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:04.436979" elapsed="0.007856"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:34:04.445188" elapsed="0.009127"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:34:04.454526" elapsed="1.515032"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:05.969819" elapsed="0.058854"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:06.029101" elapsed="0.022029"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:06.051693" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:06.051407" elapsed="0.082646"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:06.134271" elapsed="0.022420"/>
+</kw>
+<arg>${Input_UD_Kategorie_ZtratyNalezy_XPath}</arg>
+<arg>Ztráty a nálezy</arg>
+<status status="PASS" start="2025-05-11T04:34:00.896572" elapsed="5.260249"/>
+</kw>
+<kw name="UD Vyhledavani podle Kategorie" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:06.157968" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select__selected'][contains(text(),'-- Vše --')]'.</msg>
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:06.157771" elapsed="0.092365"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Hospodareni2022_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:06.250556" elapsed="0.022470"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:06.273466" level="INFO">Clicking element 'xpath=//div[@class='c-custom-select opened']//div[24]'.</msg>
+<arg>${Input}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:06.273239" elapsed="0.090633"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:06.364090" elapsed="0.022601"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:06.387196" level="INFO">Clicking element 'xpath=//button[@class='text-white bg-secondary text-sm sm:text-base font-bold py-3 px-5 transition ease-in-out hover:bg-black max-md:w-full md:min-w-[240px]']'.</msg>
+<arg>${Button_UD_RV_Hledat}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:06.386943" elapsed="0.077232"/>
+</kw>
+<kw name="Wait Until Location Is Not" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is not ``location``.</doc>
+<status status="PASS" start="2025-05-11T04:34:06.464489" elapsed="0.629663"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:07.116080" level="INFO">Current page contains text 'Životní prostředí'.</msg>
+<arg>${NazevKategorie}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:34:07.094401" elapsed="0.021785"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:07.116378" elapsed="0.008384"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL_Menu_UredniDeska}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:34:07.125222" elapsed="0.010759"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-05-11T04:34:07.136195" elapsed="1.020674"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_UredniDeska_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:08.157176" elapsed="0.034714"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:08.192107" elapsed="0.021682"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:08.214343" level="INFO">Clicking element 'xpath=//button[@class='text-white']'.</msg>
+<arg>${Button_UD_RozsireneVyhledavani}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:08.214032" elapsed="0.104459"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Input_UD_Kategorie_Vyber_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:08.318713" elapsed="0.026381"/>
+</kw>
+<arg>${Input_UD_Kategorie_ZivotniProstredi_XPath}</arg>
+<arg>Životní prostředí</arg>
+<status status="PASS" start="2025-05-11T04:34:06.157354" elapsed="2.187871"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC013-1</tag>
+<tag>TS004</tag>
+<status status="PASS" start="2025-05-11T04:32:59.121772" elapsed="69.223873"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="44">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:08.347130" elapsed="2.267835"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:34:08.346362" elapsed="2.268982"/>
+</test>
+<status status="PASS" start="2025-05-11T04:32:55.918619" elapsed="74.697509"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC013-1</stat>
+<stat pass="1" fail="0" skip="0">TS004</stat>
+</tag>
+<suite>
+<stat name="TC013-1" id="s1" pass="3" fail="0" skip="0">TC013-1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:32:56.631381" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

@@ -1,0 +1,26 @@
+ID: TC040
+Název: Přihlášení k odběru
+
+Stručný popis:
+Testuje celý proces přihlášení k odběru newsletteru. Zahrnuje validaci e-mailové adresy a reakci systému po odeslání.
+
+Preconditions:
+	- Sekce pro přihlášení k newsletteru je dostupná
+
+Testovací kroky:
+	1. Otevři formulář pro přihlášení k odběru
+	2. Zadej platný e-mail (např. a_polkova@utb.cz)
+	3. Klikni na tlačítko „Odeslat“ nebo „Přihlásit se“
+
+Očekávaný výsledek:
+	- Systém e-mail přijme a zobrazí potvrzení
+	- Nezobrazí se žádná chyba
+
+Vstupní data:
+	- E-mail: a_polkova@utb.cz
+
+Postconditions:
+	- E-mail může být uložen pro testovací účely
+
+Logy a úklid:
+	- Screenshot potvrzovací hlášky

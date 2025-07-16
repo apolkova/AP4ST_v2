@@ -1,0 +1,30 @@
+ID: TC006  
+Název: Menu Zivot ve meste
+
+Stručný popis:  
+Tento test ověřuje funkčnost hlavní položky menu „Zivot ve meste“. Zaměřuje se na přítomnost a dostupnost všech pododkazů, jako jsou Kultura, Sport, Bzenecký zpravodaj
+
+Preconditions:
+	- Web města je aktivní
+	- Navigační menu se načítá bez chyb
+
+Testovací kroky:
+	1. Na hlavní stránce najdi položku „Zivot ve meste“
+	2. Najeď kurzorem a sleduj rozbalení podmenu
+	3. Ověř, že jsou dostupné všechny pododkazy:
+		- Kultura
+		- Sport
+		- Bzenecký zpravodaj
+
+Očekávaný výsledek:
+	- Podmenu se zobrazí správně
+	- Každý odkaz je klikací a funkční
+
+Vstupní data:
+	- Není potřeba žádný konkrétní vstup
+
+Postconditions:
+	- Test nemění stav systému
+
+Logy a úklid:
+	- Screenshot rozbaleného menu

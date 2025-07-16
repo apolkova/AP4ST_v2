@@ -1,0 +1,25 @@
+ID: TS015  
+Název: Newsletter
+
+Autor: Adéla Polková  
+Datum: 08.05.2025  
+
+Typ testu: Manuální a Automatizovaný  
+
+Očekávaný výsledek:  
+    Přihlášení proběhne úspěšně nebo systém správně odmítne nevalidní e-mail.
+
+Stručný popis:  
+    Testuje se přihlášení k odběru zpravodaje – formulář a potvrzení.
+
+Pre-conditions:  
+    - Zobrazena sekce newsletteru  
+
+Post-conditions:  
+    - Odeslaný formulář nebo chybová hláška  
+
+Obsahuje:  
+    TC040 - Přihlášení k odběru  
+        TC040-1 - Správně zadaný e-mail  
+        TC040-2 - Neplatný e-mail  
+    TC041 - Potvrzovací hláška  

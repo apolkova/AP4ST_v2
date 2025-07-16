@@ -1,0 +1,28 @@
+ID: TC016
+Název: Filtrování událostí
+
+Stručný popis:
+Rodičovský test ověřuje, že je možné filtrovat události dle různých kritérií, konkrétně dle typu a časového období.
+
+Preconditions:
+	- Kalendář událostí je načten
+	- Filtrovací prvky jsou dostupné
+
+Testovací kroky:
+	1. Ověř dostupnost filtrovacích polí
+	2. Použij filtr dle typu
+	3. Poté filtr dle data
+
+Očekávaný výsledek:
+	- Výpis se mění v závislosti na aplikovaném filtru
+	- Filtry fungují bez chyb
+
+Vstupní data:
+	- Typ akce: Kultura
+	- Měsíc: květen
+
+Postconditions:
+	- Výpis lze resetovat
+
+Logy a úklid:
+	- Screenshot před a po filtrování

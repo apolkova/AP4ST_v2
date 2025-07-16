@@ -1,0 +1,25 @@
+ID: TC021-1
+Název: Formuláře v sekcích
+
+Stručný popis:
+Testuje, zda jsou formuláře rozděleny podle typů – např. žádosti, stavební, kulturní aj.
+
+Preconditions:
+	- Stránka s formuláři načtena
+
+Testovací kroky:
+	1. Sleduj strukturu stránky
+	2. Ověř počet a názvy sekcí
+
+Očekávaný výsledek:
+	- Formuláře jsou tematicky rozděleny
+	- Struktura je čitelná
+
+Vstupní data:
+	- Není nutné zadávat nic
+
+Postconditions:
+	- Nejsou nutné žádné změny
+
+Logy a úklid:
+	- Screenshot sekcí

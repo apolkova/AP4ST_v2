@@ -1,0 +1,31 @@
+ID: TC001
+Název: Načtení hlavní stránky
+
+Stručný popis:
+Ověření, že hlavní stránka města Bzenec se správně načte, zobrazí obsah bez chyb a během přiměřeného času. Součástí je kontrola, že server vrací odpověď a stránka obsahuje hlavní prvky.
+
+Preconditions:
+	- Uživatel má aktivní připojení k internetu
+	- Webový prohlížeč je otevřen a připraven (Chrome, Firefox, Edge)
+
+Testovací kroky:
+	1. Otevři prohlížeč a zadej adresu: https://www.bzenec.cz
+	2. Sleduj proces načítání hlavní stránky
+	3. Ověř, že se stránka kompletně načte do 5 sekund
+	4. Zkontroluj přítomnost loga města, hlavního menu,...
+
+Očekávaný výsledek:
+	- Stránka se načte bez chyb 
+	- Zobrazí se hlavní prvky stránky
+	- Neobjeví se žádná chybová hláška 
+
+Vstupní data:
+	- URL: https://www.bzenec.cz
+
+Postconditions:
+	- Web zůstává nezměněn
+	- Historie prohlížeče obsahuje navštívenou stránku
+
+Logy a úklid:
+	- Screenshot hlavní stránky
+	- Vymazání cache pro čisté testování při opakování

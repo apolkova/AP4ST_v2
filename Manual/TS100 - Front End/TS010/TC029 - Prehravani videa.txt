@@ -1,0 +1,27 @@
+ID: TC029
+Název: Přehrávání videa
+
+Stručný popis:
+Testuje, zda je video na webu města Bzenec funkční, spustitelné a přehrává se bez chyb. Konkretne budeme testovat video na strance https://www.bzenec.cz/videoreportaze/383-bzenecka-pout-prinesla-duchovni-zamysleni-folklor-i-zabavu
+
+Preconditions:
+	- Stránka obsahující video je dostupná  https://www.bzenec.cz/videoreportaze/383-bzenecka-pout-prinesla-duchovni-zamysleni-folklor-i-zabavu
+	- Prohlížeč podporuje HTML5 video přehrávač
+
+Testovací kroky:
+	1. Najdi vložené video na stránce (např. reportáž, záznam ze zasedání)
+	2. Klikni na tlačítko Play
+	3. Sleduj přehrávání
+
+Očekávaný výsledek:
+	- Video se spustí bez zpoždění
+	- Zvuk i obraz jsou synchronní
+
+Vstupní data:
+	- Žádná
+
+Postconditions:
+	- Video se zastaví nebo může pokračovat
+
+Logy a úklid:
+	- Screenshot přehrávače během přehrávání

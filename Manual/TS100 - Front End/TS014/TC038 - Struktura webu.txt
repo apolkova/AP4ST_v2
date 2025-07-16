@@ -1,0 +1,25 @@
+ID: TC038
+Název: Struktura webu
+
+Stručný popis:
+Test ověřuje, zda je mapa stránek dostupná a zda zobrazuje úplnou a přehlednou strukturu celého webu.
+
+Preconditions:
+	- Stránka s mapou webu je aktivní nebo dostupná v patičce
+
+Testovací kroky:
+	1. Otevři mapu stránek (např. odkaz v patičce)
+	2. Zkontroluj, že jsou zobrazeny všechny hlavní sekce a podsekce
+	3. Ověř, že odpovídají hlavnímu menu
+
+Očekávaný výsledek:
+	- Mapa stránek je přehledná, úplná a aktuální
+
+Vstupní data:
+	- Žádná
+
+Postconditions:
+	- Mapa je statická, žádné změny
+
+Logy a úklid:
+	- Screenshot mapy webu

@@ -1,0 +1,24 @@
+ID: TC023-2
+Název: Jasná pole k vyplnění
+
+Stručný popis:
+Testuje, že formulář má viditelná pole pro vyplnění – textová pole, výběrové boxy atd.
+
+Preconditions:
+	- Formulář stažený a otevřený
+
+Testovací kroky:
+	1. Prohlédni celý formulář
+	2. Ověř, že jsou pole správně označena a uspořádána
+
+Očekávaný výsledek:
+	- Formulář je uživatelsky přívětivý a snadno vyplnitelný
+
+Vstupní data:
+	- Vybraný formulář
+
+Postconditions:
+	- Formulář lze vyplnit a vytisknout
+
+Logy a úklid:
+	- Screenshot polí k vyplnění

@@ -1,0 +1,24 @@
+ID: TC014-2
+Název: Zobrazení PDF
+
+Stručný popis:
+Ověřuje, že příloha v PDF formátu se po kliknutí korektně zobrazí nebo stáhne.
+
+Preconditions:
+	- Oznámení obsahuje PDF přílohu
+
+Testovací kroky:
+	1. Klikni na odkaz na PDF
+	2. Sleduj výsledek (náhled nebo stažení)
+
+Očekávaný výsledek:
+	- PDF se otevře v prohlížeči nebo stáhne
+
+Vstupní data:
+	- Příloha v PDF
+
+Postconditions:
+	- PDF může být smazáno po testu
+
+Logy a úklid:
+	- Screenshot náhledu PDF

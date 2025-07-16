@@ -1,0 +1,26 @@
+ID: TC007-2
+Název: Odkaz Informační centrum
+
+Stručný popis:
+Testuje kliknutí na „Informační centrum“ v sekci „Turismus“ a načtení galerie města.
+
+Preconditions:
+	- Web funkční
+	- Menu „Turismus“ dostupné
+
+Testovací kroky:
+	1. Klikni na „Turismus“ > „Informační centrum“
+	2. Ověř načtení stránky
+
+Očekávaný výsledek:
+	- Stránka se zobrazí bez chyb
+	- Obsahuje fotky nebo náhledy
+
+Vstupní data:
+	- Odkaz: Informační centrum
+
+Postconditions:
+	- Web beze změn
+
+Logy a úklid:
+	- Screenshot galerie

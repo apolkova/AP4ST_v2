@@ -1,0 +1,2090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:34:41.724063" rpa="false" schemaversion="5">
+<suite id="s1" name="TC014-1" source="C:\Users\Adelka\Desktop\v55\Automated\TC014-1.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři stránku Úřední deska" line="13">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:42.058050" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/uredni-deska'.</msg>
+<msg time="2025-05-11T04:34:42.393313" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:34:42.057772" elapsed="2.360971"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:34:44.419070" elapsed="0.036535"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:34:44.455842" elapsed="0.007098"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:44.463165" elapsed="0.031165"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:44.509580" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:44.494591" elapsed="0.015211"/>
+</kw>
+<arg>${URL_Menu_UredniDeska}</arg>
+<arg>${Heading_UredniDeska_XPath}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:34:42.056472" elapsed="2.453492"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:34:42.055550" elapsed="2.454741"/>
+</test>
+<test id="s1-t2" name="TC014-1 - Ověření, že oznámení jde rozkliknout" line="16">
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:44.511936" elapsed="0.024700"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:44.537128" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[2]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:44.536864" elapsed="0.151206"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:44.688352" elapsed="0.654581"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:45.356113" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:45.343162" elapsed="0.013050"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:45.369672" level="FAIL">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-11T04:34:45.356643" elapsed="0.017284">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:34:45.356428" elapsed="0.018183"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:45.374801" elapsed="0.008409"/>
+</kw>
+<arg>${Hodnota_2}</arg>
+<status status="PASS" start="2025-05-11T04:34:44.511500" elapsed="0.871836"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:45.384192" elapsed="0.648741"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:46.033455" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[3]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:46.033158" elapsed="0.102026"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:46.135430" elapsed="0.471279"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:46.613716" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:46.606935" elapsed="0.006881"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:46.620476" level="FAIL">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-11T04:34:46.614235" elapsed="0.007478">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:34:46.614025" elapsed="0.007794"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:46.622166" elapsed="0.009576"/>
+</kw>
+<arg>${Hodnota_3}</arg>
+<status status="PASS" start="2025-05-11T04:34:45.383796" elapsed="1.248068"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:46.632863" elapsed="0.648401"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:47.281899" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[4]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:47.281564" elapsed="0.088024"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:47.369823" elapsed="0.446275"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:47.823147" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:47.816324" elapsed="0.006923"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:47.830258" level="FAIL">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-11T04:34:47.823655" elapsed="0.007809">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:34:47.823456" elapsed="0.008114"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:47.831759" elapsed="0.008075"/>
+</kw>
+<arg>${Hodnota_4}</arg>
+<status status="PASS" start="2025-05-11T04:34:46.632273" elapsed="1.207682"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:47.840736" elapsed="0.647211"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:48.488413" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[5]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:48.488164" elapsed="0.076409"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:48.564799" elapsed="0.654760"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:49.226996" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:49.219796" elapsed="0.007301"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:49.233996" level="FAIL">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-11T04:34:49.227502" elapsed="0.007894">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:34:49.227303" elapsed="0.008200"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:49.235704" elapsed="0.007364"/>
+</kw>
+<arg>${Hodnota_5}</arg>
+<status status="PASS" start="2025-05-11T04:34:47.840340" elapsed="1.402848"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:49.244139" elapsed="0.670575"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:49.915401" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[6]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:49.915014" elapsed="0.083565"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:49.998839" elapsed="0.652672"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:50.662752" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:50.651753" elapsed="0.011099"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:50.669962" level="FAIL">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-11T04:34:50.663270" elapsed="0.008560">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:34:50.663066" elapsed="0.008883"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:50.672150" elapsed="0.011050"/>
+</kw>
+<arg>${Hodnota_6}</arg>
+<status status="PASS" start="2025-05-11T04:34:49.243684" elapsed="1.439636"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:50.684252" elapsed="0.652197"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:51.336933" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[7]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:51.336682" elapsed="0.074419"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:51.411327" elapsed="0.654358"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:52.074065" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:52.065909" elapsed="0.008263"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:52.080686" level="FAIL">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-11T04:34:52.074599" elapsed="0.007302">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:34:52.074390" elapsed="0.007616"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:52.082189" elapsed="0.006736"/>
+</kw>
+<arg>${Hodnota_7}</arg>
+<status status="PASS" start="2025-05-11T04:34:50.683833" elapsed="1.405225"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:52.090200" elapsed="0.856915"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:52.947663" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[8]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:52.947379" elapsed="0.074969"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:53.022588" elapsed="0.664861"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:53.695725" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:53.687673" elapsed="0.008169"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:53.714531" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:53.696316" elapsed="0.018330"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:34:53.696084" elapsed="0.018658"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:53.714928" elapsed="0.008192"/>
+</kw>
+<arg>${Hodnota_8}</arg>
+<status status="PASS" start="2025-05-11T04:34:52.089719" elapsed="1.633579"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:53.724501" elapsed="0.892722"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:54.617727" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[9]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:54.617462" elapsed="0.065754"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:54.683439" elapsed="0.458302"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:55.150201" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:55.141980" elapsed="0.008322"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:55.158613" level="FAIL">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-11T04:34:55.150718" elapsed="0.009249">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:34:55.150515" elapsed="0.009553"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:55.160245" elapsed="0.007885"/>
+</kw>
+<arg>${Hodnota_9}</arg>
+<status status="PASS" start="2025-05-11T04:34:53.723871" elapsed="1.444402"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:55.169433" elapsed="0.649877"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:55.819794" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[10]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:55.819533" elapsed="0.075057"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:55.894815" elapsed="0.656096"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:56.558371" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:56.551131" elapsed="0.007340"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:56.573150" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:56.558964" elapsed="0.014284"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:34:56.558734" elapsed="0.014603"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:56.573514" elapsed="0.006240"/>
+</kw>
+<arg>${Hodnota_10}</arg>
+<status status="PASS" start="2025-05-11T04:34:55.168719" elapsed="1.411152"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:56.580910" elapsed="0.652922"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:57.234300" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[11]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:57.234049" elapsed="0.085229"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:57.319571" elapsed="0.441205"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:57.767339" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:57.761003" elapsed="0.006434"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:57.778686" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:57.767864" elapsed="0.010909"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:34:57.767655" elapsed="0.011204"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:57.779027" elapsed="0.007524"/>
+</kw>
+<arg>${Hodnota_11}</arg>
+<status status="PASS" start="2025-05-11T04:34:56.580502" elapsed="1.206177"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:57.787526" elapsed="0.651571"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:58.439567" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[12]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:58.439317" elapsed="0.089442"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:58.529137" elapsed="0.446502"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:58.983174" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:34:58.975860" elapsed="0.007408"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:58.990036" level="FAIL">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-11T04:34:58.983670" elapsed="0.007576">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:34:58.983471" elapsed="0.007870"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:34:58.991525" elapsed="0.007198"/>
+</kw>
+<arg>${Hodnota_12}</arg>
+<status status="PASS" start="2025-05-11T04:34:57.787120" elapsed="1.211722"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:58.999751" elapsed="0.650228"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:34:59.650447" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[13]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:34:59.650198" elapsed="0.090675"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:34:59.741100" elapsed="0.656989"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:00.404950" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:00.398316" elapsed="0.006717"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:00.412897" level="FAIL">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-11T04:35:00.405431" elapsed="0.008701">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:00.405224" elapsed="0.009022"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:00.414449" elapsed="0.006350"/>
+</kw>
+<arg>${Hodnota_13}</arg>
+<status status="PASS" start="2025-05-11T04:34:58.999355" elapsed="1.421560"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:00.421763" elapsed="0.657430"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:01.079650" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[14]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:01.079408" elapsed="0.082241"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:01.161869" elapsed="3.045798"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:04.214153" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:04.207888" elapsed="0.006351"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:04.220763" level="FAIL">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-05-11T04:35:04.214630" elapsed="0.007331">Element with locator 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' not found.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:04.214436" elapsed="0.007626"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:04.222236" elapsed="0.007423"/>
+</kw>
+<arg>${Hodnota_14}</arg>
+<status status="PASS" start="2025-05-11T04:35:00.421366" elapsed="3.808412"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:04.230721" elapsed="1.060854"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:05.292055" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[15]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:05.291798" elapsed="0.077678"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:05.369704" elapsed="0.655320"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:06.032540" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:06.025246" elapsed="0.007391"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:06.045504" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:06.033039" elapsed="0.012572"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:06.032840" elapsed="0.012886"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:06.045957" elapsed="0.007602"/>
+</kw>
+<arg>${Hodnota_15}</arg>
+<status status="PASS" start="2025-05-11T04:35:04.230317" elapsed="1.823374"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:06.054648" elapsed="0.857075"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:06.912193" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[16]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:06.911940" elapsed="0.073127"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:06.985316" elapsed="0.656413"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:07.648827" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:07.641951" elapsed="0.006967"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:07.661919" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:07.649328" elapsed="0.012689"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:07.649123" elapsed="0.012986"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:07.662288" elapsed="0.007618"/>
+</kw>
+<arg>${Hodnota_16}</arg>
+<status status="PASS" start="2025-05-11T04:35:06.054228" elapsed="1.615844"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:07.671143" elapsed="1.309451"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:08.981057" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[17]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:08.980813" elapsed="0.063309"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:09.044364" elapsed="0.658125"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:09.709700" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:09.702711" elapsed="0.007096"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:09.724062" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:09.710259" elapsed="0.013898"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:09.710041" elapsed="0.014204"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:09.724423" elapsed="0.007496"/>
+</kw>
+<arg>${Hodnota_17}</arg>
+<status status="PASS" start="2025-05-11T04:35:07.670629" elapsed="2.061406"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:09.732808" elapsed="0.660831"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:10.394110" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[18]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:10.393861" elapsed="0.083410"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:10.477505" elapsed="0.657539"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:11.141875" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:11.135269" elapsed="0.006687"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:11.156181" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:11.142337" elapsed="0.013939"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:11.142145" elapsed="0.014219"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:11.156537" elapsed="0.007478"/>
+</kw>
+<arg>${Hodnota_18}</arg>
+<status status="PASS" start="2025-05-11T04:35:09.732416" elapsed="1.431721"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:11.165009" elapsed="0.649904"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:11.815386" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[19]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:11.815138" elapsed="0.092577"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:11.907994" elapsed="0.456251"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:12.371595" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:12.364474" elapsed="0.007214"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:12.385300" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:12.372105" elapsed="0.013289"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:12.371902" elapsed="0.013577"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:12.385652" elapsed="0.008705"/>
+</kw>
+<arg>${Hodnota_19}</arg>
+<status status="PASS" start="2025-05-11T04:35:11.164637" elapsed="1.229883"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:12.395526" elapsed="0.646321"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:13.042309" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[20]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:13.042062" elapsed="0.085444"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:13.127731" elapsed="0.444892"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:13.579519" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:13.572843" elapsed="0.006763"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:13.593140" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:13.580000" elapsed="0.013234"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:13.579799" elapsed="0.013520"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:13.593552" elapsed="0.007543"/>
+</kw>
+<arg>${Hodnota_20}</arg>
+<status status="PASS" start="2025-05-11T04:35:12.394994" elapsed="1.206215"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:13.602112" elapsed="0.649459"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:14.252043" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[21]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:14.251794" elapsed="0.164782"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:14.416901" elapsed="0.451165"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:14.877838" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:14.868409" elapsed="0.009553"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:14.898058" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:14.878457" elapsed="0.019742"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:14.878218" elapsed="0.020106"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:14.898537" elapsed="0.009992"/>
+</kw>
+<arg>${Hodnota_21}</arg>
+<status status="PASS" start="2025-05-11T04:35:13.601712" elapsed="1.307044"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:14.910162" elapsed="0.679618"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:15.590370" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[22]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:15.590054" elapsed="0.183495"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:15.773897" elapsed="0.459671"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:16.243303" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:16.233908" elapsed="0.009531"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:16.262663" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:16.244013" elapsed="0.018763"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:16.243726" elapsed="0.019150"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:16.263082" elapsed="0.010112"/>
+</kw>
+<arg>${Hodnota_22}</arg>
+<status status="PASS" start="2025-05-11T04:35:14.909476" elapsed="1.363875"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:16.274369" elapsed="0.675924"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:16.950971" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[23]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:16.950601" elapsed="0.115606"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:17.066559" elapsed="0.466325"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:17.540336" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:17.533139" elapsed="0.007319"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:17.557230" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:17.540886" elapsed="0.016445"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:17.540673" elapsed="0.016810"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:17.557662" elapsed="0.007925"/>
+</kw>
+<arg>${Hodnota_23}</arg>
+<status status="PASS" start="2025-05-11T04:35:16.273863" elapsed="1.291875"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:17.566640" elapsed="0.653374"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:18.220486" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[24]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:18.220237" elapsed="0.094282"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:18.314801" elapsed="0.462356"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:18.785454" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:18.777375" elapsed="0.008175"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:18.800495" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:18.785950" elapsed="0.014645"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:18.785753" elapsed="0.014928"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:18.800856" elapsed="0.009721"/>
+</kw>
+<arg>${Hodnota_24}</arg>
+<status status="PASS" start="2025-05-11T04:35:17.566249" elapsed="1.244501"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:18.812477" elapsed="0.658920"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:19.471997" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[25]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:19.471672" elapsed="0.083940"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:19.555867" elapsed="0.453007"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:20.016873" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:20.009092" elapsed="0.007905"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:20.034225" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:20.017544" elapsed="0.016784"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:20.017263" elapsed="0.017165"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:20.034661" elapsed="0.009498"/>
+</kw>
+<arg>${Hodnota_25}</arg>
+<status status="PASS" start="2025-05-11T04:35:18.812015" elapsed="1.232303"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:20.045350" elapsed="0.659962"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:20.705792" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[26]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:20.705537" elapsed="0.098728"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:20.804557" elapsed="0.449046"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:21.261911" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:21.253820" elapsed="0.008214"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:21.279027" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:21.262769" elapsed="0.016439"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:21.262295" elapsed="0.017006"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:21.279484" elapsed="0.011272"/>
+</kw>
+<arg>${Hodnota_26}</arg>
+<status status="PASS" start="2025-05-11T04:35:20.044814" elapsed="1.246096"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:21.291972" elapsed="0.684273"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:21.977018" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[27]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:21.976621" elapsed="0.116499"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:22.093447" elapsed="0.460737"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:22.562832" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:22.554441" elapsed="0.008490"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:22.577720" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:22.563337" elapsed="0.014495"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:22.563137" elapsed="0.014802"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:22.578134" elapsed="0.009064"/>
+</kw>
+<arg>${Hodnota_27}</arg>
+<status status="PASS" start="2025-05-11T04:35:21.291496" elapsed="1.295817"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:22.588125" elapsed="0.657328"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:23.246054" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[28]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:23.245722" elapsed="0.090715"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:23.336713" elapsed="0.445671"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:23.789163" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:23.782605" elapsed="0.006635"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:23.807164" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:23.789618" elapsed="0.017709"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:23.789427" elapsed="0.018039"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:23.807738" elapsed="0.012057"/>
+</kw>
+<arg>${Hodnota_28}</arg>
+<status status="PASS" start="2025-05-11T04:35:22.587703" elapsed="1.232217"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:23.820818" elapsed="0.659947"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:24.481238" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[29]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:24.480989" elapsed="0.105468"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:24.586804" elapsed="0.469439"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:25.064940" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:25.056509" elapsed="0.008535"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:25.079634" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:25.065467" elapsed="0.014261"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:25.065262" elapsed="0.014557"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:25.079992" elapsed="0.009936"/>
+</kw>
+<arg>${Hodnota_29}</arg>
+<status status="PASS" start="2025-05-11T04:35:23.820401" elapsed="1.269732"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:25.091650" elapsed="0.655901"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:25.748018" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[30]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:25.747772" elapsed="0.099063"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:25.847165" elapsed="0.663570"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:26.517895" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:26.510959" elapsed="0.007028"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:26.531531" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:26.518446" elapsed="0.013186"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:26.518191" elapsed="0.013535"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:26.531907" elapsed="0.008589"/>
+</kw>
+<arg>${Hodnota_30}</arg>
+<status status="PASS" start="2025-05-11T04:35:25.090900" elapsed="1.449741"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:26.541619" elapsed="0.676973"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:27.219059" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[31]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:27.218810" elapsed="0.110861"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:27.330007" elapsed="0.668006"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:28.026513" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:27.998493" elapsed="0.028120"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:28.041895" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:28.027037" elapsed="0.014961"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:28.026834" elapsed="0.015256"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:28.042272" elapsed="0.007558"/>
+</kw>
+<arg>${Hodnota_31}</arg>
+<status status="PASS" start="2025-05-11T04:35:26.541195" elapsed="1.508753"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:28.050678" elapsed="0.662403"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:28.713608" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[32]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:28.713324" elapsed="0.111143"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:28.824696" elapsed="0.680020"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:29.513202" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:29.504941" elapsed="0.008373"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:29.530234" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:29.513809" elapsed="0.016527"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:29.513602" elapsed="0.016827"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:29.530607" elapsed="0.007641"/>
+</kw>
+<arg>${Hodnota_32}</arg>
+<status status="PASS" start="2025-05-11T04:35:28.050314" elapsed="1.488059"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:29.539142" elapsed="0.659395"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:30.199020" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[33]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:30.198766" elapsed="0.106579"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:30.305714" elapsed="0.674129"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:30.986771" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:30.980075" elapsed="0.006787"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:31.000014" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:30.987270" elapsed="0.012840"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:30.987069" elapsed="0.013128"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:31.000372" elapsed="0.009701"/>
+</kw>
+<arg>${Hodnota_33}</arg>
+<status status="PASS" start="2025-05-11T04:35:29.538759" elapsed="1.471493"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:31.011161" elapsed="0.658196"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:31.669878" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[34]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:31.669602" elapsed="0.111880"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:31.781808" elapsed="0.667852"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:32.458023" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:32.449957" elapsed="0.008170"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:32.473180" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:32.458548" elapsed="0.014796"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:32.458344" elapsed="0.015136"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:32.473740" elapsed="0.009406"/>
+</kw>
+<arg>${Hodnota_34}</arg>
+<status status="PASS" start="2025-05-11T04:35:31.010740" elapsed="1.472529"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:32.484140" elapsed="0.674881"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:33.159534" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[35]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:33.159271" elapsed="0.116211"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:33.275859" elapsed="0.445408"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:33.729414" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:33.721700" elapsed="0.007864"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:33.744936" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:33.730085" elapsed="0.015005"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:33.729871" elapsed="0.015335"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:33.745412" elapsed="0.009465"/>
+</kw>
+<arg>${Hodnota_35}</arg>
+<status status="PASS" start="2025-05-11T04:35:32.483775" elapsed="1.271263"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:33.755972" elapsed="0.675961"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:34.432432" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[36]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:34.432175" elapsed="0.112387"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:34.544789" elapsed="0.473579"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:35.044207" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:35.018591" elapsed="0.025713"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:35.059084" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:35.044718" elapsed="0.014467"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:35.044515" elapsed="0.014763"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:35.059456" elapsed="0.010143"/>
+</kw>
+<arg>${Hodnota_36}</arg>
+<status status="PASS" start="2025-05-11T04:35:33.755463" elapsed="1.314329"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:35.070853" elapsed="0.655803"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:35.727174" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[37]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:35.726882" elapsed="0.096990"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:35.824122" elapsed="0.455899"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:36.288134" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:36.280264" elapsed="0.007967"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:36.302004" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:36.288642" elapsed="0.013460"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:36.288440" elapsed="0.013754"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:36.302372" elapsed="0.010420"/>
+</kw>
+<arg>${Hodnota_37}</arg>
+<status status="PASS" start="2025-05-11T04:35:35.070352" elapsed="1.242702"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:36.314465" elapsed="0.859435"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:37.174447" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[38]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:37.174130" elapsed="0.099548"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:37.274029" elapsed="0.660891"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:37.943898" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:37.935145" elapsed="0.008877"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:37.961500" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:37.944493" elapsed="0.017106"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:37.944270" elapsed="0.017418"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:37.961869" elapsed="0.007419"/>
+</kw>
+<arg>${Hodnota_38}</arg>
+<status status="PASS" start="2025-05-11T04:35:36.313623" elapsed="1.655792"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:37.970225" elapsed="1.081716"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:39.052461" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[39]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:39.052185" elapsed="0.116634"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:39.169166" elapsed="0.668550"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:39.844762" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:39.837938" elapsed="0.006922"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:39.858671" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:39.845279" elapsed="0.013490"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:39.845073" elapsed="0.013782"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:39.859029" elapsed="0.009616"/>
+</kw>
+<arg>${Hodnota_39}</arg>
+<status status="PASS" start="2025-05-11T04:35:37.969847" elapsed="1.898919"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:39.869525" elapsed="0.658135"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:40.528349" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[40]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:40.527975" elapsed="0.113922"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:40.642227" elapsed="0.472631"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:41.124315" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:41.115106" elapsed="0.009331"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:41.141991" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:41.124886" elapsed="0.017221"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:41.124678" elapsed="0.017526"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:41.142397" elapsed="0.012183"/>
+</kw>
+<arg>${Hodnota_40}</arg>
+<status status="PASS" start="2025-05-11T04:35:39.869143" elapsed="1.285770"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:41.156119" elapsed="0.661774"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:41.818598" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[41]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:41.818232" elapsed="0.123860"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:41.942410" elapsed="0.664458"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:42.615273" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:42.607087" elapsed="0.008291"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:42.631833" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:42.615815" elapsed="0.016119"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:42.615605" elapsed="0.016418"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:42.632202" elapsed="0.007259"/>
+</kw>
+<arg>${Hodnota_41}</arg>
+<status status="PASS" start="2025-05-11T04:35:41.155545" elapsed="1.484060"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:42.640366" elapsed="0.870062"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:43.510892" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[42]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:43.510647" elapsed="0.096336"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:43.607328" elapsed="0.448763"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:44.063757" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:44.056345" elapsed="0.007533"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:44.080765" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:44.064339" elapsed="0.016533"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:44.064112" elapsed="0.016860"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:44.081164" elapsed="0.008941"/>
+</kw>
+<arg>${Hodnota_42}</arg>
+<status status="PASS" start="2025-05-11T04:35:42.639995" elapsed="1.450255"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:44.091323" elapsed="0.659873"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:44.751730" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[43]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:44.751464" elapsed="0.126543"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:44.878342" elapsed="0.462672"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:45.348977" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:45.341301" elapsed="0.007777"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:45.364359" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:45.349495" elapsed="0.014991"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:45.349292" elapsed="0.015301"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:45.364801" elapsed="0.010554"/>
+</kw>
+<arg>${Hodnota_43}</arg>
+<status status="PASS" start="2025-05-11T04:35:44.090899" elapsed="1.284581"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:45.376432" elapsed="0.654006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:46.030972" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[44]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:46.030658" elapsed="0.110345"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:46.141350" elapsed="0.454708"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:46.603577" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:46.596278" elapsed="0.007393"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:46.619514" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:46.604073" elapsed="0.015606"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:46.603874" elapsed="0.015938"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:46.620084" elapsed="0.011059"/>
+</kw>
+<arg>${Hodnota_44}</arg>
+<status status="PASS" start="2025-05-11T04:35:45.375921" elapsed="1.255344"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:46.632016" elapsed="0.679641"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:47.312128" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[45]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:47.311877" elapsed="0.107586"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:47.419790" elapsed="0.662475"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:48.089107" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:48.082483" elapsed="0.006725"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:48.102822" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:48.089624" elapsed="0.013319"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:48.089421" elapsed="0.013611"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:48.103228" elapsed="0.008307"/>
+</kw>
+<arg>${Hodnota_45}</arg>
+<status status="PASS" start="2025-05-11T04:35:46.631646" elapsed="1.480030"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:48.112590" elapsed="0.653751"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:48.766904" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[46]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:48.766561" elapsed="0.108163"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:48.875086" elapsed="0.446018"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:49.329400" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:49.321324" elapsed="0.008194"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:49.350084" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:49.329995" elapsed="0.020211"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:49.329747" elapsed="0.020582"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:49.350526" elapsed="0.010526"/>
+</kw>
+<arg>${Hodnota_46}</arg>
+<status status="PASS" start="2025-05-11T04:35:48.112190" elapsed="1.249032"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:49.362363" elapsed="0.659080"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:50.022026" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[47]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:50.021758" elapsed="0.094263"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:50.116321" elapsed="0.471053"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:50.594653" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:50.587612" elapsed="0.007144"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:50.609524" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:50.595196" elapsed="0.014446"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:50.594976" elapsed="0.014765"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:50.609961" elapsed="0.010120"/>
+</kw>
+<arg>${Hodnota_47}</arg>
+<status status="PASS" start="2025-05-11T04:35:49.361801" elapsed="1.258469"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:50.621269" elapsed="0.657299"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:51.279026" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[48]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:51.278781" elapsed="0.127143"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:51.911285" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:51.406208" elapsed="0.715093"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:52.130349" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:52.121516" elapsed="0.008938"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:52.147254" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:52.130867" elapsed="0.016486"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:52.130667" elapsed="0.016776"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:52.147616" elapsed="0.007229"/>
+</kw>
+<arg>${Hodnota_48}</arg>
+<status status="PASS" start="2025-05-11T04:35:50.620812" elapsed="1.534198"/>
+</kw>
+<kw name="UD Overeni Oznameni" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:52.155863" elapsed="0.667813"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:52.824143" level="INFO">Clicking element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[49]/div[4]/a'.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:35:52.823895" elapsed="0.111518"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:52.935667" elapsed="0.703872"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:53.646885" level="INFO">Current page contains element 'xpath=//h1'.</msg>
+<arg>xpath=//h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:35:53.639760" elapsed="0.007216"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:35:53.662069" level="INFO">Element 'xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]' is displayed.</msg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:35:53.647433" elapsed="0.014734"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html[1]/body[1]/div[1]/main[1]/section[3]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]/span[1]/*[name()='svg'][1]/*[name()='use'][1]</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-05-11T04:35:53.647218" elapsed="0.015039"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:53.662435" elapsed="0.008684"/>
+</kw>
+<arg>${Hodnota_49}</arg>
+<status status="PASS" start="2025-05-11T04:35:52.155470" elapsed="1.515855"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC014-1</tag>
+<tag>TS004</tag>
+<status status="PASS" start="2025-05-11T04:34:44.510844" elapsed="69.160890"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="67">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:35:53.673644" elapsed="2.226643"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:35:53.672834" elapsed="2.227875"/>
+</test>
+<status status="PASS" start="2025-05-11T04:34:41.725663" elapsed="74.175997"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC014-1</stat>
+<stat pass="1" fail="0" skip="0">TS004</stat>
+</tag>
+<suite>
+<stat name="TC014-1" id="s1" pass="3" fail="0" skip="0">TC014-1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:34:42.393313" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

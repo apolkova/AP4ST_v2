@@ -1,0 +1,25 @@
+ID: TC008-3
+Název: Odkaz Kontakty
+
+Stručný popis:
+Testuje správné načtení stránky po kliknutí na odkaz „Kontakty“ v menu „Město a úřad“.
+
+Preconditions:
+	- Načtena úvodní stránka
+	- Menu „Město a úřad“ dostupné
+
+Testovací kroky:
+	1. Klikni na „Město a úřad“ > „Kontakty“
+	2. Sleduj načtení stránky
+
+Očekávaný výsledek:
+	- Zobrazí se stránka s veřejnými Kontakty
+
+Vstupní data:
+	- Žádná
+
+Postconditions:
+	- Test nezanechá žádné změny
+
+Logy a úklid:
+	- Screenshot výpisu dokumentů

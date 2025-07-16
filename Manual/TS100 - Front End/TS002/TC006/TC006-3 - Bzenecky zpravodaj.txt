@@ -1,0 +1,26 @@
+ID: TC006-3
+Název: Odkaz Bzenecký zpravodaj
+
+Stručný popis:
+Test ověřuje, že odkaz „Bzenecký zpravodaj“ funguje správně a zobrazuje relevantní seznam nebo informace.
+
+Preconditions:
+	- Menu „Život ve městě“ dostupné
+
+Testovací kroky:
+	1. Vyber „Život ve městě“
+	2. Klikni na „Bzenecký zpravodaj“
+	3. Sleduj výsledek a zobrazený obsah
+
+Očekávaný výsledek:
+	- Zobrazí se stránka s informacemi o spolcích
+	- Informace odpovídají kontextu
+
+Vstupní data:
+	- Výběr: Bzenecký zpravodaj
+
+Postconditions:
+	- Test nezanechává změny
+
+Logy a úklid:
+	- Screenshot stránky

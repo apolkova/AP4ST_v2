@@ -1,0 +1,24 @@
+ID: TC014-1
+Název: Kliknutí na detail
+
+Stručný popis:
+Testuje klikatelnost oznámení v seznamu a přesměrování na stránku detailu.
+
+Preconditions:
+	- Načtený seznam oznámení
+
+Testovací kroky:
+	1. Klikni na název oznámení
+	2. Sleduj načtení detailu
+
+Očekávaný výsledek:
+	- Zobrazí se odpovídající stránka detailu
+
+Vstupní data:
+	- Oznámení ze seznamu
+
+Postconditions:
+	- Možnost vrátit se zpět
+
+Logy a úklid:
+	- Screenshot přechodu

@@ -1,0 +1,25 @@
+ID: TS001
+Název: Hlavní stránka
+
+Autor: Adéla Polková
+Datum: 08.05.2025
+
+Typ testu: Manuální a Automatizovaný 
+
+Očekávaný výsledek:
+    Stránka se načte bez chyby 404 nebo 500. Logo a nadpis jsou zobrazeny.
+
+Stručný popis:
+    Test ověřuje základní načtení webové stránky www.bzenec.cz a přítomnost klíčových vizuálních prvků.
+
+Pre-conditions:
+    - Chrome spuštěný
+    - Vymazaná cache
+
+Post-conditions:
+    - Stránka se zavře
+
+Obsahuje:
+    TC001 - Načtení hlavní stránky
+    TC002 - Funkčnost hlavního banneru
+    TC003 - Responzivita a mobilní zobrazení

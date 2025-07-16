@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:32:31.441958" rpa="false" schemaversion="5">
+<suite id="s1" name="TC012-1" source="C:\Users\Adelka\Desktop\v55\Automated\TC012-1.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři stránku Úřední deska" line="13">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:31.793517" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/uredni-deska'.</msg>
+<msg time="2025-05-11T04:32:32.166255" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:32:31.793243" elapsed="2.499292"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.292852" elapsed="0.041670"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.334885" elapsed="0.008177"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.343307" elapsed="0.036408"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.396482" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.379971" elapsed="0.016685"/>
+</kw>
+<arg>${URL_Menu_UredniDeska}</arg>
+<arg>${Heading_UredniDeska_XPath}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:32:31.791922" elapsed="2.604912"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:32:31.790579" elapsed="2.606693"/>
+</test>
+<test id="s1-t2" name="TC012-1 - Ověření, že oznámení na Úřední desce mají název a datum" line="16">
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.448148" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[2]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.398863" elapsed="0.049493"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.511605" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[2]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.448834" elapsed="0.062907"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.549104" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[2]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.512015" elapsed="0.037199"/>
+</kw>
+<arg>${Hodnota_2}</arg>
+<status status="PASS" start="2025-05-11T04:32:34.398489" elapsed="0.150850"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.571946" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[3]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.550186" elapsed="0.021871"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.593330" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[3]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.572282" elapsed="0.021155"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.617090" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[3]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.593666" elapsed="0.023539"/>
+</kw>
+<arg>${Hodnota_3}</arg>
+<status status="PASS" start="2025-05-11T04:32:34.549745" elapsed="0.067618"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.640664" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[4]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.618221" elapsed="0.022555"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.667251" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[4]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.641000" elapsed="0.026353"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.687708" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[4]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.667560" elapsed="0.020325"/>
+</kw>
+<arg>${Hodnota_4}</arg>
+<status status="PASS" start="2025-05-11T04:32:34.617804" elapsed="0.070243"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.711693" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[5]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.689171" elapsed="0.022623"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.733160" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[5]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.712008" elapsed="0.021464"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.753093" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[5]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.733675" elapsed="0.019515"/>
+</kw>
+<arg>${Hodnota_5}</arg>
+<status status="PASS" start="2025-05-11T04:32:34.688600" elapsed="0.064693"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.777107" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[6]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.754229" elapsed="0.023018"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.797601" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[6]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.777474" elapsed="0.020224"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.819615" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[6]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.797984" elapsed="0.021749"/>
+</kw>
+<arg>${Hodnota_6}</arg>
+<status status="PASS" start="2025-05-11T04:32:34.753810" elapsed="0.066039"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.845879" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[7]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.820756" elapsed="0.025225"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.867738" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[7]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.846185" elapsed="0.021660"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.888129" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[7]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.868050" elapsed="0.020180"/>
+</kw>
+<arg>${Hodnota_7}</arg>
+<status status="PASS" start="2025-05-11T04:32:34.820276" elapsed="0.068056"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.910130" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[8]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.889076" elapsed="0.021153"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.931550" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[8]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.910433" elapsed="0.021260"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.956126" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[8]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.931910" elapsed="0.024314"/>
+</kw>
+<arg>${Hodnota_8}</arg>
+<status status="PASS" start="2025-05-11T04:32:34.888683" elapsed="0.067642"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:34.977336" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[9]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.957003" elapsed="0.020428"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.000160" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[9]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:34.977628" elapsed="0.022632"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.021780" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[9]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.000469" elapsed="0.021425"/>
+</kw>
+<arg>${Hodnota_9}</arg>
+<status status="PASS" start="2025-05-11T04:32:34.956652" elapsed="0.065355"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.045041" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[10]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.022840" elapsed="0.022324"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.065758" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[10]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.045365" elapsed="0.020497"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.085740" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[10]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.066263" elapsed="0.019572"/>
+</kw>
+<arg>${Hodnota_10}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.022411" elapsed="0.063525"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.107844" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[11]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.086698" elapsed="0.021308"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.129008" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[11]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.108244" elapsed="0.020873"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.150659" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[11]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.129339" elapsed="0.021440"/>
+</kw>
+<arg>${Hodnota_11}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.086355" elapsed="0.064542"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.180398" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[12]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.152057" elapsed="0.028481"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.203504" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[12]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.180793" elapsed="0.022811"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.224863" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[12]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.203809" elapsed="0.021151"/>
+</kw>
+<arg>${Hodnota_12}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.151465" elapsed="0.073598"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.245762" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[13]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.225739" elapsed="0.020121"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.265725" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[13]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.246064" elapsed="0.019755"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.287463" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[13]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.266018" elapsed="0.021557"/>
+</kw>
+<arg>${Hodnota_13}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.225382" elapsed="0.062296"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.307944" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[14]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.288352" elapsed="0.019688"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.329951" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[14]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.308238" elapsed="0.021809"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.351844" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[14]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.330244" elapsed="0.021695"/>
+</kw>
+<arg>${Hodnota_14}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.288003" elapsed="0.064040"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.375359" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[15]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.352718" elapsed="0.022743"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.398317" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[15]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.375665" elapsed="0.022758"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.422040" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[15]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.398621" elapsed="0.023570"/>
+</kw>
+<arg>${Hodnota_15}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.352363" elapsed="0.069933"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.486213" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[16]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.423023" elapsed="0.063340"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.512579" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[16]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.486608" elapsed="0.026096"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.600958" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[16]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.512936" elapsed="0.088131"/>
+</kw>
+<arg>${Hodnota_16}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.422630" elapsed="0.178542"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.626409" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[17]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.601846" elapsed="0.024662"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.651208" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[17]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.626705" elapsed="0.024619"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.676035" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[17]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.651666" elapsed="0.024486"/>
+</kw>
+<arg>${Hodnota_17}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.601491" elapsed="0.074763"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.701173" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[18]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.676937" elapsed="0.024362"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.723078" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[18]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.701521" elapsed="0.021658"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.744860" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[18]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.723381" elapsed="0.021574"/>
+</kw>
+<arg>${Hodnota_18}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.676575" elapsed="0.068481"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.767557" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[19]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.745813" elapsed="0.021850"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.790994" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[19]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.767870" elapsed="0.023225"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.811632" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[19]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.791294" elapsed="0.020444"/>
+</kw>
+<arg>${Hodnota_19}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.745472" elapsed="0.066375"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.840128" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[20]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.812796" elapsed="0.027476"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.865244" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[20]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.840559" elapsed="0.024797"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.885360" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[20]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.865577" elapsed="0.019874"/>
+</kw>
+<arg>${Hodnota_20}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.812248" elapsed="0.073425"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.907187" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[21]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.886348" elapsed="0.020935"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.927787" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[21]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.907481" elapsed="0.020405"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.951051" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[21]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.928085" elapsed="0.023067"/>
+</kw>
+<arg>${Hodnota_21}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.885997" elapsed="0.065262"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.971926" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[22]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.952083" elapsed="0.019958"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:35.995557" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[22]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.972290" elapsed="0.023363"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.014766" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[22]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:35.995854" elapsed="0.019014"/>
+</kw>
+<arg>${Hodnota_22}</arg>
+<status status="PASS" start="2025-05-11T04:32:35.951696" elapsed="0.063279"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.039911" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[23]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.015666" elapsed="0.024342"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.059545" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[23]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.040215" elapsed="0.019426"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.079167" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[23]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.059836" elapsed="0.019423"/>
+</kw>
+<arg>${Hodnota_23}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.015315" elapsed="0.064042"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.098632" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[24]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.080029" elapsed="0.018718"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.121372" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[24]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.099222" elapsed="0.022257"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.140972" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[24]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.121682" elapsed="0.019385"/>
+</kw>
+<arg>${Hodnota_24}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.079678" elapsed="0.061488"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.163879" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[25]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.141846" elapsed="0.022201"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.190101" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[25]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.164407" elapsed="0.025823"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.212519" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[25]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.190439" elapsed="0.022179"/>
+</kw>
+<arg>${Hodnota_25}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.141486" elapsed="0.071231"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.234925" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[26]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.213398" elapsed="0.021632"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.255087" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[26]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.235241" elapsed="0.019947"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.275902" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[26]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.255388" elapsed="0.020625"/>
+</kw>
+<arg>${Hodnota_26}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.213043" elapsed="0.063084"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.308576" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[27]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.277216" elapsed="0.031465"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.333539" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[27]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.308899" elapsed="0.024744"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.356249" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[27]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.333853" elapsed="0.022541"/>
+</kw>
+<arg>${Hodnota_27}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.276723" elapsed="0.079824"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.380737" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[28]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.357332" elapsed="0.023500"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.402882" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[28]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.381029" elapsed="0.021950"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.423600" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[28]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.403174" elapsed="0.020543"/>
+</kw>
+<arg>${Hodnota_28}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.356969" elapsed="0.066860"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.448736" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[29]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.424499" elapsed="0.024336"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.470186" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[29]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.449035" elapsed="0.021246"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.493548" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[29]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.470474" elapsed="0.023180"/>
+</kw>
+<arg>${Hodnota_29}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.424157" elapsed="0.069606"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.520557" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[30]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.494510" elapsed="0.026153"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.548973" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[30]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.520927" elapsed="0.028146"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.570654" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[30]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.549269" elapsed="0.021478"/>
+</kw>
+<arg>${Hodnota_30}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.494124" elapsed="0.076724"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.592159" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[31]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.571506" elapsed="0.020749"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.615873" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[31]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.592574" elapsed="0.023400"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.636592" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[31]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.616179" elapsed="0.020507"/>
+</kw>
+<arg>${Hodnota_31}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.571166" elapsed="0.065621"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.663071" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[32]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.637453" elapsed="0.025717"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.684022" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[32]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.663372" elapsed="0.020746"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.708278" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[32]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.684315" elapsed="0.024063"/>
+</kw>
+<arg>${Hodnota_32}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.637103" elapsed="0.071375"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.731219" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[33]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.709151" elapsed="0.022165"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.751809" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[33]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.731513" elapsed="0.020389"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.773434" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[33]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.752095" elapsed="0.021488"/>
+</kw>
+<arg>${Hodnota_33}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.708798" elapsed="0.064928"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.797209" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[34]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.774628" elapsed="0.022678"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.820922" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[34]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.797506" elapsed="0.023562"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.849050" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[34]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.821362" elapsed="0.027858"/>
+</kw>
+<arg>${Hodnota_34}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.774146" elapsed="0.075256"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.886178" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[35]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.851242" elapsed="0.035048"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.912160" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[35]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.886518" elapsed="0.025776"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.933768" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[35]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.912563" elapsed="0.021299"/>
+</kw>
+<arg>${Hodnota_35}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.850635" elapsed="0.083331"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.957597" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[36]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.934628" elapsed="0.023079"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:36.978651" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[36]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.957918" elapsed="0.020961"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.000766" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[36]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:36.979189" elapsed="0.021672"/>
+</kw>
+<arg>${Hodnota_36}</arg>
+<status status="PASS" start="2025-05-11T04:32:36.934273" elapsed="0.066687"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.022969" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[37]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.001620" elapsed="0.021488"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.046212" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[37]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.023395" elapsed="0.022915"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.066594" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[37]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.046509" elapsed="0.020180"/>
+</kw>
+<arg>${Hodnota_37}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.001278" elapsed="0.065513"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.087675" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[38]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.067455" elapsed="0.020316"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.110219" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[38]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.087963" elapsed="0.022405"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.130738" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[38]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.110663" elapsed="0.020171"/>
+</kw>
+<arg>${Hodnota_38}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.067114" elapsed="0.063821"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.152636" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[39]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.131603" elapsed="0.021163"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.179237" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[39]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.153034" elapsed="0.026354"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.204105" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[39]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.179667" elapsed="0.024540"/>
+</kw>
+<arg>${Hodnota_39}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.131261" elapsed="0.073054"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.227575" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[40]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.205029" elapsed="0.022644"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.250715" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[40]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.227876" elapsed="0.022949"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.272897" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[40]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.251031" elapsed="0.021983"/>
+</kw>
+<arg>${Hodnota_40}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.204656" elapsed="0.068471"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.297697" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[41]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.274052" elapsed="0.023746"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.321965" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[41]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.297999" elapsed="0.024082"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.343847" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[41]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.322395" elapsed="0.021546"/>
+</kw>
+<arg>${Hodnota_41}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.273652" elapsed="0.070390"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.371666" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[42]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.344706" elapsed="0.027086"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.395383" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[42]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.372059" elapsed="0.023498"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.418886" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[42]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.395836" elapsed="0.023179"/>
+</kw>
+<arg>${Hodnota_42}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.344358" elapsed="0.074801"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.445928" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[43]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.420194" elapsed="0.025885"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.479346" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[43]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.446360" elapsed="0.033112"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.505417" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[43]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.479735" elapsed="0.025817"/>
+</kw>
+<arg>${Hodnota_43}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.419704" elapsed="0.085992"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.534539" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[44]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.506676" elapsed="0.028008"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.560181" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[44]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.534986" elapsed="0.025331"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.583361" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[44]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.560596" elapsed="0.022891"/>
+</kw>
+<arg>${Hodnota_44}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.506141" elapsed="0.077489"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.608598" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[45]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.584457" elapsed="0.024245"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.633281" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[45]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.608910" elapsed="0.024496"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.657779" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[45]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.633670" elapsed="0.024208"/>
+</kw>
+<arg>${Hodnota_45}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.584074" elapsed="0.073909"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.678927" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[46]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.658663" elapsed="0.020361"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.703467" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[46]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.679222" elapsed="0.024347"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.724198" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[46]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.703769" elapsed="0.020601"/>
+</kw>
+<arg>${Hodnota_46}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.658308" elapsed="0.066174"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.746263" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[47]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.725154" elapsed="0.021204"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.767485" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[47]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.746555" elapsed="0.021029"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.789726" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[47]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.767780" elapsed="0.022050"/>
+</kw>
+<arg>${Hodnota_47}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.724810" elapsed="0.065124"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.811624" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[48]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.790596" elapsed="0.021164"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.837906" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[48]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.812073" elapsed="0.025971"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.862579" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[48]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.838318" elapsed="0.024385"/>
+</kw>
+<arg>${Hodnota_48}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.790252" elapsed="0.072573"/>
+</kw>
+<kw name="UD Oznameni Obsahuje Nazev a Datum" owner="Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.888145" level="INFO">Element 'xpath=//body/div/main/section/div/div/div/div[49]' is displayed.</msg>
+<arg>xpath=//body/div/main/section/div/div/div/div[${index}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.863656" elapsed="0.024615"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.909910" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[49]/div[1]/span[2]' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[1]/span[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.888540" elapsed="0.021480"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:32:37.931564" level="INFO">Element 'xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[49]/div[4]/a' is displayed.</msg>
+<arg>xpath=//*[@id="snippet--content"]/main/section[2]/div/div/div[1]/div[${index}]/div[4]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.910221" elapsed="0.021444"/>
+</kw>
+<arg>${Hodnota_49}</arg>
+<status status="PASS" start="2025-05-11T04:32:37.863233" elapsed="0.068536"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC012-1</tag>
+<tag>TS004</tag>
+<status status="PASS" start="2025-05-11T04:32:34.397825" elapsed="3.534194"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="67">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:32:37.932880" elapsed="2.177326"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:32:37.932488" elapsed="2.178044"/>
+</test>
+<status status="PASS" start="2025-05-11T04:32:31.443609" elapsed="8.667729"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC012-1</stat>
+<stat pass="1" fail="0" skip="0">TS004</stat>
+</tag>
+<suite>
+<stat name="TC012-1" id="s1" pass="3" fail="0" skip="0">TC012-1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:32:32.166255" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

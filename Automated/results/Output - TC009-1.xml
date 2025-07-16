@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-11T04:31:12.497898" rpa="false" schemaversion="5">
+<suite id="s1" name="TC009-1" source="C:\Users\Adelka\Desktop\v55\Automated\TC009-1.robot">
+<test id="s1-t1" name="Pre-conditions - Otevři hlavní stránku města Bzenec" line="12">
+<kw name="Open and Verify URL" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:12.854989" level="INFO">Opening browser 'chrome' to base url 'https://www.bzenec.cz/'.</msg>
+<msg time="2025-05-11T04:31:13.213726" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-11T04:31:12.854637" elapsed="2.779422"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-11T04:31:15.634557" elapsed="0.191987"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-11T04:31:15.826992" elapsed="0.010515"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${main_title_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:31:15.837814" elapsed="0.040028"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:15.893207" level="INFO">Current page contains element 'xpath=//img[@class='w-[140px] sm:w-[140px] max-h-[50px]']'.</msg>
+<arg>${Logo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:31:15.878092" elapsed="0.015236"/>
+</kw>
+<arg>${URL_Bzenec_HomePage}</arg>
+<arg>${Heading_HomePage_MainTitle_XPath}</arg>
+<arg>${Logo_MestoBzenec}</arg>
+<doc>Otevře zadanou stránku a ověří načtení přes viditelnost hlavního nadpisu.</doc>
+<status status="PASS" start="2025-05-11T04:31:12.853138" elapsed="3.040319"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:15.910258" level="INFO">Current page contains element 'xpath=//button[@title='Vyhledávání']//span[@class='icon-svg icon-svg__icon-search']//*[name()='svg']'.</msg>
+<arg>${Button_Vyhledat_XPath}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-11T04:31:15.893819" elapsed="0.016596"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:31:12.852218" elapsed="3.058544"/>
+</test>
+<test id="s1-t2" name="TC009-1 - Vyhledání výrazu &quot;formulář&quot; a kontrola výsledků" line="16">
+<kw name="Searching" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:15.912886" level="INFO">Clicking element 'xpath=//button[@title='Vyhledávání']//span[@class='icon-svg icon-svg__icon-search']//*[name()='svg']'.</msg>
+<arg>${Button_Vyhledat_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:31:15.912674" elapsed="0.087268"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:16.000456" level="INFO">Typing text 'formulář' into text field 'xpath=//input[@id='vyhledavani']'.</msg>
+<arg>${Input_Vyhledat_XPath}</arg>
+<arg>${Hodnota}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:31:16.000182" elapsed="0.098040"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>${Input_Vyhledat_XPath}</arg>
+<arg>${Hodnota_Enter}</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-11T04:31:16.098521" elapsed="0.040329"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Heading_Vyhledavani_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-11T04:31:16.139151" elapsed="0.692934"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-11T04:31:16.857258" level="INFO">Current page contains text 'formulář'.</msg>
+<arg>${Hodnota}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-11T04:31:16.832311" elapsed="0.025087"/>
+</kw>
+<arg>${Hodnota_Formular}</arg>
+<status status="PASS" start="2025-05-11T04:31:15.912255" elapsed="0.945291"/>
+</kw>
+<tag>FrontEnd</tag>
+<tag>TC009-1</tag>
+<tag>TS003</tag>
+<status status="PASS" start="2025-05-11T04:31:15.911365" elapsed="0.946573"/>
+</test>
+<test id="s1-t3" name="Post-conditions - Zavři prohlížeč" line="20">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-11T04:31:16.859116" elapsed="2.169566"/>
+</kw>
+<status status="PASS" start="2025-05-11T04:31:16.858619" elapsed="2.170369"/>
+</test>
+<status status="PASS" start="2025-05-11T04:31:12.499468" elapsed="6.530162"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">FrontEnd</stat>
+<stat pass="1" fail="0" skip="0">TC009-1</stat>
+<stat pass="1" fail="0" skip="0">TS003</stat>
+</tag>
+<suite>
+<stat name="TC009-1" id="s1" pass="3" fail="0" skip="0">TC009-1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-11T04:31:13.213726" level="WARN">The chromedriver version (135.0.7049.84) detected in PATH at C:\Users\Adelka\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
